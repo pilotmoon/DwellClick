@@ -43,7 +43,7 @@ betatag=$(! [[ $version_tag =~ -beta[.0-9]*$ ]] || print 1)
 show betatag
 
 # Dev, Beta or Release?
-if [[ $branch != "master" || $dirty || $debug ]]; then
+if [[ ( $branch != "master" && $branch != "main" ) || $dirty || $debug ]]; then
     channel=$channel_dev;
 	version_string="${gitref}"
   version_num=$version_num_dev
