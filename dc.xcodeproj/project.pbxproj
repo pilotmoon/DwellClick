@@ -90,6 +90,7 @@
 		016ACCB32FD03E7900E59082 /* prefs-Advanced.png in Resources */ = {isa = PBXBuildFile; fileRef = 016ACCB22FD03E7900E59082 /* prefs-Advanced.png */; };
 		016ACCB62FD048CC00E59082 /* ActionIconTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 016ACCB52FD048CC00E59082 /* ActionIconTransformer.m */; };
 		016ACCBA2FD049FE00E59082 /* Beep060.wav in Resources */ = {isa = PBXBuildFile; fileRef = 016ACCB92FD049FE00E59082 /* Beep060.wav */; };
+		016ACD442FD079A600E59082 /* Credits.txt in Resources */ = {isa = PBXBuildFile; fileRef = 016ACD432FD079A600E59082 /* Credits.txt */; };
 		016F91B514BED8E20049E3FB /* DCPrefsPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016F91B414BED8E20049E3FB /* DCPrefsPanelController.m */; };
 		016F91B814BEDA0E0049E3FB /* PrefsPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 016F91B714BEDA0E0049E3FB /* PrefsPanel.xib */; };
 		016F91BB14BEDB020049E3FB /* prefs-Panel.png in Resources */ = {isa = PBXBuildFile; fileRef = 016F91BA14BEDB020049E3FB /* prefs-Panel.png */; };
@@ -124,7 +125,6 @@
 		01B8CDAB14C86C2C00CC41E9 /* PopupOrHold.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B8CDAA14C86C2C00CC41E9 /* PopupOrHold.png */; };
 		01B8CDD914C8B26400CC41E9 /* Repeat.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B8CDD814C8B26400CC41E9 /* Repeat.png */; };
 		01BA6A4E12A52488006D8A64 /* DCPopupsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BA6A4712A52488006D8A64 /* DCPopupsController.m */; };
-		01BF758A127F72D500B3B3FC /* Credits.txt in Resources */ = {isa = PBXBuildFile; fileRef = 01BF7589127F72D500B3B3FC /* Credits.txt */; };
 		01C0C868132A5AAC0003F5DF /* NSImage+Symbol.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C0C865132A5AAC0003F5DF /* NSImage+Symbol.m */; };
 		01C0C916132A60F90003F5DF /* DCAppNameFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C0C913132A60F90003F5DF /* DCAppNameFormatter.m */; };
 		01C15A5012F967BA00553D37 /* DCPrefsPopupsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C15A4F12F967BA00553D37 /* DCPrefsPopupsController.m */; };
@@ -387,6 +387,7 @@
 		016ACCB42FD048CC00E59082 /* ActionIconTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionIconTransformer.h; sourceTree = "<group>"; };
 		016ACCB52FD048CC00E59082 /* ActionIconTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionIconTransformer.m; sourceTree = "<group>"; };
 		016ACCB92FD049FE00E59082 /* Beep060.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Beep060.wav; path = sounds/Beep060.wav; sourceTree = "<group>"; };
+		016ACD432FD079A600E59082 /* Credits.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Credits.txt; sourceTree = "<group>"; };
 		016F91B314BED8E10049E3FB /* DCPrefsPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPrefsPanelController.h; sourceTree = "<group>"; };
 		016F91B414BED8E20049E3FB /* DCPrefsPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPrefsPanelController.m; sourceTree = "<group>"; };
 		016F91B714BEDA0E0049E3FB /* PrefsPanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrefsPanel.xib; sourceTree = "<group>"; };
@@ -662,7 +663,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		016ACCBE2FD0666B00E59082 /* docs */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = docs; sourceTree = "<group>"; };
 		01D40E2A2FCEE4950090E201 /* BuildScripts */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = BuildScripts; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -1106,7 +1106,6 @@
 			children = (
 				0153579011B80E9E00673C2F /* BuildSettings.xcconfig */,
 				01D40E2A2FCEE4950090E201 /* BuildScripts */,
-				016ACCBE2FD0666B00E59082 /* docs */,
 				012B891A1A9E4F4B00BA7979 /* ShortcutRecorder.xcodeproj */,
 				01C9424211F4B72700A88FD4 /* Source */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -1136,6 +1135,7 @@
 				0197027011C2959C00CB6FD7 /* Sounds.plist */,
 				0101686D123FF40C00CDA1E1 /* DwellClick.sdef */,
 				0153575011B805CD00673C2F /* DwellClick-Info.plist */,
+				016ACD432FD079A600E59082 /* Credits.txt */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1390,13 +1390,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01BF758A127F72D500B3B3FC /* Credits.txt in Resources */,
 				0197027211C2959C00CB6FD7 /* Sounds.plist in Resources */,
 				014DFBB911C2D5D200EC5D28 /* Click043Doubled.aiff in Resources */,
 				014DFBBA11C2D5D200EC5D28 /* Click072Doubled.aiff in Resources */,
 				014DFBBB11C2D5D200EC5D28 /* Click078Doubled.aiff in Resources */,
 				014DFBBD11C2D5D200EC5D28 /* Click051Doubled.aiff in Resources */,
 				014DFC7711C2E24000EC5D28 /* Beep021.wav in Resources */,
+				016ACD442FD079A600E59082 /* Credits.txt in Resources */,
 				014DFC7811C2E24000EC5D28 /* Beep022.wav in Resources */,
 				014DFC7A11C2E24000EC5D28 /* Beep086.wav in Resources */,
 				014DFC7C11C2E24000EC5D28 /* Click043.wav in Resources */,
