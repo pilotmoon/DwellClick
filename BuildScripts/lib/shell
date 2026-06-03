@@ -1,0 +1,33 @@
+#!/bin/zsh
+function sayhi {
+  print
+  print "* begin script: ${1:t}"
+}
+
+function saybye {
+  print "* done: ${1:t} ($?)"
+  print
+}
+
+function show {
+  for name in $*; do
+    print -D $name: ${(P)name}
+  done
+}
+
+function prompt {
+    read "choice?$1 (y to continue, enter to skip): "
+    case "${choice:l}" in      
+      y|yes ) return 0;;
+      * ) return 1;;
+    esac
+}
+
+function askuser {
+    read "choice?$1 (Type 'yes' to continue): "
+    case "${choice:l}" in
+      yes ) return 0;;
+      no ) return 1;;
+      * ) echo "I'll take that as a no."; return 1;;
+    esac
+}

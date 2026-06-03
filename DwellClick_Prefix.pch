@@ -1,0 +1,20 @@
+//
+// Prefix header for all source files of the 'DwellClick' target in the 'dc' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
+
+#ifdef DEBUG_BUILD
+#else
+    #define NMLOG_DISABLE_INFO
+    #define NSLog(...) do { } while (0) 
+    #ifndef NS_BLOCK_ASSERTIONS
+        #define NS_BLOCK_ASSERTIONS
+    #endif
+#endif
+
+#ifdef __OBJC__
+    #import "NMKit/NMLog.h"
+#endif

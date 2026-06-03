@@ -1,0 +1,33 @@
+#!/bin/zsh
+set -eu; base=${0:a:h}/..; source $base/common; sayhi $0
+frameworks_path=${1}
+allowed_languages=${2}
+signing_identity=${3}
+show frameworks_path  allowed_languages signing_identity
+[[ -d $frameworks_path ]] || { print "bad paths supplied"; exit 1 }
+
+sparkle_path=$frameworks_path/Sparkle.framework
+autoupdate_bin_path=$sparkle_path/Versions/B/Autoupdate
+updater_path=$sparkle_path/Versions/B/Updater.app
+[[ -d $sparkle_path && -x $autoupdate_bin_path && -d $updater_path ]] || { print "expected items not found"; exit 1 }
+
+print "removing unused XPCServices"
+rm -rfv $sparkle_path/Versions/B/XPCServices
+rm -rf $sparkle_path/XPCServices
+rm -rfv $sparkle_path/Versions/B/Headers
+rm -rf $sparkle_path/Headers
+rm -rfv $sparkle_path/Versions/B/PrivateHeaders
+rm -rf $sparkle_path/PrivateHeaders
+rm -rfv $sparkle_path/Versions/B/Modules
+rm -rf $sparkle_path/Modules
+
+print "removing languages"
+$base/process/remove_langs $sparkle_path/Versions/B/Resources $allowed_languages
+
+# re-sign everything
+print "re-signing..."
+codesign --timestamp=none -o runtime -s $signing_identity -f $updater_path # sign
+codesign --timestamp=none -o runtime -s $signing_identity -f $autoupdate_bin_path # sign
+codesign --timestamp=none -o runtime -s $signing_identity -f $sparkle_path # sign
+
+saybye $0

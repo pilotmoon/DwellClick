@@ -1,0 +1,43 @@
+#!/bin/zsh
+
+function memo_vars_allowed { # 1:file name
+  case $1 in
+    vars_action)
+      print PROJECT_DIR CONFIGURATION TARGET_NAME \
+        BUILDSCRIPTS_VERSION_OFFSET BUILDSCRIPTS_VERSION_DEV \
+        BUILDSCRIPTS_VERSION_BASE BUILDSCRIPTS_METADATA_CONFIG_PATH
+      ;;
+    vars_archive)
+      print PROJECT_DIR TARGET_NAME ARCHIVE_PATH ARCHIVE_DSYMS_PATH \
+        INFOPLIST_PATH UNLOCALIZED_RESOURCES_FOLDER_PATH EXECUTABLE_PATH \
+        PRODUCT_NAME BUILDSCRIPTS_EXPORT_OPTIONS_PLIST BUILDSCRIPTS_RELEASE_NOTES_PATH \
+        PILOTMOON_APPBUILDS_LOCATION
+      ;;
+    *)
+      print "memo_vars: no allowlist for $1"
+      return 1
+      ;;
+  esac
+}
+
+function memo_vars { # 1:file name
+  if [[ -v PRODUCT_BUNDLE_IDENTIFIER ]]; then # sentinel var, it could be any build setting
+    local temp=$(unique_temp_dir)
+    local vars_file=$temp/$1
+    local names=($(memo_vars_allowed $1))
+    print "memo vars to:" $temp
+    ensure_temp_root
+    mkdir -p -m 700 $temp
+    : > $vars_file
+    chmod 600 $vars_file
+    for name in $names; do
+      if [[ -v $name ]]; then
+        print -r -- "$name=${(qqq)${(P)name}}" >> $vars_file
+      fi
+    done
+  else
+    local vars_file=$(print $(temp_root)/*/$1(.oc[1]))
+    print vars: $vars_file
+    source $vars_file
+  fi
+}

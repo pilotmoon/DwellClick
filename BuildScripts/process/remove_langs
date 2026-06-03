@@ -1,0 +1,25 @@
+#!/bin/zsh
+set -eu; base=${0:a:h}/..; source $base/common; sayhi $0
+
+# args: foldername langs
+folder=$1; langs=(${=2}); show folder langs
+
+# first remap zh_CN→zh-Hans and zh_TW→zh_Hant (for consistency across projects)
+# if [[ -d $folder/zh_CN.lproj && ! -d $folder/zh-Hans.lproj ]]; then
+#    mv $folder/zh_CN.lproj $folder/zh-Hans.lproj
+#fi
+#if [[ -d $folder/zh_TW.lproj && ! -d $folder/zh-Hant.lproj ]]; then
+#    mv $folder/zh_TW.lproj $folder/zh-Hant.lproj
+#fi
+
+for subfolder in $folder/*.lproj(N); do
+	code=$(normalise_lproj $subfolder)
+  if (($langs[(Ie)$code])); then
+    print "keeping ${subfolder:t}"	
+  else
+    print "deleting ${subfolder:t}"
+	  rm -rf $subfolder
+  fi
+done
+
+saybye $0

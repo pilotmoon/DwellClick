@@ -1,0 +1,107 @@
+#!/bin/zsh
+set -eu; base=${0:a:h}/..; source $base/common
+
+# save or load the environment variables
+memo_vars vars_archive
+
+# switch to our working dir
+cd_temp_dir
+
+# select export options file based on target
+case ${${=TARGET_NAME}[-1]:u} {
+  MAS ) options_plist=ExportOptions_MAS.plist ;;
+  SE ) options_plist=ExportOptions_SE.plist ;;
+  SA|* ) options_plist=ExportOptions_SA.plist ;;
+}
+
+options_path=${BUILDSCRIPTS_EXPORT_OPTIONS_PLIST:-$PROJECT_DIR/xcode/$options_plist}
+[[ $options_path = /* ]] || options_path=$PROJECT_DIR/$options_path
+show options_path
+[[ -f $options_path ]] || { print "bad options_path"; exit 1 }
+
+# export app from xcode
+export_path=$(pwd)/export; show export_path
+print '* exporting archive...'
+/usr/bin/xcodebuild -exportArchive -archivePath $ARCHIVE_PATH -exportOptionsPlist $options_path -exportPath $export_path -allowProvisioningUpdates
+
+# get app info
+print '* examining exported info.plist...'
+info() { /usr/libexec/PlistBuddy -c "Print :$1" $export_path/$INFOPLIST_PATH }
+meta() { /usr/libexec/PlistBuddy -c "Print :$1" $export_path/$UNLOCALIZED_RESOURCES_FOLDER_PATH/Meta.plist }
+version=$(info CFBundleShortVersionString)
+build=$(info CFBundleVersion)
+bundle_id=$(info CFBundleIdentifier)
+channel=$(info PilotmoonReleaseChannel)
+edition=$(info PilotmoonReleaseEdition)
+min_system=$(info LSMinimumSystemVersion)
+build_date=$(plist_to_releases_date "$(meta AppBuildDate)")
+effective_date=$(plist_to_releases_date "$(meta AppEffectiveDate)")
+show version build bundle_id channel edition min_system build_date effective_date
+
+# get architectures
+archs=$(lipo -archs $export_path/$EXECUTABLE_PATH)
+
+# construct naming slug for zip files
+print '* constructing slug...'
+slug_version=$version
+slug_label=''
+if [[ $edition != $edition_standalone ]]; then
+    slug_label="-${edition}"
+fi
+if [[ $edition == $edition_mas && $channel == $channel_production ]]; then
+    slug_version=$(info PilotmoonInternalVersionString)
+fi
+
+product=${PRODUCT_NAME}; show product
+slug=${product:gs/ /}${slug_label}-${slug_version:l:gs/ /-}; show slug
+
+# make dsyms zip
+dsyms_zip=${PWD}/${slug}-dSYM.zip; show dsyms_zip
+print -n "* zipping dsyms..."
+/usr/bin/ditto -c -k $ARCHIVE_DSYMS_PATH $dsyms_zip
+print "done"
+
+# make app zip
+app_path=${export_path}/${PRODUCT_NAME}.app; show app_path
+app_zip=${PWD}/${slug}.zip; show app_zip
+print -n "* zipping app..."
+/usr/bin/ditto -c -k --keepParent $app_path $app_zip
+print "done"
+
+# release notes
+release_notes_path=${BUILDSCRIPTS_RELEASE_NOTES_PATH:-$PROJECT_DIR/ReleaseNotes.md}
+if [[ -f $release_notes_path ]]; then
+  print "* copying release notes from $release_notes_path"
+  cp $release_notes_path rnotes.md
+fi
+
+# storage path
+storage_path=''
+storage_configured=no
+[[ -n ${PILOTMOON_APPBUILDS_LOCATION:-} ]] && storage_configured=yes
+
+# save the zip to storage?
+if [[ ($channel == $channel_production || $channel == $channel_beta) && -n ${PILOTMOON_APPBUILDS_LOCATION:-} ]]; then
+  storage_path="$PILOTMOON_APPBUILDS_LOCATION/$product/($build) $product $edition $version"
+  # copy app and dsyms
+  print "* creating storage_path: $storage_path"
+  mkdir -p $storage_path
+
+  dsyms_dest=$storage_path/${dsyms_zip:t}
+  print "* saving dsyms to $dsyms_dest"
+  cp -f $dsyms_zip $dsyms_dest 
+  
+  if [[ $edition == $edition_mas ]]; then 
+    zip_dest=$storage_path/${app_zip:t}
+  else 
+    zip_dest=$storage_path/notstapled-${app_zip:t}
+  fi
+  print "* saving zip to $zip_dest"
+  cp -f $app_zip $zip_dest  
+else
+  print "* not saving to storage (channel: $channel, storage configured: $storage_configured)"
+fi
+
+# save vars to json file
+project_dir=$PROJECT_DIR
+save_info edition slug app_path app_zip dsyms_zip version build channel bundle_id min_system archs product storage_path build_date effective_date options_path release_notes_path project_dir

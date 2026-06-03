@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+
+
+	<!-- declare the namespace for using XInclude so we can include the standard suite -->
+<dictionary xmlns:xi="http://www.w3.org/2003/XInclude">
+
+
+		<!-- use XInclude to include the standard suite -->
+	<xi:include href="file:///System/Library/ScriptingDefinitions/CocoaStandard.sdef" xpointer="xpointer(/dictionary/suite)"/>
+
+
+		<!-- our special scripting suite -->
+	<suite name="DwellClick Suite" code="Dwel"
+		description="DwellClick application specific scripting facilities.">
+		
+		
+			<!-- any additions to the application class are done here.  note that
+			we have specified that we inherit all of the properties from the standard
+			application class definition, and we use the same four character code from
+			that definition (see the application class definition above).  -->
+		<class name="application" code="capp"
+			description="DwellClick application." inherits="application">
+			
+				<!-- the name of the Cocoa class where we have provided the
+				various accessor methods for our application class.  -->
+			<cocoa class="NSApplication"/>
+
+			<property name="enabled" code="Dena" type="boolean" description="Is DwellClick enabled?"/>
+			
+			<property name="selected action" code="Dsac" access="r" type="action" description="The currently selected action."/>
+			
+			<element type="action"/>
+			
+		</class>
+		
+		<command name="select" code="Dwelsele"
+			description="Specify the action for DwellClick to perform next time the mouse dwells.">
+			<direct-parameter type="action"/>
+		</command>
+		
+		<command name="perform" code="Dwelperf"
+			description="If the mouse is at rest, perform the action immediately. Otherwise, select this as the next action.">
+			<direct-parameter type="action"/>
+		</command>
+		
+		<class name="action" code="Dact"
+			description="A DwellClick action (execute 'get name of every action' to list them).">
+			<cocoa class="DCClick"/>
+			
+			<property name="name" code="pnam" type="text" access="r"
+			        description="The action's name."/>
+
+			<property name="selected" code="Dsel" type="boolean" access="rw"
+				description="Is this the selected action?"/>
+		
+			<responds-to name="select">
+				<cocoa method="select:"/>
+			</responds-to>
+
+			<responds-to name="perform">
+				<cocoa method="perform:"/>
+			</responds-to>
+			
+		</class>
+
+	</suite>
+	
+	
+</dictionary>

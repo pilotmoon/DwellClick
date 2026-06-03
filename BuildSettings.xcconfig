@@ -1,0 +1,19 @@
+// DwellClick build settings.
+// BuildMetadata.generated.xcconfig is created by BuildScripts/action and is
+// intentionally not checked in. These defaults keep a fresh checkout valid.
+
+BUILDSCRIPTS_VERSION_NUM = $(BUILDSCRIPTS_VERSION_BASE)
+BUILDSCRIPTS_VERSION_STRING = dev
+BUILDSCRIPTS_ORIGINAL_VERSION_STRING = $(BUILDSCRIPTS_VERSION_STRING)
+BUILDSCRIPTS_RELEASE_CHANNEL = Development
+BUILDSCRIPTS_RELEASE_EDITION = Standalone
+BUILDSCRIPTS_MINIMUM_SYSTEM_VERSION = $(MACOSX_DEPLOYMENT_TARGET)
+BUILDSCRIPTS_COPYRIGHT = © Pilotmoon Software
+BUILDSCRIPTS_VERSION_BASE = 0
+BUILDSCRIPTS_VERSION_OFFSET = 0
+BUILDSCRIPTS_VERSION_DEV = 9999999
+BUILDSCRIPTS_METADATA_CONFIG_PATH = $(PROJECT_DIR)/BuildMetadata.generated.xcconfig
+
+ENABLE_HARDENED_RUNTIME = YES
+
+#include? "BuildMetadata.generated.xcconfig"

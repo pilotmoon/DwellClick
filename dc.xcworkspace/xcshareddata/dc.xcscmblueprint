@@ -1,0 +1,65 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "30138C219C04C83E0DDC82F451FE2325ED8202F0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F876732DD8392AC65F5B84F087FCB26734033C5C" : 0,
+    "571F7D5E5E5506D911D6D731B461637F31D061F2" : 0,
+    "13D1F6563FCF3CD326D0EE874A76674EC0350338" : 0,
+    "97641889692A69A4B270231FB25F4B84FB93CA0B" : 0,
+    "1407C4E89959CC3773CDA720FEC9F6AF8B44746D" : 0,
+    "8F1EE616791C8648C13FE96064BC8E4753F499B7" : 0,
+    "30138C219C04C83E0DDC82F451FE2325ED8202F0" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1A166B8E-03A9-4155-BEF0-3037CDEF35C9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F876732DD8392AC65F5B84F087FCB26734033C5C" : "DwellClick\/BuildScripts",
+    "571F7D5E5E5506D911D6D731B461637F31D061F2" : "DwellClick\/NMKit\/ThirdParty\/DGKVOBlocks",
+    "13D1F6563FCF3CD326D0EE874A76674EC0350338" : "DwellClick\/NMKit\/NMLog",
+    "97641889692A69A4B270231FB25F4B84FB93CA0B" : "DwellClick\/ShortcutRecorder",
+    "1407C4E89959CC3773CDA720FEC9F6AF8B44746D" : "DwellClick\/NMKit",
+    "8F1EE616791C8648C13FE96064BC8E4753F499B7" : "DwellClick\/NMKit\/ThirdParty\/NSTimer-Blocks",
+    "30138C219C04C83E0DDC82F451FE2325ED8202F0" : "DwellClick"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "dc",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "dc.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/github.com\/invariant\/NMLog.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "13D1F6563FCF3CD326D0EE874A76674EC0350338"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/github.com\/invariant\/NMKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1407C4E89959CC3773CDA720FEC9F6AF8B44746D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/github.com\/invariant\/DwellClick",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "30138C219C04C83E0DDC82F451FE2325ED8202F0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/github.com\/invariant\/DGKVOBlocks.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "571F7D5E5E5506D911D6D731B461637F31D061F2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/github.com\/invariant\/NSTimer-Blocks.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8F1EE616791C8648C13FE96064BC8E4753F499B7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:invariant\/ShortcutRecorder.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "97641889692A69A4B270231FB25F4B84FB93CA0B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/github.com\/invariant\/BuildScripts.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F876732DD8392AC65F5B84F087FCB26734033C5C"
+    }
+  ]
+}

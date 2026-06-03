@@ -1,0 +1,56 @@
+/* Literal for the Space key */
+"Space" = "Dấu cách";
+
+/* VoiceOver type of the object recorded by the control */
+"Shortcut" = "Lối tắt";
+
+/* VoiceOver value for the value-less control */
+"Not set" = "Chưa thiết lập";
+
+/* Tooltip for the cancel button when the control has a value */
+"Use old shortcut" = "Sử dụng phím tắt cũ";
+
+/* Tooltip for the cancel button when the control has no value */
+"Cancel recording" = "Hủy ghi âm";
+
+/* Tooltip for the clear button */
+"Delete current shortcut" = "Xóa lối tắt hiện tại";
+
+/* Label and tooltip for the recording mode */
+"Press keys now" = "Nhấn các phím ngay bây giờ";
+
+/* Label for the value-less control */
+"Record Shortcut" = "Ghi lại phím tắt";
+
+/* Tooltip for the normal mode */
+"Click to record shortcut" = "Nhấn để ghi lối tắt";
+
+/* Value for the NSLocalizedFailureReasonErrorKey key of validator's error */
+"The \"%@\" shortcut can't be used!" = "Phím tắt “%@” không thể sử dụng được!";
+
+/* Value for the NSLocalizedDescriptionKey key of validator's delegate error */
+"The \"%@\" shortcut can't be used because %@." = "Phím tắt “%@” không thể sử dụng vì %@.";
+
+/* Default value for the NSLocalizedDescriptionKey key of validator's error */
+"The \"%@\" shortcut is already in use." = "Phím tắt “%@” đã được sử dụng.";
+
+/* Value for the NSLocalizedDescriptionKey key of validator's system shortcuts error */
+"The \"%@\" shortcut can't be used because it's already used by a system-wide keyboard shortcut. If you really want to use this shortcut, most shortcuts can be changed in the Keyboard panel in System Preferences." = "Phím tắt “%@” không thể sử dụng vì đã được một phím tắt toàn hệ thống sử dụng. Nếu bạn thực sự muốn dùng phím tắt này, hầu hết các phím tắt có thể được thay đổi trong mục Bàn phím ở Tùy chọn hệ thống.";
+
+/* Value for the NSLocalizedDescriptionKey key of validator's menu error */
+"The \"%@\" shortcut can't be used because it's already used by the \"%@\" menu item." = "Phím tắt “%@” không thể sử dụng vì đã được dùng cho mục menu “%@”.";
+
+/* VoiceOver name of the Command modifier key */
+"Command" = "Command";
+
+/* VoiceOver name of the Option modifier key */
+"Option" = "Option";
+
+/* VoiceOver name of the Shift modifier key */
+"Shift" = "Shift";
+
+/* VoiceOver name of the Control modifier key */
+"Control" = "Control";
+
+/* VoiceOver name of the modifier keys delimiter */
+"-" = "-";

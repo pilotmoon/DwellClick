@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Chirpy</key>
+	<array>
+		<string>Glitch014</string>
+		<string>Glitch013</string>
+	</array>
+	<key>Click 1</key>
+	<array>
+		<string>Click051</string>
+		<string>Click051Doubled</string>
+		<string>Click051Tripled</string>
+	</array>
+	<key>Click 2</key>
+	<array>
+		<string>Click043</string>
+		<string>Click043Doubled</string>
+		<string>Click043Tripled</string>
+	</array>
+	<key>Click 3</key>
+	<array>
+		<string>Click072</string>
+		<string>Click072Doubled</string>
+		<string>Click072Tripled</string>
+	</array>
+	<key>Click 4</key>
+	<array>
+		<string>Click078</string>
+		<string>Click078Doubled</string>
+		<string>Click078Tripled</string>
+	</array>
+	<key>ClickSounds</key>
+	<array>
+		<string>Click 1</string>
+		<string>Click 2</string>
+		<string>Click 3</string>
+		<string>Click 4</string>
+	</array>
+	<key>Default</key>
+	<array>
+		<string>Click101</string>
+		<string>Click073</string>
+	</array>
+	<key>DragDropSounds</key>
+	<array>
+		<string>Default</string>
+		<string>Stellar</string>
+		<string>Future</string>
+		<string>Electronic</string>
+		<string>Smooth</string>
+		<string>Chirpy</string>
+	</array>
+	<key>Electronic</key>
+	<array>
+		<string>Beep021</string>
+		<string>Beep022</string>
+	</array>
+	<key>Future</key>
+	<array>
+		<string>Glitch019</string>
+		<string>Glitch022</string>
+	</array>
+	<key>LockDrag</key>
+	<string>Glitch015</string>
+	<key>HoverOn</key>
+	<string>Beep060</string>
+	<key>Smooth</key>
+	<array>
+		<string>Beep086</string>
+		<string>Beep085</string>
+	</array>
+	<key>Stellar</key>
+	<array>
+		<string>Beep034</string>
+		<string>Beep033</string>
+	</array>
+</dict>
+</plist>

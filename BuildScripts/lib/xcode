@@ -1,0 +1,8 @@
+#!/bin/zsh
+# store the password as follows (it must be an app specific pw from appleid.apple.com):
+#   xcrun altool --store-password-in-keychain-item "AC_PASSWORD" -u <username> -p <secret_password>
+# get provider shortname with 
+#   xcrun altool --list-providers -u <username> -p "@keychain:AC_PASSWORD"
+function altool { # call altool with login params
+  xcrun altool --output-format json --username $PILOTMOON_APPSTORECONNECT_USERNAME --password @keychain:AC_PASSWORD $*
+}

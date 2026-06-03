@@ -1,0 +1,60 @@
+#!/bin/zsh
+set -eu; base=${0:a:h}/..; source $base/common; cd_info
+
+interactive=yes
+while getopts 'q' c; do
+  case $c in
+    q) interactive=no ;;
+  esac
+done
+
+# cd to our temp dir
+cd_info
+load_info app_path app_zip bundle_id edition channel version build
+
+# is this is something we would like to publish to web
+if [[ ( $edition != $edition_standalone && $edition != $edition_setapp ) || ( $channel != $channel_beta && $channel != $channel_production ) ]]; then
+  print "Not notarizing edition: $edition, channel $channel"; exit 1
+fi
+
+if [[ $interactive == yes ]]; then
+  echo; askuser "Ready to go. Send this for notarization?"
+fi
+
+# upload
+echo "* uploading to Apple's notarization service..."
+notary_result_path=notary-submit.json
+if ! notary_result=$(xcrun notarytool submit "$app_zip" --keychain-profile AppStoreConnectProfile --wait --output-format json); then
+  print -r -- "$notary_result" > "$notary_result_path"
+  print "* notarization upload failed"
+  exit 1
+fi
+print -r -- "$notary_result" > "$notary_result_path"
+notary_submission_id=$(print -r -- "$notary_result" | jq -r '.id // empty')
+notary_status=$(print -r -- "$notary_result" | jq -r '.status // empty')
+save_info notary_submission_id notary_status notary_result_path
+
+if [[ -z $notary_submission_id || -z $notary_status ]]; then
+  print "* notarization response did not contain an id and status"
+  cat "$notary_result_path"
+  exit 1
+fi
+
+if [[ $notary_status != "Accepted" ]]; then
+  print "* notarization status: $notary_status"
+  notary_log_path="notary-log-$notary_submission_id.json"
+  if xcrun notarytool log "$notary_submission_id" --keychain-profile AppStoreConnectProfile > "$notary_log_path"; then
+    save_info notary_log_path
+    print "* notarization log saved to: $PWD/$notary_log_path"
+    jq -r '.issues[]? | "- [\(.severity)] \(.path // ""): \(.message)"' "$notary_log_path"
+  else
+    print "* failed to fetch notarization log"
+  fi
+  exit 1
+fi
+# save profile as follows
+# xcrun notarytool store-credentials AppStoreConnectProfile
+# (man notarytool for info. note that the profile should already be in icloud keychain.)
+
+notarized='1'
+save_info notarized

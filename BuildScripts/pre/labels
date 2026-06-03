@@ -1,0 +1,79 @@
+#!/bin/zsh
+# this must be called within the git repo and with 'constants' sourced
+version_num_offset=${1:-0}
+version_num_dev=${2:-0}
+show version_num_offset version_num_dev
+
+# get the branch name, dirty status, commit reference, debug flag and target suffix
+branch=$(git symbolic-ref --short HEAD || print '')
+gitref=g$(git rev-parse --short=7 HEAD)
+dirty=$(git diff --quiet || print 1)
+debug=$([[ $CONFIGURATION == Release ]] || print 1)
+show branch gitref dirty debug
+
+# look up edition label from target suffix
+case ${${=TARGET_NAME}[-1]:u} {
+  MAS ) edition=$edition_mas ;;
+  SE ) edition=$edition_setapp ;;
+  SA|* ) edition=$edition_standalone ;; # no suffix = standalone
+}
+show TARGET_NAME edition
+
+# the build version number derived from buildbase tag
+build_desc=$(git describe --long --match "buildbase" 2>/dev/null || print '')
+if [[ $build_desc ]]; then
+    build_num=$(echo $build_desc | cut -d'-' -f2)
+else
+    build_num=${BUILDSCRIPTS_VERSION_BASE:-0}
+fi
+build_num=$(($build_num + $version_num_offset))
+show build_num
+
+# the version tag, if any; 'v' prefix required
+version_tag=$(git describe --exact-match --match "v*" 2>/dev/null || print '')
+show version_tag
+
+# last tag before this
+last_tag=$(git describe --match "v*" 2>/dev/null || print '')
+last_tag=${last_tag%%-*}
+show last_tag
+
+# explicit beta tagged?
+betatag=$(! [[ $version_tag =~ -beta[.0-9]*$ ]] || print 1)
+show betatag
+
+# Dev, Beta or Release?
+if [[ $branch != "master" || $dirty || $debug ]]; then
+    channel=$channel_dev;
+	version_string="${gitref}"
+  version_num=$version_num_dev
+  if [[ $dirty ]]; then version_string="${version_string}-dty"; fi
+  if [[ $debug ]]; then version_string="${version_string}-dbg"; fi
+else
+    version_string=${version_tag#v} # strip off v prefix
+	if [[ $version_tag ]] && ! [[ $betatag ]]; then # this commit has its own version tag
+		channel=$channel_production
+        version_num=$build_num
+	else
+		channel=$channel_beta
+        if ! [[ $betatag ]]; then
+            if [[ $edition == $edition_standalone ]]; then
+                version_string="Build $build_num"
+            elif [[ $edition == $edition_mas ]]; then
+                version_string=$(date +'%Y.%-m') # just use current month and year
+            else
+                version_string="${last_tag#v}.0.$build_num"
+            fi
+        fi
+        version_num=$build_num
+	fi
+fi
+show channel version_string
+
+# adjust for MAS by removing the first hyphen and all that follows
+original_version_string=$version_string
+if [[ $edition != $edition_standalone && $channel == $channel_production ]]; then
+    version_string=$(echo $version_string | cut -d'-' -f1)
+fi
+
+export version_num version_string original_version_string channel edition

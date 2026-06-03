@@ -1,0 +1,54 @@
+#!/bin/zsh
+set -eu
+
+here=${0:a:h}
+root=$here/..
+BuildScripts=$root/BuildScripts
+source $BuildScripts/common
+sayhi $0
+
+allowed_languages="en"
+resources_path="$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH"
+frameworks_path="$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH"
+info_plist="$BUILT_PRODUCTS_DIR/$INFOPLIST_PATH"
+signing_identity="${EXPANDED_CODE_SIGN_IDENTITY_NAME:-${CODE_SIGN_IDENTITY:-Developer ID Application}}"
+
+show resources_path frameworks_path info_plist allowed_languages signing_identity
+
+$BuildScripts/process/remove_langs $resources_path $allowed_languages
+
+/usr/libexec/PlistBuddy -c "Delete :CFBundleLocalizations" $info_plist 2>/dev/null || true
+/usr/libexec/PlistBuddy -c "Add :CFBundleLocalizations array" $info_plist
+for code in ${=allowed_languages}; do
+  /usr/libexec/PlistBuddy -c "Add :CFBundleLocalizations: string $code" $info_plist
+done
+
+meta_plist=$resources_path/Meta.plist
+if [[ ! -f $meta_plist ]]; then
+  /usr/bin/plutil -create xml1 $meta_plist
+fi
+set_plist_value :AppBuildDate date "$(iso_to_plist_date $(current_iso_date_start_of_day))" $meta_plist
+set_plist_value :AppEffectiveDate date "$(iso_to_plist_date ${BUILDSCRIPTS_EFFECTIVE_DATE:-$(current_iso_date_start_of_day)})" $meta_plist
+
+if [[ "${CODE_SIGNING_ALLOWED:-YES}" == "NO" ]]; then
+  print "Skipping framework post-processing because code signing is disabled."
+  saybye $0
+  exit 0
+fi
+
+if [[ -z "$signing_identity" || "$signing_identity" == "-" ]]; then
+  print "Skipping framework post-processing because no signing identity is configured."
+  saybye $0
+  exit 0
+fi
+
+if ! security find-identity -v -p codesigning | grep -F "$signing_identity" >/dev/null; then
+  print "Skipping framework post-processing because signing identity '$signing_identity' was not found."
+  saybye $0
+  exit 0
+fi
+
+$BuildScripts/process/process_shortcutrecorder $frameworks_path $allowed_languages $signing_identity
+$BuildScripts/process/process_sparkle2_nosb $frameworks_path $allowed_languages $signing_identity
+
+saybye $0

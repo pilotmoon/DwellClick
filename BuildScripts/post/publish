@@ -1,0 +1,93 @@
+#!/bin/zsh
+set -eu; base=${0:a:h}/..; source $base/common; cd_info
+
+allow_unstapled=no # f = allow unstapled builds?
+while getopts 'u' c; do
+  case $c in
+    u) allow_unstapled=yes ;;
+  esac
+done
+
+# load vars
+load_info product app_zip version build channel edition slug min_system archs verified build_date effective_date
+[[ $allow_unstapled == yes ]] || load_info stapled
+
+# check standalone
+[[ $edition == $edition_standalone ]] || (print "not publishing because not standalone edition"; exit 1)
+
+print "* generating sparkle signature"
+
+# get zip file eddsa signature and size
+signature_response=$($base/bin/sign_update $app_zip) || print 'sign_update error'
+[[ $signature_response =~ '^sparkle:edSignature=\"(.+)\" length=\"(.+)\"$' ]] || { print "signature output not in expected format: $signature_response"; exit 1 }
+signature=$match[1]
+size=$match[2]
+show size signature
+save_info size signature
+
+print "* generating jekyll template"
+
+# make jekyll template for appcast
+metafile=$(date +%F)-$slug.md; show metafile
+show PWD
+
+# notes template
+if [[ -f ./rnotes.md ]]; then
+  notes=$(<./rnotes.md)
+else
+  notes="Your notes here."
+fi
+
+# build releases metadata file for Jekyll site
+cat <<END > $metafile
+---
+layout: appcast
+date: $build_date
+effective_date: $effective_date
+product: $product
+channel: $channel
+version: $build
+filename: ${app_zip:t}
+short_version_string: '$version'
+size: $size
+eddsa_signature: '$signature'
+minimum_system_version: '$min_system'
+archs: [ $(echo $archs | sed "s/\([^[:space:]]*\)/'\1'/g" | sed 's/ /, /g') ]
+published: no
+---
+
+$notes
+
+END
+
+# preserve existing file
+meta_dest=$PILOTMOON_WWW_RELEASES_LOCATION/$metafile
+if [[ -f $meta_dest ]]; then
+  meta_backup=$PILOTMOON_WWW_RELEASES_LOCATION/_${metafile}.backup-$(uuid)
+  print "* copying existing metafile to $meta_backup"
+  mv $meta_dest $meta_backup
+fi
+
+# copy to destination
+print "* copying metafile to $meta_dest"
+cp $metafile $meta_dest
+
+
+# determine server path
+dl_name="${app_zip:t}"
+if [[ $channel == $channel_beta ]]; then
+   dl_name=beta/${app_zip:t}
+fi
+
+# upload file to api server
+print "* uploading zip to server for download at <https://pilotmoon.com/downloads/$dl_name>"
+# curl \
+#   -H "Authorization: Bearer $PILOTMOON_FILES_API_KEY" \
+#   --data-binary "@$app_zip" \
+#   "$PILOTMOON_FILES_API_URL?name=$dl_name"
+http POST "$PILOTMOON_FILES_API_URL" \
+  name=="$dl_name" \
+  Authorization:"Bearer $PILOTMOON_FILES_API_KEY" \
+  < "$app_zip"
+
+published=1; save_info published

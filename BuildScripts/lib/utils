@@ -1,0 +1,56 @@
+#!/bin/zsh
+
+# remove .lproj suffix, lowercase, hyphen separators 
+function normalise_lproj {
+  print ${${${1%.lproj}//_/-}:t:l} 
+}
+
+ # list the languages in a folder
+function list_langs {
+  list=($(for lproj in $(\ls -G $1); do print $(normalise_lproj $lproj); done))
+  print ${(j: :)list} # join with spaces
+}
+
+# date formats
+ISO_DATE_FORMAT="%Y-%m-%dT%H:%M:%SZ"
+ISO_ZERO_HOURS_DATE_FORMAT="%Y-%m-%dT00:00:00Z"
+PLISTBUDDY_DATE_FORMAT="%a %b %d %H:%M:%S GMT %Y"
+RELEASES_DATE_FORMAT="%Y-%m-%d %H:%M:%S %z"
+
+# Convert ISO 8601 format to the PlistBuddy date format
+iso_to_plist_date() {        
+    date -jf "$ISO_DATE_FORMAT" "$1" +"$PLISTBUDDY_DATE_FORMAT"
+}
+
+# Convert the PlistBuddy date format to ISO 8601 format
+plist_to_iso_date() {
+    date -jf "$PLISTBUDDY_DATE_FORMAT" "$1" +"$ISO_DATE_FORMAT"
+}
+
+# Convert the PlistBuddy date format to releases feed date format
+plist_to_releases_date() {    
+    date -jf "$PLISTBUDDY_DATE_FORMAT" "$1" +"$RELEASES_DATE_FORMAT"
+}
+
+# Give current date in ISO 8601 format
+current_iso_date() {
+    date -u +"$ISO_DATE_FORMAT"
+}
+
+# Current ISO Date with time 00:00:00
+current_iso_date_start_of_day() {
+    date -u +"$ISO_ZERO_HOURS_DATE_FORMAT"
+}
+
+# Function to set or update a Config.plist constant
+set_plist_value() {
+    local key=$1
+    local type=$2
+    local value=$3
+    local config_plist=$4
+    /usr/libexec/PlistBuddy -c "Delete $key" $config_plist 2>/dev/null || true
+    /usr/libexec/PlistBuddy -c "Add $key $type $value" $config_plist
+    read_back=$(/usr/libexec/PlistBuddy -c "Print $key" $config_plist)
+    echo "set_plist_value: $key=$read_back"
+}
+

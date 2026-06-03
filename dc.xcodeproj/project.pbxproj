@@ -1,0 +1,1858 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 70;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0101686E123FF40C00CDA1E1 /* DwellClick.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 0101686D123FF40C00CDA1E1 /* DwellClick.sdef */; };
+		01016880123FF99F00CDA1E1 /* DCApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0101687F123FF99F00CDA1E1 /* DCApp.m */; };
+		012517CF1C8063A20013EF4D /* NM_XIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 012517CE1C8063A20013EF4D /* NM_XIcon.png */; };
+		01287CFF1313D5D100895A31 /* DCAppDelegate+Startup.m in Sources */ = {isa = PBXBuildFile; fileRef = 01287CFD1313D5D100895A31 /* DCAppDelegate+Startup.m */; };
+		012B89261A9E4F6200BA7979 /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012B89211A9E4F4B00BA7979 /* ShortcutRecorder.framework */; };
+		012B89271A9E4F6400BA7979 /* ShortcutRecorder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 012B89211A9E4F4B00BA7979 /* ShortcutRecorder.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		012CF31412F3461A0040F5BE /* ShowPopup.png in Resources */ = {isa = PBXBuildFile; fileRef = 012CF31312F3461A0040F5BE /* ShowPopup.png */; };
+		0130DCE02FCEE6D40090E201 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0130DCDF2FCEE6D40090E201 /* ServiceManagement.framework */; };
+		0135F6971278A89900B854AF /* DCTouchMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0135F6961278A89900B854AF /* DCTouchMonitor.m */; };
+		013C90B1132115B600C9098F /* FCAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C90AC132115B600C9098F /* FCAboutController.m */; };
+		013C90B2132115B600C9098F /* FCDraggableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C90AE132115B600C9098F /* FCDraggableImageView.m */; };
+		013C90B3132115B600C9098F /* FCLinkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C90B0132115B600C9098F /* FCLinkView.m */; };
+		013C90BC132115EB00C9098F /* FCWhiteBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C90BB132115EB00C9098F /* FCWhiteBox.m */; };
+		013C90C01321160800C9098F /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013C90BF1321160800C9098F /* About.xib */; };
+		013C912D13211D6700C9098F /* DCAboutWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C912A13211D6700C9098F /* DCAboutWindow.m */; };
+		013C92691321455200C9098F /* DCClickCounterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C92661321455200C9098F /* DCClickCounterView.m */; };
+		01425DF811B8152B00CDC8EE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		014B1D2A191B69B4007928A1 /* Popup.png in Resources */ = {isa = PBXBuildFile; fileRef = 014B1D29191B69B4007928A1 /* Popup.png */; };
+		014D4CA8129462430056C234 /* Click043Tripled.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 014D4CA4129462430056C234 /* Click043Tripled.aiff */; };
+		014D4CA9129462430056C234 /* Click051Tripled.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 014D4CA5129462430056C234 /* Click051Tripled.aiff */; };
+		014D4CAA129462430056C234 /* Click072Tripled.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 014D4CA6129462430056C234 /* Click072Tripled.aiff */; };
+		014D4CAB129462430056C234 /* Click078Tripled.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 014D4CA7129462430056C234 /* Click078Tripled.aiff */; };
+		014DFBB911C2D5D200EC5D28 /* Click043Doubled.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 014DFBAF11C2D5D200EC5D28 /* Click043Doubled.aiff */; };
+		014DFBBA11C2D5D200EC5D28 /* Click072Doubled.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 014DFBB011C2D5D200EC5D28 /* Click072Doubled.aiff */; };
+		014DFBBB11C2D5D200EC5D28 /* Click078Doubled.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 014DFBB111C2D5D200EC5D28 /* Click078Doubled.aiff */; };
+		014DFBBD11C2D5D200EC5D28 /* Click051Doubled.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 014DFBB311C2D5D200EC5D28 /* Click051Doubled.aiff */; };
+		014DFC7711C2E24000EC5D28 /* Beep021.wav in Resources */ = {isa = PBXBuildFile; fileRef = 014DFC5911C2E24000EC5D28 /* Beep021.wav */; };
+		014DFC7811C2E24000EC5D28 /* Beep022.wav in Resources */ = {isa = PBXBuildFile; fileRef = 014DFC5A11C2E24000EC5D28 /* Beep022.wav */; };
+		014DFC7A11C2E24000EC5D28 /* Beep086.wav in Resources */ = {isa = PBXBuildFile; fileRef = 014DFC5C11C2E24000EC5D28 /* Beep086.wav */; };
+		014DFC7C11C2E24000EC5D28 /* Click043.wav in Resources */ = {isa = PBXBuildFile; fileRef = 014DFC5E11C2E24000EC5D28 /* Click043.wav */; };
+		014DFC7D11C2E24000EC5D28 /* Click051.wav in Resources */ = {isa = PBXBuildFile; fileRef = 014DFC5F11C2E24000EC5D28 /* Click051.wav */; };
+		014DFC7E11C2E24000EC5D28 /* Click072.wav in Resources */ = {isa = PBXBuildFile; fileRef = 014DFC6011C2E24000EC5D28 /* Click072.wav */; };
+		014DFC7F11C2E24000EC5D28 /* Click073.wav in Resources */ = {isa = PBXBuildFile; fileRef = 014DFC6111C2E24000EC5D28 /* Click073.wav */; };
+		014DFC8011C2E24000EC5D28 /* Click078.wav in Resources */ = {isa = PBXBuildFile; fileRef = 014DFC6211C2E24000EC5D28 /* Click078.wav */; };
+		014DFC8111C2E24000EC5D28 /* Click101.wav in Resources */ = {isa = PBXBuildFile; fileRef = 014DFC6311C2E24000EC5D28 /* Click101.wav */; };
+		014DFC8211C2E24000EC5D28 /* Glitch013.wav in Resources */ = {isa = PBXBuildFile; fileRef = 014DFC6411C2E24000EC5D28 /* Glitch013.wav */; };
+		014DFC8311C2E24000EC5D28 /* Glitch014.wav in Resources */ = {isa = PBXBuildFile; fileRef = 014DFC6511C2E24000EC5D28 /* Glitch014.wav */; };
+		014DFC8411C2E24000EC5D28 /* Glitch019.wav in Resources */ = {isa = PBXBuildFile; fileRef = 014DFC6611C2E24000EC5D28 /* Glitch019.wav */; };
+		014DFC8511C2E24000EC5D28 /* Glitch022.wav in Resources */ = {isa = PBXBuildFile; fileRef = 014DFC6711C2E24000EC5D28 /* Glitch022.wav */; };
+		014EE7D111CA36BF00DA988F /* Glitch067.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 014EE7CF11CA36BF00DA988F /* Glitch067.mp3 */; };
+		014F093D11F83F6500BE094C /* DCClickIntelligence.m in Sources */ = {isa = PBXBuildFile; fileRef = 014F093C11F83F6500BE094C /* DCClickIntelligence.m */; };
+		014F0F5E11F98B7400BE094C /* BundleIdentifierTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 014F0F5D11F98B7400BE094C /* BundleIdentifierTransformer.m */; };
+		014F7081120743270065481F /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 014F7080120743270065481F /* Config.plist */; };
+		014F736E120790760065481F /* ActionNameTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 014F736D120790760065481F /* ActionNameTransformer.m */; };
+		014F73BA120797880065481F /* DCShortcutViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 014F73B9120797880065481F /* DCShortcutViewItem.m */; };
+		015E3C27120B079C00F55DB4 /* Auto-Click.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3BF5120B079C00F55DB4 /* Auto-Click.png */; };
+		015E3C28120B079C00F55DB4 /* Click-With-Copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3BF6120B079C00F55DB4 /* Click-With-Copy.png */; };
+		015E3C29120B079C00F55DB4 /* Click-With-Cut.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3BF7120B079C00F55DB4 /* Click-With-Cut.png */; };
+		015E3C2A120B079C00F55DB4 /* Click-With-Paste.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3BF8120B079C00F55DB4 /* Click-With-Paste.png */; };
+		015E3C2B120B079C00F55DB4 /* Click.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3BF9120B079C00F55DB4 /* Click.png */; };
+		015E3C2C120B079C00F55DB4 /* Command-C.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3BFA120B079C00F55DB4 /* Command-C.png */; };
+		015E3C2D120B079C00F55DB4 /* Command-Click.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3BFB120B079C00F55DB4 /* Command-Click.png */; };
+		015E3C2E120B079C00F55DB4 /* Command-Drag.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3BFC120B079C00F55DB4 /* Command-Drag.png */; };
+		015E3C30120B079C00F55DB4 /* Command-V.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3BFE120B079C00F55DB4 /* Command-V.png */; };
+		015E3C31120B079C00F55DB4 /* Command-X.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3BFF120B079C00F55DB4 /* Command-X.png */; };
+		015E3C33120B079C00F55DB4 /* Control-Click.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C01120B079C00F55DB4 /* Control-Click.png */; };
+		015E3C34120B079C00F55DB4 /* Control-Drag.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C02120B079C00F55DB4 /* Control-Drag.png */; };
+		015E3C3A120B079C00F55DB4 /* DCIconStatus.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C08120B079C00F55DB4 /* DCIconStatus.png */; };
+		015E3C3B120B079C00F55DB4 /* Double-Click-With-Copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C09120B079C00F55DB4 /* Double-Click-With-Copy.png */; };
+		015E3C3C120B079C00F55DB4 /* Double-Click-With-Cut.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C0A120B079C00F55DB4 /* Double-Click-With-Cut.png */; };
+		015E3C3D120B079C00F55DB4 /* Double-Click-With-Paste.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C0B120B079C00F55DB4 /* Double-Click-With-Paste.png */; };
+		015E3C3E120B079C00F55DB4 /* Double-Click.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C0C120B079C00F55DB4 /* Double-Click.png */; };
+		015E3C3F120B079C00F55DB4 /* Drag-With-Copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C0D120B079C00F55DB4 /* Drag-With-Copy.png */; };
+		015E3C40120B079C00F55DB4 /* Drag-With-Cut.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C0E120B079C00F55DB4 /* Drag-With-Cut.png */; };
+		015E3C41120B079C00F55DB4 /* Drag.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C0F120B079C00F55DB4 /* Drag.png */; };
+		015E3C42120B079C00F55DB4 /* GreenTick.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C10120B079C00F55DB4 /* GreenTick.png */; };
+		015E3C43120B079C00F55DB4 /* Lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C11120B079C00F55DB4 /* Lock.png */; };
+		015E3C45120B079C00F55DB4 /* On-Off.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C13120B079C00F55DB4 /* On-Off.png */; };
+		015E3C46120B079C00F55DB4 /* Option-Click.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C14120B079C00F55DB4 /* Option-Click.png */; };
+		015E3C47120B079C00F55DB4 /* Option-Drag.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C15120B079C00F55DB4 /* Option-Drag.png */; };
+		015E3C4A120B079C00F55DB4 /* prefs-Clicking.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C18120B079C00F55DB4 /* prefs-Clicking.png */; };
+		015E3C4C120B079C00F55DB4 /* prefs-Keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C1A120B079C00F55DB4 /* prefs-Keyboard.png */; };
+		015E3C4F120B079C00F55DB4 /* prefs-Software.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C1D120B079C00F55DB4 /* prefs-Software.png */; };
+		015E3C50120B079C00F55DB4 /* Release.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C1E120B079C00F55DB4 /* Release.png */; };
+		015E3C51120B079C00F55DB4 /* Right-Click.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C1F120B079C00F55DB4 /* Right-Click.png */; };
+		015E3C52120B079C00F55DB4 /* Right-Drag.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C20120B079C00F55DB4 /* Right-Drag.png */; };
+		015E3C53120B079C00F55DB4 /* Shift-Click.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C21120B079C00F55DB4 /* Shift-Click.png */; };
+		015E3C54120B079C00F55DB4 /* Shift-Drag.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C22120B079C00F55DB4 /* Shift-Drag.png */; };
+		01683298126F239E00904A28 /* DCConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 01683297126F239E00904A28 /* DCConstants.m */; };
+		0168A83C135E2ADE00F041CB /* BundleIdIconTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168A83B135E2ADD00F041CB /* BundleIdIconTransformer.m */; };
+		016ACCB32FD03E7900E59082 /* prefs-Advanced.png in Resources */ = {isa = PBXBuildFile; fileRef = 016ACCB22FD03E7900E59082 /* prefs-Advanced.png */; };
+		016ACCB62FD048CC00E59082 /* ActionIconTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 016ACCB52FD048CC00E59082 /* ActionIconTransformer.m */; };
+		016ACCBA2FD049FE00E59082 /* Beep060.wav in Resources */ = {isa = PBXBuildFile; fileRef = 016ACCB92FD049FE00E59082 /* Beep060.wav */; };
+		016F91B514BED8E20049E3FB /* DCPrefsPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016F91B414BED8E20049E3FB /* DCPrefsPanelController.m */; };
+		016F91B814BEDA0E0049E3FB /* PrefsPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 016F91B714BEDA0E0049E3FB /* PrefsPanel.xib */; };
+		016F91BB14BEDB020049E3FB /* prefs-Panel.png in Resources */ = {isa = PBXBuildFile; fileRef = 016F91BA14BEDB020049E3FB /* prefs-Panel.png */; };
+		016F91C214BF0C8A0049E3FB /* DCClicksPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 016F91BF14BF0C8A0049E3FB /* DCClicksPanel.m */; };
+		016F91C414BF0C8A0049E3FB /* DCClicksPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016F91C114BF0C8A0049E3FB /* DCClicksPanelController.m */; };
+		0174B147128A9DEA00D442B1 /* Drag-With-Paste.png in Resources */ = {isa = PBXBuildFile; fileRef = 0174B146128A9DEA00D442B1 /* Drag-With-Paste.png */; };
+		0189619817BA73F80047D8C7 /* DwellClickIconR.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0189619717BA73F80047D8C7 /* DwellClickIconR.icns */; };
+		018BCA49130BC87B00283495 /* SecondsTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 018BCA47130BC87B00283495 /* SecondsTransformer.m */; };
+		018C81B81294368E00CD6C63 /* Triple-Click-With-Copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 018C81B51294368E00CD6C63 /* Triple-Click-With-Copy.png */; };
+		018C81B91294368E00CD6C63 /* Triple-Click-With-Paste.png in Resources */ = {isa = PBXBuildFile; fileRef = 018C81B61294368E00CD6C63 /* Triple-Click-With-Paste.png */; };
+		018C81BA1294368E00CD6C63 /* Triple-Click.png in Resources */ = {isa = PBXBuildFile; fileRef = 018C81B71294368E00CD6C63 /* Triple-Click.png */; };
+		018E6CBF11D0E4E80078342A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018E6CBD11D0E4E80078342A /* Sparkle.framework */; };
+		018E6D6A11D0E5390078342A /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 018E6CBD11D0E4E80078342A /* Sparkle.framework */; };
+		018EA2D11287F31800F6F0A2 /* DCClickEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 018EA2D01287F31800F6F0A2 /* DCClickEvent.m */; };
+		0197027211C2959C00CB6FD7 /* Sounds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0197027011C2959C00CB6FD7 /* Sounds.plist */; };
+		01992FE4135D7BFB00F1759C /* PopupOrLock.png in Resources */ = {isa = PBXBuildFile; fileRef = 01992FE3135D7BFB00F1759C /* PopupOrLock.png */; };
+		019B39D312895F3800AF3223 /* DCUIState.m in Sources */ = {isa = PBXBuildFile; fileRef = 019B39D212895F3800AF3223 /* DCUIState.m */; };
+		019B3A6B1289674E00AF3223 /* DCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 019B3A6A1289674E00AF3223 /* DCUtils.m */; };
+		019BA05C131FF9E200D1F211 /* NoEntry.png in Resources */ = {isa = PBXBuildFile; fileRef = 019BA05B131FF9E200D1F211 /* NoEntry.png */; };
+		019CF73314C5880E00D000AC /* DCNewClicksPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 019CF73214C5880D00D000AC /* DCNewClicksPanel.m */; };
+		019CF73714C5886B00D000AC /* DCNewClicksPanelBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 019CF73614C5886A00D000AC /* DCNewClicksPanelBackgroundView.m */; };
+		019CF73B14C5888900D000AC /* DCNewClicksPanelBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 019CF73A14C5888900D000AC /* DCNewClicksPanelBorderView.m */; };
+		019CF73F14C588AC00D000AC /* DCNewClicksPanelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 019CF73E14C588AC00D000AC /* DCNewClicksPanelButton.m */; };
+		019CF74314C588B800D000AC /* DCNewClicksPanelButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 019CF74214C588B800D000AC /* DCNewClicksPanelButtonCell.m */; };
+		01A801FF1333943F00729B20 /* DCEngine+Gubbins.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A801FE1333943B00729B20 /* DCEngine+Gubbins.m */; };
+		01AB3EE51333AED200F62F66 /* DCModifierController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AB3EE41333AED100F62F66 /* DCModifierController.m */; };
+		01AC07AF1210340500D15CA8 /* DCScrollDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AC07AE1210340500D15CA8 /* DCScrollDetector.m */; };
+		01AD503D120827C00038D53D /* NSUserDefaults+Archive.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AD503C120827C00038D53D /* NSUserDefaults+Archive.m */; };
+		01AD55B6120882310038D53D /* DCSimpleTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AD55B5120882310038D53D /* DCSimpleTrigger.m */; };
+		01B1702D12B7E42100E26927 /* prefs-Popups.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B1702C12B7E42100E26927 /* prefs-Popups.png */; };
+		01B8CDA914C86C2100CC41E9 /* HeldDrag.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B8CDA814C86C2100CC41E9 /* HeldDrag.png */; };
+		01B8CDAB14C86C2C00CC41E9 /* PopupOrHold.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B8CDAA14C86C2C00CC41E9 /* PopupOrHold.png */; };
+		01B8CDD914C8B26400CC41E9 /* Repeat.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B8CDD814C8B26400CC41E9 /* Repeat.png */; };
+		01BA6A4E12A52488006D8A64 /* DCPopupsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BA6A4712A52488006D8A64 /* DCPopupsController.m */; };
+		01BF758A127F72D500B3B3FC /* Credits.txt in Resources */ = {isa = PBXBuildFile; fileRef = 01BF7589127F72D500B3B3FC /* Credits.txt */; };
+		01C0C868132A5AAC0003F5DF /* NSImage+Symbol.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C0C865132A5AAC0003F5DF /* NSImage+Symbol.m */; };
+		01C0C916132A60F90003F5DF /* DCAppNameFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C0C913132A60F90003F5DF /* DCAppNameFormatter.m */; };
+		01C15A5012F967BA00553D37 /* DCPrefsPopupsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C15A4F12F967BA00553D37 /* DCPrefsPopupsController.m */; };
+		01C15A5C12F9682400553D37 /* PrefsPopups.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01C15A5B12F9682400553D37 /* PrefsPopups.xib */; };
+		01C3DF09129E7F7F005E99B7 /* DCAppDelegate+Distribution.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C3DF08129E7F7F005E99B7 /* DCAppDelegate+Distribution.m */; };
+		01C3E1C9129EAC62005E99B7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01AC07B71210343C00D15CA8 /* OpenGL.framework */; };
+		01C3E1D3129EAC8B005E99B7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01275250127B2C15007356C1 /* Security.framework */; };
+		01C3E1DB129EACAD005E99B7 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014F723512075D730065481F /* Carbon.framework */; };
+		01C55478126C9BF500B89D77 /* prefs-Feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C55477126C9BF500B89D77 /* prefs-Feedback.png */; };
+		01C5548A126CADC700B89D77 /* prefs-Apps.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C55489126CADC700B89D77 /* prefs-Apps.png */; };
+		01C60A8C132921F100230ADE /* DCPopupWindowButtonProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C60A89132921F100230ADE /* DCPopupWindowButtonProxy.m */; };
+		01C942D411F4B72800A88FD4 /* DCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9424511F4B72700A88FD4 /* DCAppDelegate.m */; };
+		01C942D511F4B72800A88FD4 /* DCClick.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9424711F4B72700A88FD4 /* DCClick.m */; };
+		01C942DA11F4B72800A88FD4 /* DCDwellMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9425311F4B72800A88FD4 /* DCDwellMachine.m */; };
+		01C942DB11F4B72800A88FD4 /* DCEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9425511F4B72800A88FD4 /* DCEngine.m */; };
+		01C942DC11F4B72800A88FD4 /* DCFlagGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9425711F4B72800A88FD4 /* DCFlagGroup.m */; };
+		01C942DD11F4B72800A88FD4 /* DCFlagSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9425911F4B72800A88FD4 /* DCFlagSelection.m */; };
+		01C942DF11F4B72800A88FD4 /* DCKeyedSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9425D11F4B72800A88FD4 /* DCKeyedSelection.m */; };
+		01C942E311F4B72800A88FD4 /* DCLinks.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9426511F4B72800A88FD4 /* DCLinks.m */; };
+		01C942E411F4B72800A88FD4 /* DCMainMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9426711F4B72800A88FD4 /* DCMainMenuController.m */; };
+		01C942E611F4B72800A88FD4 /* DCMouseClicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9426B11F4B72800A88FD4 /* DCMouseClicker.m */; };
+		01C942E711F4B72800A88FD4 /* DCMouseTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9426F11F4B72800A88FD4 /* DCMouseTap.m */; };
+		01C942EA11F4B72800A88FD4 /* DCPrefsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9427511F4B72800A88FD4 /* DCPrefsController.m */; };
+		01C942EC11F4B72800A88FD4 /* DCSelectableAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9427911F4B72800A88FD4 /* DCSelectableAction.m */; };
+		01C942ED11F4B72800A88FD4 /* DCSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9427B11F4B72800A88FD4 /* DCSelection.m */; };
+		01C942EE11F4B72800A88FD4 /* DCSelectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9427D11F4B72800A88FD4 /* DCSelectionGroup.m */; };
+		01C942EF11F4B72800A88FD4 /* DCSoundController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9427F11F4B72800A88FD4 /* DCSoundController.m */; };
+		01C942F211F4B72800A88FD4 /* DCUniqueSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9428511F4B72800A88FD4 /* DCUniqueSelection.m */; };
+		01C942F411F4B72800A88FD4 /* DCWelcomeWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9428911F4B72800A88FD4 /* DCWelcomeWindowController.m */; };
+		01C942F611F4B72800A88FD4 /* NSDate+Beginning.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9428C11F4B72800A88FD4 /* NSDate+Beginning.m */; };
+		01C9430911F4B75D00A88FD4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9430711F4B75D00A88FD4 /* main.m */; };
+		01C9431F11F4B7DE00A88FD4 /* Help.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01C9431311F4B7DE00A88FD4 /* Help.xib */; };
+		01C9432011F4B7DE00A88FD4 /* Main.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01C9431411F4B7DE00A88FD4 /* Main.xib */; };
+		01C9432111F4B7DE00A88FD4 /* Prefs.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01C9431511F4B7DE00A88FD4 /* Prefs.xib */; };
+		01C9432311F4B7DE00A88FD4 /* Welcome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01C9431711F4B7DE00A88FD4 /* Welcome.xib */; };
+		01C9434411F4C69000A88FD4 /* DCAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9434211F4C69000A88FD4 /* DCAnimationController.m */; };
+		01C9454D11F500F100A88FD4 /* NSUserDefaults+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9454B11F500F100A88FD4 /* NSUserDefaults+Color.m */; };
+		01C9984311F5C1B600DB9812 /* DCClickMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9984111F5C1B600DB9812 /* DCClickMachine.m */; };
+		01CB180914C4A5AA00CE1985 /* DCClicksPanelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CB180814C4A5AA00CE1985 /* DCClicksPanelButton.m */; };
+		01CB180D14C4A60600CE1985 /* DCClicksPanelButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CB180C14C4A60600CE1985 /* DCClicksPanelButtonCell.m */; };
+		01CD4104130B17B7002E2FC8 /* Command-Big.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CD40FC130B17B7002E2FC8 /* Command-Big.png */; };
+		01CD4105130B17B7002E2FC8 /* Control-Big.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CD40FD130B17B7002E2FC8 /* Control-Big.png */; };
+		01CD4106130B17B7002E2FC8 /* Option-Big.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CD40FE130B17B7002E2FC8 /* Option-Big.png */; };
+		01CD4107130B17B7002E2FC8 /* Shift-Big.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CD40FF130B17B7002E2FC8 /* Shift-Big.png */; };
+		01D142EE12CA6633006AEE0C /* PrefsSoftware.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D142ED12CA6633006AEE0C /* PrefsSoftware.xib */; };
+		01D1434512CA6CAE006AEE0C /* DCPrefsSoftwareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D1434412CA6CAE006AEE0C /* DCPrefsSoftwareController.m */; };
+		01D4D6271328045200AE62BC /* DCSymbolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D4D6241328045200AE62BC /* DCSymbolController.m */; };
+		01D4D64E13280A1400AE62BC /* DCAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D4D64B13280A1400AE62BC /* DCAnimationView.m */; };
+		01D6312A11C6408E00122A41 /* Beep085.wav in Resources */ = {isa = PBXBuildFile; fileRef = 01D6312811C6408E00122A41 /* Beep085.wav */; };
+		01DC1C921369B382009067E2 /* DCStatusItemDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DC1C911369B382009067E2 /* DCStatusItemDelegate.m */; };
+		01E1201612AAE8F5008CA3F5 /* DCBoxGrab.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1201512AAE8F5008CA3F5 /* DCBoxGrab.m */; };
+		01E4C61D1247997E001852C5 /* LockedDrag.png in Resources */ = {isa = PBXBuildFile; fileRef = 01E4C61C1247997E001852C5 /* LockedDrag.png */; };
+		01F454CB12B0D7C300CE7AFA /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BF76711280133800B3B3FC /* IOKit.framework */; };
+		01F8AA11133B4F0F0044531D /* Glitch015.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 01F8AA10133B4F0F0044531D /* Glitch015.aiff */; };
+		01F8AA16133B4F1E0044531D /* Beep033.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01F8AA14133B4F1E0044531D /* Beep033.mp3 */; };
+		01F8AA19133B4F1E0044531D /* Beep034.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01F8AA15133B4F1E0044531D /* Beep034.mp3 */; };
+		01FB6BCC1206DCA400C825C0 /* DCAppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FB6BCB1206DCA400C825C0 /* DCAppCell.m */; };
+		01FB6DA41206FB8300C825C0 /* DCImageAndTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FB6DA31206FB8300C825C0 /* DCImageAndTextCell.m */; };
+		01FFB17012A8FB7300BC5C23 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FFB16B12A8FB6600BC5C23 /* Quartz.framework */; };
+		C0DE02DAC2395DBD8C3BD239 /* NMStartAtLogin2024.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEAF3EBADC9E723DAB829E /* NMStartAtLogin2024.m */; };
+		C0DE0E666684B32AF9348323 /* NMLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE748EBE4A43D710445F9E /* NMLog.m */; };
+		C0DE102446ADF30FDCCD906A /* NMCoreUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE0FF5BD9F71C61A4C1296 /* NMCoreUtils.m */; };
+		C0DE19A813F3A82583FE76DE /* NMBubbleCloseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE88BCB739B48DF4120FC8 /* NMBubbleCloseButton.m */; };
+		C0DE1A076A2900BDA0825887 /* NMTipWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEF5B62D52911D0A7167B5 /* NMTipWindow.m */; };
+		C0DE21DD599B8EFB391541FB /* NMMouseUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEF0E82AF5A5509BC25FF9 /* NMMouseUtils.m */; };
+		C0DE2454858D3D8B0EA5747D /* NSMutableDictionary+NMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEB82F06D43150ACA8EEB6 /* NSMutableDictionary+NMSafe.m */; };
+		C0DE2A3623F6DCB64E6C47B3 /* NMKeyConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEF41B320DE4DBF0FC45BB /* NMKeyConverter.m */; };
+		C0DE2CF6F849554B74EA529F /* NMUniversalMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEC7E565E4079468C4808F /* NMUniversalMonitor.m */; };
+		C0DE2E86CB25094B3A648E1D /* NMSuperFastHash.c in Sources */ = {isa = PBXBuildFile; fileRef = C0DE2F4A326A69C03762FD23 /* NMSuperFastHash.c */; };
+		C0DE34EBEDFD81CB02F6C15A /* NMStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE00E6B7C94C17BF6DBDFD /* NMStateMachine.m */; };
+		C0DE3572E3FCD8F323100295 /* NMSugarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE6597543C50FCEDECB711 /* NMSugarButton.m */; };
+		C0DE3AD28EBE620F45A5C91A /* NMAppSupportDir.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEF17CE2801EDE57B4E8D2 /* NMAppSupportDir.m */; };
+		C0DE44783B45B3BC3AE0F77B /* NMNubWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE7DD25629F66D69D57BCE /* NMNubWindowView.m */; };
+		C0DE4BED7E549CB01FAD8851 /* NMBlockUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DECED7A960B969D3030589 /* NMBlockUtils.m */; };
+		C0DE5167826C60D0D3DCA100 /* NMCUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = C0DE462F92AACD1ECDDE751A /* NMCUtils.c */; };
+		C0DE57C957F8C213090906BD /* NMCursorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DECC9A70CB9BE7C8F33F49 /* NMCursorUtils.m */; };
+		C0DE5C203E1FC8CEB338E556 /* NMPopupWindowBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE27F63F185046464412FF /* NMPopupWindowBackgroundView.m */; };
+		C0DE5CC6691E9E43EEC3FA37 /* NMPopupWindowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEAB90FA0BFB9A4399A0B5 /* NMPopupWindowButton.m */; };
+		C0DE5F423C408A4C344CB224 /* NMPopupWindowBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE4D7A0746436383FC3B59 /* NMPopupWindowBorderView.m */; };
+		C0DE5F7CF75A66956E5088EB /* NMRegexUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE51FA539EA73EB5CB45AF /* NMRegexUtils.m */; };
+		C0DE65D3B9E5014EE77F2B06 /* NMGeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE4EFDB764E28A23F7CC83 /* NMGeometryUtils.m */; };
+		C0DE6891B49E87C12DFE0968 /* NMLoginItemsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE7EFB77DC82D166B9350B /* NMLoginItemsController.m */; };
+		C0DE6DD9F04B2C453211A867 /* NMKeyPresser.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEBB99EFFFBDDEEF1B42DD /* NMKeyPresser.m */; };
+		C0DE775F09D813A01F262ABE /* NMAppMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE9C00B317E3B049745D2D /* NMAppMonitor.m */; };
+		C0DE77B949EF602F2B1CFE8A /* NSObject+NMObservePrefs.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEA2A7302AE0C3C1330E31 /* NSObject+NMObservePrefs.m */; };
+		C0DE798AB203801568BACB54 /* NMNubWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE5563F60D84AFFE9EECE1 /* NMNubWindow.m */; };
+		C0DE8175AF501786C017A924 /* NMEventUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE6D68BF40073A4E4F0F77 /* NMEventUtils.m */; };
+		C0DE81E2D55D96659241C2A1 /* NMKeyCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE858AE33C59AF97FAAAC1 /* NMKeyCombo.m */; };
+		C0DE82E3DE9B2B4033C0B00B /* NMCommander.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE368482B793863C47C4A0 /* NMCommander.m */; };
+		C0DE83372D35FC0D67CBCAF1 /* NMBubbleWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DED6B864BDE1BCE4693CBB /* NMBubbleWindow.m */; };
+		C0DE8E25A36DA1093452467A /* NMPopupWindowButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE424FCE96B4911E5BF0D8 /* NMPopupWindowButtonCell.m */; };
+		C0DE8F2636A98513F43BAE0B /* NMStatusBubbleWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE3A1E994659462A44608D /* NMStatusBubbleWindow.m */; };
+		C0DE92826978C494AA5DD39B /* NMStatusItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEA0CFA0864F7CBBBABA5D /* NMStatusItemController.m */; };
+		C0DE938520D59B47A2697402 /* NSWindow+NMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE21A4BCE650D6F842E694 /* NSWindow+NMAdditions.m */; };
+		C0DE9770FDAAFB5FCFE45E58 /* NMStatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEB769F683603200263537 /* NMStatusItemView.m */; };
+		C0DE98B0232A05D3762C421B /* NMKeyCommander.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE98AB29B8E429322BE0A3 /* NMKeyCommander.m */; };
+		C0DE98B218159C6C5C8C42A3 /* NMPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE377C2430843C0330E63E /* NMPopupController.m */; };
+		C0DEA19B93A3CD6F8E0559A5 /* NMUIElement.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE3108ABE2678DB66E09F3 /* NMUIElement.m */; };
+		C0DEA333DE0B8C759886056E /* NMState.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEB10C46EB218C76889D2C /* NMState.m */; };
+		C0DEA5FE9728FA1A8D8E7402 /* NMPopupWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEF0379B5ADDCE938D679F /* NMPopupWindow.m */; };
+		C0DEAE6656650AD9F957E3B3 /* NMBrowserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEABDB7801B5243DCB89BC /* NMBrowserHelper.m */; };
+		C0DEB0DC473FE2D6B2FC06F9 /* NMConfigUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEB84BA8143201509BE8DD /* NMConfigUtils.m */; };
+		C0DEBA94E64ADB71732770B8 /* NMLinks.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE37437DA77F38438BA335 /* NMLinks.m */; };
+		C0DEC0FBC092050A707EC0C1 /* NMTipWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE5BC4AA5ACC1CFEE16DAE /* NMTipWindowView.m */; };
+		C0DEC4C84A6C29C392191556 /* NMSugarButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE612252A77DC6163C92AE /* NMSugarButtonCell.m */; };
+		C0DECD7B7D7EB0EA09A2EF08 /* NMImageButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE931F7CC148AA1959A149 /* NMImageButtonCell.m */; };
+		C0DED205A11CC8743578A61F /* NMPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE2600762A6E7AB3DA35DB /* NMPoint.m */; };
+		C0DEDD49361071BE94FA721E /* NMImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEC26EE991BEA5FC7657D2 /* NMImageButton.m */; };
+		C0DEDEBE3A4040952C09597D /* NMFloatUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEF0C9E256C7FF9750B73E /* NMFloatUtils.m */; };
+		C0DEE0582895D03F51F05834 /* NMUIElementHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEA92D2212C641BDDC7FA3 /* NMUIElementHelper.m */; };
+		C0DEE8349569EC131D9C40E7 /* NSImage+NMCopySize.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE6838C012311B1E9DB54A /* NSImage+NMCopySize.m */; };
+		C0DEEE486D4D24FA9766438F /* NSBezierPath+NMNub.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEE958F2E445F58802EEB1 /* NSBezierPath+NMNub.m */; };
+		C0DEF21696B4227F4BBC95DE /* NMUniversalAccessHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE91A47886692CE413A83C /* NMUniversalAccessHelper.m */; };
+		C0DEF2D7ECCC19B3237C32D4 /* NMAppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEFB7F31674CB2CBFD1048 /* NMAppUtils.m */; };
+		C0DEF700FACCAC0CD964636E /* NMBubbleWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE33AA1B4982EE4F14D543 /* NMBubbleWindowView.m */; };
+		C0DEFBDDAB3B461B3C34C0DA /* NMStartAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEE39E591BF43733898B73 /* NMStartAtLoginController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		012B89201A9E4F4B00BA7979 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 012B891A1A9E4F4B00BA7979 /* ShortcutRecorder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 939837800DA42965007F53F3;
+			remoteInfo = ShortcutRecorder.framework;
+		};
+		017A72E02FCF0D9100723596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 012B891A1A9E4F4B00BA7979 /* ShortcutRecorder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BAC79C07216FCE8E00E45F23;
+			remoteInfo = Inspector;
+		};
+		017A72E22FCF0D9100723596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 012B891A1A9E4F4B00BA7979 /* ShortcutRecorder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BA722EC52161619200EFF192;
+			remoteInfo = "Unit Tests";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		018E6D6D11D0E5570078342A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				018E6D6A11D0E5390078342A /* Sparkle.framework in CopyFiles */,
+				012B89271A9E4F6400BA7979 /* ShortcutRecorder.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0101686D123FF40C00CDA1E1 /* DwellClick.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DwellClick.sdef; sourceTree = "<group>"; };
+		0101687E123FF99F00CDA1E1 /* DCApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCApp.h; sourceTree = "<group>"; };
+		0101687F123FF99F00CDA1E1 /* DCApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCApp.m; sourceTree = "<group>"; };
+		012517CE1C8063A20013EF4D /* NM_XIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NM_XIcon.png; sourceTree = "<group>"; };
+		01275250127B2C15007356C1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		01287CFC1313D5D100895A31 /* DCAppDelegate+Startup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DCAppDelegate+Startup.h"; sourceTree = "<group>"; };
+		01287CFD1313D5D100895A31 /* DCAppDelegate+Startup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DCAppDelegate+Startup.m"; sourceTree = "<group>"; };
+		012B89171A9E493100BA7979 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = "../../Library/Developer/Xcode/DerivedData/dc-dzuimvtvphiitkberdikmfzykelb/Build/Products/Release/ShortcutRecorder.framework"; sourceTree = "<group>"; };
+		012B891A1A9E4F4B00BA7979 /* ShortcutRecorder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShortcutRecorder.xcodeproj; path = ShortcutRecorder/ShortcutRecorder.xcodeproj; sourceTree = "<group>"; };
+		012CF31312F3461A0040F5BE /* ShowPopup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShowPopup.png; sourceTree = "<group>"; };
+		0130DCDF2FCEE6D40090E201 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		0135F6951278A89900B854AF /* DCTouchMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTouchMonitor.h; sourceTree = "<group>"; };
+		0135F6961278A89900B854AF /* DCTouchMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTouchMonitor.m; sourceTree = "<group>"; };
+		013C90AB132115B600C9098F /* FCAboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCAboutController.h; sourceTree = "<group>"; };
+		013C90AC132115B600C9098F /* FCAboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCAboutController.m; sourceTree = "<group>"; };
+		013C90AD132115B600C9098F /* FCDraggableImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCDraggableImageView.h; sourceTree = "<group>"; };
+		013C90AE132115B600C9098F /* FCDraggableImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCDraggableImageView.m; sourceTree = "<group>"; };
+		013C90AF132115B600C9098F /* FCLinkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCLinkView.h; sourceTree = "<group>"; };
+		013C90B0132115B600C9098F /* FCLinkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCLinkView.m; sourceTree = "<group>"; };
+		013C90BA132115EB00C9098F /* FCWhiteBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCWhiteBox.h; sourceTree = "<group>"; };
+		013C90BB132115EB00C9098F /* FCWhiteBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCWhiteBox.m; sourceTree = "<group>"; };
+		013C90BF1321160800C9098F /* About.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = About.xib; sourceTree = "<group>"; };
+		013C912913211D6700C9098F /* DCAboutWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAboutWindow.h; sourceTree = "<group>"; };
+		013C912A13211D6700C9098F /* DCAboutWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCAboutWindow.m; sourceTree = "<group>"; };
+		013C92651321455200C9098F /* DCClickCounterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCClickCounterView.h; sourceTree = "<group>"; };
+		013C92661321455200C9098F /* DCClickCounterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCClickCounterView.m; sourceTree = "<group>"; };
+		014B1D29191B69B4007928A1 /* Popup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Popup.png; sourceTree = "<group>"; };
+		014D4CA4129462430056C234 /* Click043Tripled.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = Click043Tripled.aiff; path = sounds/Click043Tripled.aiff; sourceTree = "<group>"; };
+		014D4CA5129462430056C234 /* Click051Tripled.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = Click051Tripled.aiff; path = sounds/Click051Tripled.aiff; sourceTree = "<group>"; };
+		014D4CA6129462430056C234 /* Click072Tripled.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = Click072Tripled.aiff; path = sounds/Click072Tripled.aiff; sourceTree = "<group>"; };
+		014D4CA7129462430056C234 /* Click078Tripled.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = Click078Tripled.aiff; path = sounds/Click078Tripled.aiff; sourceTree = "<group>"; };
+		014DFBAF11C2D5D200EC5D28 /* Click043Doubled.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = Click043Doubled.aiff; path = sounds/Click043Doubled.aiff; sourceTree = "<group>"; };
+		014DFBB011C2D5D200EC5D28 /* Click072Doubled.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = Click072Doubled.aiff; path = sounds/Click072Doubled.aiff; sourceTree = "<group>"; };
+		014DFBB111C2D5D200EC5D28 /* Click078Doubled.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = Click078Doubled.aiff; path = sounds/Click078Doubled.aiff; sourceTree = "<group>"; };
+		014DFBB311C2D5D200EC5D28 /* Click051Doubled.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = Click051Doubled.aiff; path = sounds/Click051Doubled.aiff; sourceTree = "<group>"; };
+		014DFC5911C2E24000EC5D28 /* Beep021.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Beep021.wav; path = sounds/Beep021.wav; sourceTree = "<group>"; };
+		014DFC5A11C2E24000EC5D28 /* Beep022.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Beep022.wav; path = sounds/Beep022.wav; sourceTree = "<group>"; };
+		014DFC5C11C2E24000EC5D28 /* Beep086.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Beep086.wav; path = sounds/Beep086.wav; sourceTree = "<group>"; };
+		014DFC5E11C2E24000EC5D28 /* Click043.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Click043.wav; path = sounds/Click043.wav; sourceTree = "<group>"; };
+		014DFC5F11C2E24000EC5D28 /* Click051.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Click051.wav; path = sounds/Click051.wav; sourceTree = "<group>"; };
+		014DFC6011C2E24000EC5D28 /* Click072.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Click072.wav; path = sounds/Click072.wav; sourceTree = "<group>"; };
+		014DFC6111C2E24000EC5D28 /* Click073.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Click073.wav; path = sounds/Click073.wav; sourceTree = "<group>"; };
+		014DFC6211C2E24000EC5D28 /* Click078.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Click078.wav; path = sounds/Click078.wav; sourceTree = "<group>"; };
+		014DFC6311C2E24000EC5D28 /* Click101.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Click101.wav; path = sounds/Click101.wav; sourceTree = "<group>"; };
+		014DFC6411C2E24000EC5D28 /* Glitch013.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Glitch013.wav; path = sounds/Glitch013.wav; sourceTree = "<group>"; };
+		014DFC6511C2E24000EC5D28 /* Glitch014.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Glitch014.wav; path = sounds/Glitch014.wav; sourceTree = "<group>"; };
+		014DFC6611C2E24000EC5D28 /* Glitch019.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Glitch019.wav; path = sounds/Glitch019.wav; sourceTree = "<group>"; };
+		014DFC6711C2E24000EC5D28 /* Glitch022.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Glitch022.wav; path = sounds/Glitch022.wav; sourceTree = "<group>"; };
+		014EE7CF11CA36BF00DA988F /* Glitch067.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Glitch067.mp3; path = sounds/Glitch067.mp3; sourceTree = "<group>"; };
+		014F093B11F83F6500BE094C /* DCClickIntelligence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCClickIntelligence.h; sourceTree = "<group>"; };
+		014F093C11F83F6500BE094C /* DCClickIntelligence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCClickIntelligence.m; sourceTree = "<group>"; };
+		014F0F5C11F98B7400BE094C /* BundleIdentifierTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BundleIdentifierTransformer.h; sourceTree = "<group>"; };
+		014F0F5D11F98B7400BE094C /* BundleIdentifierTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BundleIdentifierTransformer.m; sourceTree = "<group>"; };
+		014F7080120743270065481F /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		014F723512075D730065481F /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		014F736C120790760065481F /* ActionNameTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionNameTransformer.h; sourceTree = "<group>"; };
+		014F736D120790760065481F /* ActionNameTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ActionNameTransformer.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		014F73B8120797880065481F /* DCShortcutViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCShortcutViewItem.h; sourceTree = "<group>"; };
+		014F73B9120797880065481F /* DCShortcutViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCShortcutViewItem.m; sourceTree = "<group>"; };
+		0153574C11B805CD00673C2F /* DwellClick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DwellClick.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0153575011B805CD00673C2F /* DwellClick-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DwellClick-Info.plist"; sourceTree = "<group>"; };
+		0153578B11B80E9E00673C2F /* DwellClick_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DwellClick_Prefix.pch; sourceTree = "<group>"; };
+		0153579011B80E9E00673C2F /* BuildSettings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BuildSettings.xcconfig; sourceTree = "<group>"; };
+		015E3BF5120B079C00F55DB4 /* Auto-Click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Auto-Click.png"; sourceTree = "<group>"; };
+		015E3BF6120B079C00F55DB4 /* Click-With-Copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Click-With-Copy.png"; sourceTree = "<group>"; };
+		015E3BF7120B079C00F55DB4 /* Click-With-Cut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Click-With-Cut.png"; sourceTree = "<group>"; };
+		015E3BF8120B079C00F55DB4 /* Click-With-Paste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Click-With-Paste.png"; sourceTree = "<group>"; };
+		015E3BF9120B079C00F55DB4 /* Click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Click.png; sourceTree = "<group>"; };
+		015E3BFA120B079C00F55DB4 /* Command-C.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Command-C.png"; sourceTree = "<group>"; };
+		015E3BFB120B079C00F55DB4 /* Command-Click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Command-Click.png"; sourceTree = "<group>"; };
+		015E3BFC120B079C00F55DB4 /* Command-Drag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Command-Drag.png"; sourceTree = "<group>"; };
+		015E3BFE120B079C00F55DB4 /* Command-V.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Command-V.png"; sourceTree = "<group>"; };
+		015E3BFF120B079C00F55DB4 /* Command-X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Command-X.png"; sourceTree = "<group>"; };
+		015E3C01120B079C00F55DB4 /* Control-Click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Control-Click.png"; sourceTree = "<group>"; };
+		015E3C02120B079C00F55DB4 /* Control-Drag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Control-Drag.png"; sourceTree = "<group>"; };
+		015E3C08120B079C00F55DB4 /* DCIconStatus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DCIconStatus.png; sourceTree = "<group>"; };
+		015E3C09120B079C00F55DB4 /* Double-Click-With-Copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Double-Click-With-Copy.png"; sourceTree = "<group>"; };
+		015E3C0A120B079C00F55DB4 /* Double-Click-With-Cut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Double-Click-With-Cut.png"; sourceTree = "<group>"; };
+		015E3C0B120B079C00F55DB4 /* Double-Click-With-Paste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Double-Click-With-Paste.png"; sourceTree = "<group>"; };
+		015E3C0C120B079C00F55DB4 /* Double-Click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Double-Click.png"; sourceTree = "<group>"; };
+		015E3C0D120B079C00F55DB4 /* Drag-With-Copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Drag-With-Copy.png"; sourceTree = "<group>"; };
+		015E3C0E120B079C00F55DB4 /* Drag-With-Cut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Drag-With-Cut.png"; sourceTree = "<group>"; };
+		015E3C0F120B079C00F55DB4 /* Drag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Drag.png; sourceTree = "<group>"; };
+		015E3C10120B079C00F55DB4 /* GreenTick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenTick.png; sourceTree = "<group>"; };
+		015E3C11120B079C00F55DB4 /* Lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lock.png; sourceTree = "<group>"; };
+		015E3C13120B079C00F55DB4 /* On-Off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "On-Off.png"; sourceTree = "<group>"; };
+		015E3C14120B079C00F55DB4 /* Option-Click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Option-Click.png"; sourceTree = "<group>"; };
+		015E3C15120B079C00F55DB4 /* Option-Drag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Option-Drag.png"; sourceTree = "<group>"; };
+		015E3C18120B079C00F55DB4 /* prefs-Clicking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prefs-Clicking.png"; sourceTree = "<group>"; };
+		015E3C1A120B079C00F55DB4 /* prefs-Keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prefs-Keyboard.png"; sourceTree = "<group>"; };
+		015E3C1D120B079C00F55DB4 /* prefs-Software.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prefs-Software.png"; sourceTree = "<group>"; };
+		015E3C1E120B079C00F55DB4 /* Release.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Release.png; sourceTree = "<group>"; };
+		015E3C1F120B079C00F55DB4 /* Right-Click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Right-Click.png"; sourceTree = "<group>"; };
+		015E3C20120B079C00F55DB4 /* Right-Drag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Right-Drag.png"; sourceTree = "<group>"; };
+		015E3C21120B079C00F55DB4 /* Shift-Click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shift-Click.png"; sourceTree = "<group>"; };
+		015E3C22120B079C00F55DB4 /* Shift-Drag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shift-Drag.png"; sourceTree = "<group>"; };
+		01683296126F239E00904A28 /* DCConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCConstants.h; sourceTree = "<group>"; };
+		01683297126F239E00904A28 /* DCConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCConstants.m; sourceTree = "<group>"; };
+		016832E6126F278900904A28 /* DCCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCommon.h; sourceTree = "<group>"; };
+		0168A83A135E2ADD00F041CB /* BundleIdIconTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BundleIdIconTransformer.h; sourceTree = "<group>"; };
+		0168A83B135E2ADD00F041CB /* BundleIdIconTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BundleIdIconTransformer.m; sourceTree = "<group>"; };
+		016ACCB22FD03E7900E59082 /* prefs-Advanced.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prefs-Advanced.png"; sourceTree = "<group>"; };
+		016ACCB42FD048CC00E59082 /* ActionIconTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionIconTransformer.h; sourceTree = "<group>"; };
+		016ACCB52FD048CC00E59082 /* ActionIconTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionIconTransformer.m; sourceTree = "<group>"; };
+		016ACCB92FD049FE00E59082 /* Beep060.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Beep060.wav; path = sounds/Beep060.wav; sourceTree = "<group>"; };
+		016F91B314BED8E10049E3FB /* DCPrefsPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPrefsPanelController.h; sourceTree = "<group>"; };
+		016F91B414BED8E20049E3FB /* DCPrefsPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPrefsPanelController.m; sourceTree = "<group>"; };
+		016F91B714BEDA0E0049E3FB /* PrefsPanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrefsPanel.xib; sourceTree = "<group>"; };
+		016F91BA14BEDB020049E3FB /* prefs-Panel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prefs-Panel.png"; sourceTree = "<group>"; };
+		016F91BE14BF0C8A0049E3FB /* DCClicksPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCClicksPanel.h; sourceTree = "<group>"; };
+		016F91BF14BF0C8A0049E3FB /* DCClicksPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCClicksPanel.m; sourceTree = "<group>"; };
+		016F91C014BF0C8A0049E3FB /* DCClicksPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCClicksPanelController.h; sourceTree = "<group>"; };
+		016F91C114BF0C8A0049E3FB /* DCClicksPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCClicksPanelController.m; sourceTree = "<group>"; };
+		0174B146128A9DEA00D442B1 /* Drag-With-Paste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Drag-With-Paste.png"; sourceTree = "<group>"; };
+		0189619717BA73F80047D8C7 /* DwellClickIconR.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = DwellClickIconR.icns; sourceTree = "<group>"; };
+		018BCA46130BC87B00283495 /* SecondsTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondsTransformer.h; sourceTree = "<group>"; };
+		018BCA47130BC87B00283495 /* SecondsTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondsTransformer.m; sourceTree = "<group>"; };
+		018C81B51294368E00CD6C63 /* Triple-Click-With-Copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Triple-Click-With-Copy.png"; sourceTree = "<group>"; };
+		018C81B61294368E00CD6C63 /* Triple-Click-With-Paste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Triple-Click-With-Paste.png"; sourceTree = "<group>"; };
+		018C81B71294368E00CD6C63 /* Triple-Click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Triple-Click.png"; sourceTree = "<group>"; };
+		018E6CBD11D0E4E80078342A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		018EA2CF1287F31800F6F0A2 /* DCClickEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCClickEvent.h; sourceTree = "<group>"; };
+		018EA2D01287F31800F6F0A2 /* DCClickEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCClickEvent.m; sourceTree = "<group>"; };
+		0197027011C2959C00CB6FD7 /* Sounds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Sounds.plist; sourceTree = "<group>"; };
+		01992FE3135D7BFB00F1759C /* PopupOrLock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PopupOrLock.png; sourceTree = "<group>"; };
+		019B39D112895F3800AF3223 /* DCUIState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCUIState.h; sourceTree = "<group>"; };
+		019B39D212895F3800AF3223 /* DCUIState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCUIState.m; sourceTree = "<group>"; };
+		019B3A6A1289674E00AF3223 /* DCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCUtils.m; sourceTree = "<group>"; };
+		019BA05B131FF9E200D1F211 /* NoEntry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NoEntry.png; sourceTree = "<group>"; };
+		019BA09D131FFF9A00D1F211 /* Popup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Popup.png; sourceTree = "<group>"; };
+		019CF73114C5880D00D000AC /* DCNewClicksPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNewClicksPanel.h; sourceTree = "<group>"; };
+		019CF73214C5880D00D000AC /* DCNewClicksPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNewClicksPanel.m; sourceTree = "<group>"; };
+		019CF73514C5886A00D000AC /* DCNewClicksPanelBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNewClicksPanelBackgroundView.h; sourceTree = "<group>"; };
+		019CF73614C5886A00D000AC /* DCNewClicksPanelBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNewClicksPanelBackgroundView.m; sourceTree = "<group>"; };
+		019CF73914C5888900D000AC /* DCNewClicksPanelBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNewClicksPanelBorderView.h; sourceTree = "<group>"; };
+		019CF73A14C5888900D000AC /* DCNewClicksPanelBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNewClicksPanelBorderView.m; sourceTree = "<group>"; };
+		019CF73D14C588AC00D000AC /* DCNewClicksPanelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNewClicksPanelButton.h; sourceTree = "<group>"; };
+		019CF73E14C588AC00D000AC /* DCNewClicksPanelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNewClicksPanelButton.m; sourceTree = "<group>"; };
+		019CF74114C588B800D000AC /* DCNewClicksPanelButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNewClicksPanelButtonCell.h; sourceTree = "<group>"; };
+		019CF74214C588B800D000AC /* DCNewClicksPanelButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNewClicksPanelButtonCell.m; sourceTree = "<group>"; };
+		01A801FD1333943700729B20 /* DCEngine+Gubbins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DCEngine+Gubbins.h"; sourceTree = "<group>"; };
+		01A801FE1333943B00729B20 /* DCEngine+Gubbins.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DCEngine+Gubbins.m"; sourceTree = "<group>"; };
+		01AB3EE31333AED000F62F66 /* DCModifierController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCModifierController.h; sourceTree = "<group>"; };
+		01AB3EE41333AED100F62F66 /* DCModifierController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCModifierController.m; sourceTree = "<group>"; };
+		01AC07AD1210340500D15CA8 /* DCScrollDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCScrollDetector.h; sourceTree = "<group>"; };
+		01AC07AE1210340500D15CA8 /* DCScrollDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCScrollDetector.m; sourceTree = "<group>"; };
+		01AC07B71210343C00D15CA8 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		01AD503B120827C00038D53D /* NSUserDefaults+Archive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Archive.h"; sourceTree = "<group>"; };
+		01AD503C120827C00038D53D /* NSUserDefaults+Archive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Archive.m"; sourceTree = "<group>"; };
+		01AD543012085F030038D53D /* DCTriggerable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTriggerable.h; sourceTree = "<group>"; };
+		01AD55B4120882310038D53D /* DCSimpleTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSimpleTrigger.h; sourceTree = "<group>"; };
+		01AD55B5120882310038D53D /* DCSimpleTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSimpleTrigger.m; sourceTree = "<group>"; };
+		01B1702C12B7E42100E26927 /* prefs-Popups.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prefs-Popups.png"; sourceTree = "<group>"; };
+		01B8CDA814C86C2100CC41E9 /* HeldDrag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeldDrag.png; sourceTree = "<group>"; };
+		01B8CDAA14C86C2C00CC41E9 /* PopupOrHold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PopupOrHold.png; sourceTree = "<group>"; };
+		01B8CDD814C8B26400CC41E9 /* Repeat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Repeat.png; sourceTree = "<group>"; };
+		01BA6A4612A52488006D8A64 /* DCPopupsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPopupsController.h; sourceTree = "<group>"; };
+		01BA6A4712A52488006D8A64 /* DCPopupsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DCPopupsController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		01BF7589127F72D500B3B3FC /* Credits.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Credits.txt; sourceTree = "<group>"; };
+		01BF76711280133800B3B3FC /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		01C0C864132A5AAC0003F5DF /* NSImage+Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Symbol.h"; sourceTree = "<group>"; };
+		01C0C865132A5AAC0003F5DF /* NSImage+Symbol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Symbol.m"; sourceTree = "<group>"; };
+		01C0C912132A60F90003F5DF /* DCAppNameFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAppNameFormatter.h; sourceTree = "<group>"; };
+		01C0C913132A60F90003F5DF /* DCAppNameFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCAppNameFormatter.m; sourceTree = "<group>"; };
+		01C15A4E12F967BA00553D37 /* DCPrefsPopupsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPrefsPopupsController.h; sourceTree = "<group>"; };
+		01C15A4F12F967BA00553D37 /* DCPrefsPopupsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPrefsPopupsController.m; sourceTree = "<group>"; };
+		01C15A5B12F9682400553D37 /* PrefsPopups.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrefsPopups.xib; sourceTree = "<group>"; };
+		01C3DF07129E7F7F005E99B7 /* DCAppDelegate+Distribution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DCAppDelegate+Distribution.h"; sourceTree = "<group>"; };
+		01C3DF08129E7F7F005E99B7 /* DCAppDelegate+Distribution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "DCAppDelegate+Distribution.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		01C55477126C9BF500B89D77 /* prefs-Feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prefs-Feedback.png"; sourceTree = "<group>"; };
+		01C55489126CADC700B89D77 /* prefs-Apps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prefs-Apps.png"; sourceTree = "<group>"; };
+		01C60A88132921F100230ADE /* DCPopupWindowButtonProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPopupWindowButtonProxy.h; sourceTree = "<group>"; };
+		01C60A89132921F100230ADE /* DCPopupWindowButtonProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPopupWindowButtonProxy.m; sourceTree = "<group>"; };
+		01C9424311F4B72700A88FD4 /* DCActivation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCActivation.h; sourceTree = "<group>"; };
+		01C9424411F4B72700A88FD4 /* DCAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAppDelegate.h; sourceTree = "<group>"; };
+		01C9424511F4B72700A88FD4 /* DCAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCAppDelegate.m; sourceTree = "<group>"; };
+		01C9424611F4B72700A88FD4 /* DCClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCClick.h; sourceTree = "<group>"; };
+		01C9424711F4B72700A88FD4 /* DCClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCClick.m; sourceTree = "<group>"; };
+		01C9424811F4B72700A88FD4 /* DCClickControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCClickControl.h; sourceTree = "<group>"; };
+		01C9424911F4B72700A88FD4 /* DCClickMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCClickMachine.h; sourceTree = "<group>"; };
+		01C9425111F4B72800A88FD4 /* DCDragTypeSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCDragTypeSetting.h; sourceTree = "<group>"; };
+		01C9425211F4B72800A88FD4 /* DCDwellMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCDwellMachine.h; sourceTree = "<group>"; };
+		01C9425311F4B72800A88FD4 /* DCDwellMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCDwellMachine.m; sourceTree = "<group>"; };
+		01C9425411F4B72800A88FD4 /* DCEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCEngine.h; sourceTree = "<group>"; };
+		01C9425511F4B72800A88FD4 /* DCEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DCEngine.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		01C9425611F4B72800A88FD4 /* DCFlagGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFlagGroup.h; sourceTree = "<group>"; };
+		01C9425711F4B72800A88FD4 /* DCFlagGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFlagGroup.m; sourceTree = "<group>"; };
+		01C9425811F4B72800A88FD4 /* DCFlagSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFlagSelection.h; sourceTree = "<group>"; };
+		01C9425911F4B72800A88FD4 /* DCFlagSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFlagSelection.m; sourceTree = "<group>"; };
+		01C9425C11F4B72800A88FD4 /* DCKeyedSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCKeyedSelection.h; sourceTree = "<group>"; };
+		01C9425D11F4B72800A88FD4 /* DCKeyedSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCKeyedSelection.m; sourceTree = "<group>"; };
+		01C9426411F4B72800A88FD4 /* DCLinks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCLinks.h; sourceTree = "<group>"; };
+		01C9426511F4B72800A88FD4 /* DCLinks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCLinks.m; sourceTree = "<group>"; };
+		01C9426611F4B72800A88FD4 /* DCMainMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCMainMenuController.h; sourceTree = "<group>"; };
+		01C9426711F4B72800A88FD4 /* DCMainMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCMainMenuController.m; sourceTree = "<group>"; };
+		01C9426A11F4B72800A88FD4 /* DCMouseClicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCMouseClicker.h; sourceTree = "<group>"; };
+		01C9426B11F4B72800A88FD4 /* DCMouseClicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCMouseClicker.m; sourceTree = "<group>"; };
+		01C9426C11F4B72800A88FD4 /* DCMouseMonitoring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCMouseMonitoring.h; sourceTree = "<group>"; };
+		01C9426E11F4B72800A88FD4 /* DCMouseTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCMouseTap.h; sourceTree = "<group>"; };
+		01C9426F11F4B72800A88FD4 /* DCMouseTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCMouseTap.m; sourceTree = "<group>"; };
+		01C9427411F4B72800A88FD4 /* DCPrefsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPrefsController.h; sourceTree = "<group>"; };
+		01C9427511F4B72800A88FD4 /* DCPrefsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPrefsController.m; sourceTree = "<group>"; };
+		01C9427811F4B72800A88FD4 /* DCSelectableAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSelectableAction.h; sourceTree = "<group>"; };
+		01C9427911F4B72800A88FD4 /* DCSelectableAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSelectableAction.m; sourceTree = "<group>"; };
+		01C9427A11F4B72800A88FD4 /* DCSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSelection.h; sourceTree = "<group>"; };
+		01C9427B11F4B72800A88FD4 /* DCSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSelection.m; sourceTree = "<group>"; };
+		01C9427C11F4B72800A88FD4 /* DCSelectionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSelectionGroup.h; sourceTree = "<group>"; };
+		01C9427D11F4B72800A88FD4 /* DCSelectionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSelectionGroup.m; sourceTree = "<group>"; };
+		01C9427E11F4B72800A88FD4 /* DCSoundController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSoundController.h; sourceTree = "<group>"; };
+		01C9427F11F4B72800A88FD4 /* DCSoundController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSoundController.m; sourceTree = "<group>"; };
+		01C9428411F4B72800A88FD4 /* DCUniqueSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCUniqueSelection.h; sourceTree = "<group>"; };
+		01C9428511F4B72800A88FD4 /* DCUniqueSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCUniqueSelection.m; sourceTree = "<group>"; };
+		01C9428711F4B72800A88FD4 /* DCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCUtils.h; sourceTree = "<group>"; };
+		01C9428811F4B72800A88FD4 /* DCWelcomeWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCWelcomeWindowController.h; sourceTree = "<group>"; };
+		01C9428911F4B72800A88FD4 /* DCWelcomeWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCWelcomeWindowController.m; sourceTree = "<group>"; };
+		01C9428B11F4B72800A88FD4 /* NSDate+Beginning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Beginning.h"; sourceTree = "<group>"; };
+		01C9428C11F4B72800A88FD4 /* NSDate+Beginning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Beginning.m"; sourceTree = "<group>"; };
+		01C9430711F4B75D00A88FD4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		01C9431311F4B7DE00A88FD4 /* Help.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Help.xib; sourceTree = "<group>"; };
+		01C9431411F4B7DE00A88FD4 /* Main.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Main.xib; sourceTree = "<group>"; };
+		01C9431511F4B7DE00A88FD4 /* Prefs.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Prefs.xib; sourceTree = "<group>"; };
+		01C9431711F4B7DE00A88FD4 /* Welcome.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Welcome.xib; sourceTree = "<group>"; };
+		01C9434111F4C69000A88FD4 /* DCAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAnimationController.h; sourceTree = "<group>"; };
+		01C9434211F4C69000A88FD4 /* DCAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DCAnimationController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		01C9454A11F500F100A88FD4 /* NSUserDefaults+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Color.h"; sourceTree = "<group>"; };
+		01C9454B11F500F100A88FD4 /* NSUserDefaults+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Color.m"; sourceTree = "<group>"; };
+		01C9984111F5C1B600DB9812 /* DCClickMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCClickMachine.m; sourceTree = "<group>"; };
+		01CB180714C4A5AA00CE1985 /* DCClicksPanelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCClicksPanelButton.h; sourceTree = "<group>"; };
+		01CB180814C4A5AA00CE1985 /* DCClicksPanelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCClicksPanelButton.m; sourceTree = "<group>"; };
+		01CB180B14C4A60500CE1985 /* DCClicksPanelButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCClicksPanelButtonCell.h; sourceTree = "<group>"; };
+		01CB180C14C4A60600CE1985 /* DCClicksPanelButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCClicksPanelButtonCell.m; sourceTree = "<group>"; };
+		01CD40FC130B17B7002E2FC8 /* Command-Big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Command-Big.png"; sourceTree = "<group>"; };
+		01CD40FD130B17B7002E2FC8 /* Control-Big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Control-Big.png"; sourceTree = "<group>"; };
+		01CD40FE130B17B7002E2FC8 /* Option-Big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Option-Big.png"; sourceTree = "<group>"; };
+		01CD40FF130B17B7002E2FC8 /* Shift-Big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shift-Big.png"; sourceTree = "<group>"; };
+		01D142ED12CA6633006AEE0C /* PrefsSoftware.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrefsSoftware.xib; sourceTree = "<group>"; };
+		01D1434312CA6CAE006AEE0C /* DCPrefsSoftwareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPrefsSoftwareController.h; sourceTree = "<group>"; };
+		01D1434412CA6CAE006AEE0C /* DCPrefsSoftwareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPrefsSoftwareController.m; sourceTree = "<group>"; };
+		01D4D6231328045200AE62BC /* DCSymbolController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSymbolController.h; sourceTree = "<group>"; };
+		01D4D6241328045200AE62BC /* DCSymbolController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSymbolController.m; sourceTree = "<group>"; };
+		01D4D64A13280A1400AE62BC /* DCAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAnimationView.h; sourceTree = "<group>"; };
+		01D4D64B13280A1400AE62BC /* DCAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCAnimationView.m; sourceTree = "<group>"; };
+		01D6312811C6408E00122A41 /* Beep085.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Beep085.wav; path = sounds/Beep085.wav; sourceTree = "<group>"; };
+		01DC1C901369B382009067E2 /* DCStatusItemDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStatusItemDelegate.h; sourceTree = "<group>"; };
+		01DC1C911369B382009067E2 /* DCStatusItemDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusItemDelegate.m; sourceTree = "<group>"; };
+		01E1201412AAE8F5008CA3F5 /* DCBoxGrab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBoxGrab.h; sourceTree = "<group>"; };
+		01E1201512AAE8F5008CA3F5 /* DCBoxGrab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBoxGrab.m; sourceTree = "<group>"; };
+		01E4C61C1247997E001852C5 /* LockedDrag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LockedDrag.png; sourceTree = "<group>"; };
+		01F8AA10133B4F0F0044531D /* Glitch015.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = Glitch015.aiff; path = sounds/Glitch015.aiff; sourceTree = "<group>"; };
+		01F8AA14133B4F1E0044531D /* Beep033.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Beep033.mp3; path = sounds/Beep033.mp3; sourceTree = "<group>"; };
+		01F8AA15133B4F1E0044531D /* Beep034.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Beep034.mp3; path = sounds/Beep034.mp3; sourceTree = "<group>"; };
+		01FB6BCA1206DCA400C825C0 /* DCAppCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAppCell.h; sourceTree = "<group>"; };
+		01FB6BCB1206DCA400C825C0 /* DCAppCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DCAppCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		01FB6DA21206FB8300C825C0 /* DCImageAndTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCImageAndTextCell.h; sourceTree = "<group>"; };
+		01FB6DA31206FB8300C825C0 /* DCImageAndTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCImageAndTextCell.m; sourceTree = "<group>"; };
+		01FFB16B12A8FB6600BC5C23 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		C0DE00E6B7C94C17BF6DBDFD /* NMStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMStateMachine.m; sourceTree = "<group>"; };
+		C0DE0992AFE460BB73C82B34 /* NMBubbleWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMBubbleWindowView.h; sourceTree = "<group>"; };
+		C0DE0AEE55879917840C5F29 /* NMInitialDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMInitialDefaults.h; sourceTree = "<group>"; };
+		C0DE0FD3B035C3652AB94D5B /* NMLoginItemsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMLoginItemsController.h; sourceTree = "<group>"; };
+		C0DE0FF5BD9F71C61A4C1296 /* NMCoreUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMCoreUtils.m; sourceTree = "<group>"; };
+		C0DE14456AE8558FB1CFDE34 /* NMAppSupportDir.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMAppSupportDir.h; sourceTree = "<group>"; };
+		C0DE16DD5AD9506D0BB50EA5 /* NMSuperFastHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSuperFastHash.h; sourceTree = "<group>"; };
+		C0DE1E8573D8883611AD06BD /* NMImageButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMImageButtonCell.h; sourceTree = "<group>"; };
+		C0DE1FE7C21777BAFBB31F4A /* NMTipWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMTipWindow.h; sourceTree = "<group>"; };
+		C0DE21A4BCE650D6F842E694 /* NSWindow+NMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWindow+NMAdditions.m"; sourceTree = "<group>"; };
+		C0DE2600762A6E7AB3DA35DB /* NMPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMPoint.m; sourceTree = "<group>"; };
+		C0DE27F63F185046464412FF /* NMPopupWindowBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMPopupWindowBackgroundView.m; sourceTree = "<group>"; };
+		C0DE2E2E70745B368F48CBEB /* NMState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMState.h; sourceTree = "<group>"; };
+		C0DE2F4A326A69C03762FD23 /* NMSuperFastHash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NMSuperFastHash.c; sourceTree = "<group>"; };
+		C0DE3108ABE2678DB66E09F3 /* NMUIElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMUIElement.m; sourceTree = "<group>"; };
+		C0DE33AA1B4982EE4F14D543 /* NMBubbleWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMBubbleWindowView.m; sourceTree = "<group>"; };
+		C0DE368482B793863C47C4A0 /* NMCommander.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMCommander.m; sourceTree = "<group>"; };
+		C0DE371D00360A5E6CB04740 /* NMKeyCombo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMKeyCombo.h; sourceTree = "<group>"; };
+		C0DE37437DA77F38438BA335 /* NMLinks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMLinks.m; sourceTree = "<group>"; };
+		C0DE377C2430843C0330E63E /* NMPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMPopupController.m; sourceTree = "<group>"; };
+		C0DE3A1E994659462A44608D /* NMStatusBubbleWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMStatusBubbleWindow.m; sourceTree = "<group>"; };
+		C0DE3E80900B287470B5375D /* NMLinks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMLinks.h; sourceTree = "<group>"; };
+		C0DE424FCE96B4911E5BF0D8 /* NMPopupWindowButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMPopupWindowButtonCell.m; sourceTree = "<group>"; };
+		C0DE462F92AACD1ECDDE751A /* NMCUtils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NMCUtils.c; sourceTree = "<group>"; };
+		C0DE4AB15AAC6EF2D04E1255 /* NMPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMPopupController.h; sourceTree = "<group>"; };
+		C0DE4D7A0746436383FC3B59 /* NMPopupWindowBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMPopupWindowBorderView.m; sourceTree = "<group>"; };
+		C0DE4D81BED257A870AE20AF /* NSObject+NMObservePrefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NMObservePrefs.h"; sourceTree = "<group>"; };
+		C0DE4DE63790115E38EF5BC4 /* NSWindow+NMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWindow+NMAdditions.h"; sourceTree = "<group>"; };
+		C0DE4EFDB764E28A23F7CC83 /* NMGeometryUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMGeometryUtils.m; sourceTree = "<group>"; };
+		C0DE4F349F66937B923489C6 /* NMImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMImageButton.h; sourceTree = "<group>"; };
+		C0DE51FA539EA73EB5CB45AF /* NMRegexUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMRegexUtils.m; sourceTree = "<group>"; };
+		C0DE5563F60D84AFFE9EECE1 /* NMNubWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMNubWindow.m; sourceTree = "<group>"; };
+		C0DE57A128AB251D0EF71C69 /* NMNubWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMNubWindow.h; sourceTree = "<group>"; };
+		C0DE598942BD327DF9150A29 /* NMKeyCommander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMKeyCommander.h; sourceTree = "<group>"; };
+		C0DE5BC4AA5ACC1CFEE16DAE /* NMTipWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMTipWindowView.m; sourceTree = "<group>"; };
+		C0DE5EFF7D1FBCE799EAAEB2 /* NMPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMPoint.h; sourceTree = "<group>"; };
+		C0DE60A5CAE8071072E6ECCD /* NMSugarButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSugarButtonCell.h; sourceTree = "<group>"; };
+		C0DE612252A77DC6163C92AE /* NMSugarButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMSugarButtonCell.m; sourceTree = "<group>"; };
+		C0DE632C794ECB35B01F22F4 /* NMCursorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCursorUtils.h; sourceTree = "<group>"; };
+		C0DE637CE6C8BF4AC2D05E99 /* NMMouseUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMMouseUtils.h; sourceTree = "<group>"; };
+		C0DE643195C58A0D7DC6A008 /* NMUniversalAccessHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMUniversalAccessHelper.h; sourceTree = "<group>"; };
+		C0DE6597543C50FCEDECB711 /* NMSugarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMSugarButton.m; sourceTree = "<group>"; };
+		C0DE66688CA665D03EFDCF8B /* NMPopupWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMPopupWindow.h; sourceTree = "<group>"; };
+		C0DE6838C012311B1E9DB54A /* NSImage+NMCopySize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+NMCopySize.m"; sourceTree = "<group>"; };
+		C0DE6D68BF40073A4E4F0F77 /* NMEventUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMEventUtils.m; sourceTree = "<group>"; };
+		C0DE6F47CC08EC6482FE9231 /* NMConfigUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMConfigUtils.h; sourceTree = "<group>"; };
+		C0DE70B008AD20C92FE6D5EC /* NMStartAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMStartAtLoginController.h; sourceTree = "<group>"; };
+		C0DE71F4926B54B4C8A73AC0 /* NMNubWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMNubWindowView.h; sourceTree = "<group>"; };
+		C0DE7205B0B257E1FBE4F71F /* NMStatusBubbleWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMStatusBubbleWindow.h; sourceTree = "<group>"; };
+		C0DE744768F77118AD26C128 /* NMBrowserHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMBrowserHelper.h; sourceTree = "<group>"; };
+		C0DE748EBE4A43D710445F9E /* NMLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMLog.m; sourceTree = "<group>"; };
+		C0DE77125EA1B08AD80D524B /* NMStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMStateMachine.h; sourceTree = "<group>"; };
+		C0DE7854079321E5FE83B05E /* NMStartAtLogin2024.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMStartAtLogin2024.h; sourceTree = "<group>"; };
+		C0DE78DF0EFE72ACA8932AA9 /* NMGeometryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMGeometryUtils.h; sourceTree = "<group>"; };
+		C0DE7989B984D6D154C83029 /* NMFloatUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMFloatUtils.h; sourceTree = "<group>"; };
+		C0DE79DD8FBACF1C2CC9831B /* NMKeyConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMKeyConverter.h; sourceTree = "<group>"; };
+		C0DE7DD25629F66D69D57BCE /* NMNubWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMNubWindowView.m; sourceTree = "<group>"; };
+		C0DE7E05DAAD328F059708D9 /* NMPopupWindowButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMPopupWindowButtonCell.h; sourceTree = "<group>"; };
+		C0DE7EA1481402EA96533545 /* NMTipWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMTipWindowView.h; sourceTree = "<group>"; };
+		C0DE7EFB77DC82D166B9350B /* NMLoginItemsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMLoginItemsController.m; sourceTree = "<group>"; };
+		C0DE80E0D30C970523697C4B /* NMCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCUtils.h; sourceTree = "<group>"; };
+		C0DE858AE33C59AF97FAAAC1 /* NMKeyCombo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMKeyCombo.m; sourceTree = "<group>"; };
+		C0DE88BCB739B48DF4120FC8 /* NMBubbleCloseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMBubbleCloseButton.m; sourceTree = "<group>"; };
+		C0DE8919AB387333494A0841 /* NMAppMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMAppMonitor.h; sourceTree = "<group>"; };
+		C0DE8F6DAEF022ED7CAE2379 /* NMStartAtLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMStartAtLogin.h; sourceTree = "<group>"; };
+		C0DE91A47886692CE413A83C /* NMUniversalAccessHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMUniversalAccessHelper.m; sourceTree = "<group>"; };
+		C0DE931F7CC148AA1959A149 /* NMImageButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMImageButtonCell.m; sourceTree = "<group>"; };
+		C0DE965024897E68BE766D62 /* NSBezierPath+NMNub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+NMNub.h"; sourceTree = "<group>"; };
+		C0DE98AB29B8E429322BE0A3 /* NMKeyCommander.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMKeyCommander.m; sourceTree = "<group>"; };
+		C0DE99C49EF2F953DC8EFA77 /* NMEscapableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMEscapableItem.h; sourceTree = "<group>"; };
+		C0DE9C00B317E3B049745D2D /* NMAppMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMAppMonitor.m; sourceTree = "<group>"; };
+		C0DE9DAA7C9AC027C1A583F9 /* NMUIElementHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMUIElementHelper.h; sourceTree = "<group>"; };
+		C0DEA08A30BEF46061AB7C3B /* NSMutableDictionary+NMSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+NMSafe.h"; sourceTree = "<group>"; };
+		C0DEA0CFA0864F7CBBBABA5D /* NMStatusItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMStatusItemController.m; sourceTree = "<group>"; };
+		C0DEA2A7302AE0C3C1330E31 /* NSObject+NMObservePrefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NMObservePrefs.m"; sourceTree = "<group>"; };
+		C0DEA5482279880F5CB8D6AD /* NMRegexUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMRegexUtils.h; sourceTree = "<group>"; };
+		C0DEA69846B3AA8CB3D95F25 /* NMCommander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCommander.h; sourceTree = "<group>"; };
+		C0DEA7F9392A95FB87D1BCB9 /* NMKeyPresser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMKeyPresser.h; sourceTree = "<group>"; };
+		C0DEA859B91BDC00267DAF99 /* NMLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMLog.h; sourceTree = "<group>"; };
+		C0DEA92D2212C641BDDC7FA3 /* NMUIElementHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMUIElementHelper.m; sourceTree = "<group>"; };
+		C0DEAB90FA0BFB9A4399A0B5 /* NMPopupWindowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMPopupWindowButton.m; sourceTree = "<group>"; };
+		C0DEABDB7801B5243DCB89BC /* NMBrowserHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMBrowserHelper.m; sourceTree = "<group>"; };
+		C0DEAF3EBADC9E723DAB829E /* NMStartAtLogin2024.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMStartAtLogin2024.m; sourceTree = "<group>"; };
+		C0DEB10C46EB218C76889D2C /* NMState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMState.m; sourceTree = "<group>"; };
+		C0DEB769F683603200263537 /* NMStatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMStatusItemView.m; sourceTree = "<group>"; };
+		C0DEB79A89200DCB9673B4AE /* NMBlockUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMBlockUtils.h; sourceTree = "<group>"; };
+		C0DEB82F06D43150ACA8EEB6 /* NSMutableDictionary+NMSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+NMSafe.m"; sourceTree = "<group>"; };
+		C0DEB84BA8143201509BE8DD /* NMConfigUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMConfigUtils.m; sourceTree = "<group>"; };
+		C0DEBAF90AD1026D2CEAA674 /* NMKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMKit.h; sourceTree = "<group>"; };
+		C0DEBB622521B5A68238E4EF /* NMStatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMStatusItemView.h; sourceTree = "<group>"; };
+		C0DEBB99EFFFBDDEEF1B42DD /* NMKeyPresser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMKeyPresser.m; sourceTree = "<group>"; };
+		C0DEBC247CDA7676D97B785E /* NMBubbleWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMBubbleWindow.h; sourceTree = "<group>"; };
+		C0DEC26EE991BEA5FC7657D2 /* NMImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMImageButton.m; sourceTree = "<group>"; };
+		C0DEC3CF95FA2590800E34A5 /* NMUniversalMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMUniversalMonitor.h; sourceTree = "<group>"; };
+		C0DEC7E565E4079468C4808F /* NMUniversalMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMUniversalMonitor.m; sourceTree = "<group>"; };
+		C0DEC8B2EFB81935D6F676C8 /* NMPopupWindowBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMPopupWindowBackgroundView.h; sourceTree = "<group>"; };
+		C0DECC9A70CB9BE7C8F33F49 /* NMCursorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMCursorUtils.m; sourceTree = "<group>"; };
+		C0DECCCEF7C5942575A82C42 /* NMEventUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMEventUtils.h; sourceTree = "<group>"; };
+		C0DECDD2B568911A260EE345 /* NMSugarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSugarButton.h; sourceTree = "<group>"; };
+		C0DECED7A960B969D3030589 /* NMBlockUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMBlockUtils.m; sourceTree = "<group>"; };
+		C0DED499743FB87A1C2BC8C9 /* NMPopupWindowBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMPopupWindowBorderView.h; sourceTree = "<group>"; };
+		C0DED4E12599A823373B27E4 /* NMAppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMAppUtils.h; sourceTree = "<group>"; };
+		C0DED6B864BDE1BCE4693CBB /* NMBubbleWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMBubbleWindow.m; sourceTree = "<group>"; };
+		C0DEDE401F51B9D63AB8C0DC /* NSImage+NMCopySize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+NMCopySize.h"; sourceTree = "<group>"; };
+		C0DEE1A84253ECE12E18CAEC /* NMCoreUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCoreUtils.h; sourceTree = "<group>"; };
+		C0DEE39E591BF43733898B73 /* NMStartAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMStartAtLoginController.m; sourceTree = "<group>"; };
+		C0DEE5F8A2384AF3BCEB7693 /* NMBubbleCloseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMBubbleCloseButton.h; sourceTree = "<group>"; };
+		C0DEE958F2E445F58802EEB1 /* NSBezierPath+NMNub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+NMNub.m"; sourceTree = "<group>"; };
+		C0DEEE7D46DB3650A9BA3863 /* NMUIElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMUIElement.h; sourceTree = "<group>"; };
+		C0DEEE9871CCECD68805FA96 /* NMStatusItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMStatusItemController.h; sourceTree = "<group>"; };
+		C0DEF0379B5ADDCE938D679F /* NMPopupWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMPopupWindow.m; sourceTree = "<group>"; };
+		C0DEF0C9E256C7FF9750B73E /* NMFloatUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMFloatUtils.m; sourceTree = "<group>"; };
+		C0DEF0E82AF5A5509BC25FF9 /* NMMouseUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMMouseUtils.m; sourceTree = "<group>"; };
+		C0DEF17CE2801EDE57B4E8D2 /* NMAppSupportDir.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMAppSupportDir.m; sourceTree = "<group>"; };
+		C0DEF41B320DE4DBF0FC45BB /* NMKeyConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMKeyConverter.m; sourceTree = "<group>"; };
+		C0DEF5B62D52911D0A7167B5 /* NMTipWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMTipWindow.m; sourceTree = "<group>"; };
+		C0DEFB7F31674CB2CBFD1048 /* NMAppUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMAppUtils.m; sourceTree = "<group>"; };
+		C0DEFDD64A66F074A45BDDF3 /* NMPopupWindowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMPopupWindowButton.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		016ACCBE2FD0666B00E59082 /* docs */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = docs; sourceTree = "<group>"; };
+		01D40E2A2FCEE4950090E201 /* BuildScripts */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = BuildScripts; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0153574A11B805CD00673C2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				012B89261A9E4F6200BA7979 /* ShortcutRecorder.framework in Frameworks */,
+				0130DCE02FCEE6D40090E201 /* ServiceManagement.framework in Frameworks */,
+				01425DF811B8152B00CDC8EE /* Cocoa.framework in Frameworks */,
+				018E6CBF11D0E4E80078342A /* Sparkle.framework in Frameworks */,
+				01C3E1C9129EAC62005E99B7 /* OpenGL.framework in Frameworks */,
+				01C3E1D3129EAC8B005E99B7 /* Security.framework in Frameworks */,
+				01C3E1DB129EACAD005E99B7 /* Carbon.framework in Frameworks */,
+				01FFB17012A8FB7300BC5C23 /* Quartz.framework in Frameworks */,
+				01F454CB12B0D7C300CE7AFA /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0104B1721327B01A004FEF19 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				016832E6126F278900904A28 /* DCCommon.h */,
+				01683296126F239E00904A28 /* DCConstants.h */,
+				01683297126F239E00904A28 /* DCConstants.m */,
+				01C9424411F4B72700A88FD4 /* DCAppDelegate.h */,
+				01C9424511F4B72700A88FD4 /* DCAppDelegate.m */,
+				01C3DF07129E7F7F005E99B7 /* DCAppDelegate+Distribution.h */,
+				01C3DF08129E7F7F005E99B7 /* DCAppDelegate+Distribution.m */,
+				01287CFC1313D5D100895A31 /* DCAppDelegate+Startup.h */,
+				01287CFD1313D5D100895A31 /* DCAppDelegate+Startup.m */,
+				0101687E123FF99F00CDA1E1 /* DCApp.h */,
+				0101687F123FF99F00CDA1E1 /* DCApp.m */,
+				01DC1C901369B382009067E2 /* DCStatusItemDelegate.h */,
+				01DC1C911369B382009067E2 /* DCStatusItemDelegate.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		0104B36E1327B172004FEF19 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				01C9427E11F4B72800A88FD4 /* DCSoundController.h */,
+				01C9427F11F4B72800A88FD4 /* DCSoundController.m */,
+			);
+			name = Sound;
+			sourceTree = "<group>";
+		};
+		012B891B1A9E4F4B00BA7979 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				017A72E12FCF0D9100723596 /* Inspector.app */,
+				012B89211A9E4F4B00BA7979 /* ShortcutRecorder.framework */,
+				017A72E32FCF0D9100723596 /* Unit Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		013C90AA132115A700C9098F /* About */ = {
+			isa = PBXGroup;
+			children = (
+				014F743F1207FB670065481F /* Window Controllers */,
+				013C912913211D6700C9098F /* DCAboutWindow.h */,
+				013C912A13211D6700C9098F /* DCAboutWindow.m */,
+				013C90BA132115EB00C9098F /* FCWhiteBox.h */,
+				013C90BB132115EB00C9098F /* FCWhiteBox.m */,
+				013C90AB132115B600C9098F /* FCAboutController.h */,
+				013C90AC132115B600C9098F /* FCAboutController.m */,
+				013C90AD132115B600C9098F /* FCDraggableImageView.h */,
+				013C90AE132115B600C9098F /* FCDraggableImageView.m */,
+				013C90AF132115B600C9098F /* FCLinkView.h */,
+				013C90B0132115B600C9098F /* FCLinkView.m */,
+				013C92651321455200C9098F /* DCClickCounterView.h */,
+				013C92661321455200C9098F /* DCClickCounterView.m */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
+		014F74171207FA040065481F /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				014F0F5C11F98B7400BE094C /* BundleIdentifierTransformer.h */,
+				014F0F5D11F98B7400BE094C /* BundleIdentifierTransformer.m */,
+				016ACCB42FD048CC00E59082 /* ActionIconTransformer.h */,
+				016ACCB52FD048CC00E59082 /* ActionIconTransformer.m */,
+				014F736C120790760065481F /* ActionNameTransformer.h */,
+				014F736D120790760065481F /* ActionNameTransformer.m */,
+				018BCA46130BC87B00283495 /* SecondsTransformer.h */,
+				018BCA47130BC87B00283495 /* SecondsTransformer.m */,
+				0168A83A135E2ADD00F041CB /* BundleIdIconTransformer.h */,
+				0168A83B135E2ADD00F041CB /* BundleIdIconTransformer.m */,
+			);
+			name = Transformers;
+			sourceTree = "<group>";
+		};
+		014F74181207FA270065481F /* Selection */ = {
+			isa = PBXGroup;
+			children = (
+				01BF7589127F72D500B3B3FC /* Credits.txt */,
+				01C9427A11F4B72800A88FD4 /* DCSelection.h */,
+				01C9427B11F4B72800A88FD4 /* DCSelection.m */,
+				01C9425C11F4B72800A88FD4 /* DCKeyedSelection.h */,
+				01C9425D11F4B72800A88FD4 /* DCKeyedSelection.m */,
+				01C9428411F4B72800A88FD4 /* DCUniqueSelection.h */,
+				01C9428511F4B72800A88FD4 /* DCUniqueSelection.m */,
+				01C9427811F4B72800A88FD4 /* DCSelectableAction.h */,
+				01C9427911F4B72800A88FD4 /* DCSelectableAction.m */,
+				01C9427C11F4B72800A88FD4 /* DCSelectionGroup.h */,
+				01C9427D11F4B72800A88FD4 /* DCSelectionGroup.m */,
+				01C9425811F4B72800A88FD4 /* DCFlagSelection.h */,
+				01C9425911F4B72800A88FD4 /* DCFlagSelection.m */,
+				01C9425611F4B72800A88FD4 /* DCFlagGroup.h */,
+				01C9425711F4B72800A88FD4 /* DCFlagGroup.m */,
+				01AD543012085F030038D53D /* DCTriggerable.h */,
+				01AD55B4120882310038D53D /* DCSimpleTrigger.h */,
+				01AD55B5120882310038D53D /* DCSimpleTrigger.m */,
+			);
+			name = Selection;
+			sourceTree = "<group>";
+		};
+		014F741A1207FA7C0065481F /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				01C9428711F4B72800A88FD4 /* DCUtils.h */,
+				019B3A6A1289674E00AF3223 /* DCUtils.m */,
+				01AC07AD1210340500D15CA8 /* DCScrollDetector.h */,
+				01AC07AE1210340500D15CA8 /* DCScrollDetector.m */,
+				01E1201412AAE8F5008CA3F5 /* DCBoxGrab.h */,
+				01E1201512AAE8F5008CA3F5 /* DCBoxGrab.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		014F741B1207FB030065481F /* App Support */ = {
+			isa = PBXGroup;
+			children = (
+				01C9426411F4B72800A88FD4 /* DCLinks.h */,
+				01C9426511F4B72800A88FD4 /* DCLinks.m */,
+			);
+			name = "App Support";
+			sourceTree = "<group>";
+		};
+		014F741C1207FB1D0065481F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				01C9454A11F500F100A88FD4 /* NSUserDefaults+Color.h */,
+				01C9454B11F500F100A88FD4 /* NSUserDefaults+Color.m */,
+				01AD503B120827C00038D53D /* NSUserDefaults+Archive.h */,
+				01AD503C120827C00038D53D /* NSUserDefaults+Archive.m */,
+				01C9428B11F4B72800A88FD4 /* NSDate+Beginning.h */,
+				01C9428C11F4B72800A88FD4 /* NSDate+Beginning.m */,
+				01C0C864132A5AAC0003F5DF /* NSImage+Symbol.h */,
+				01C0C865132A5AAC0003F5DF /* NSImage+Symbol.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		014F743F1207FB670065481F /* Window Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				01C9428811F4B72800A88FD4 /* DCWelcomeWindowController.h */,
+				01C9428911F4B72800A88FD4 /* DCWelcomeWindowController.m */,
+			);
+			name = "Window Controllers";
+			sourceTree = "<group>";
+		};
+		014F74401207FBAD0065481F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01C0C912132A60F90003F5DF /* DCAppNameFormatter.h */,
+				01C0C913132A60F90003F5DF /* DCAppNameFormatter.m */,
+				01FB6DA21206FB8300C825C0 /* DCImageAndTextCell.h */,
+				01FB6DA31206FB8300C825C0 /* DCImageAndTextCell.m */,
+				01FB6BCA1206DCA400C825C0 /* DCAppCell.h */,
+				01FB6BCB1206DCA400C825C0 /* DCAppCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		014F74411207FBD50065481F /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				01C9425411F4B72800A88FD4 /* DCEngine.h */,
+				01C9425511F4B72800A88FD4 /* DCEngine.m */,
+				01A801FD1333943700729B20 /* DCEngine+Gubbins.h */,
+				01A801FE1333943B00729B20 /* DCEngine+Gubbins.m */,
+				01BA6A4612A52488006D8A64 /* DCPopupsController.h */,
+				01BA6A4712A52488006D8A64 /* DCPopupsController.m */,
+				01C9426E11F4B72800A88FD4 /* DCMouseTap.h */,
+				01C9426F11F4B72800A88FD4 /* DCMouseTap.m */,
+				01C9424611F4B72700A88FD4 /* DCClick.h */,
+				01C9424711F4B72700A88FD4 /* DCClick.m */,
+				018EA2CF1287F31800F6F0A2 /* DCClickEvent.h */,
+				018EA2D01287F31800F6F0A2 /* DCClickEvent.m */,
+				01C9424911F4B72700A88FD4 /* DCClickMachine.h */,
+				01C9984111F5C1B600DB9812 /* DCClickMachine.m */,
+				014F093B11F83F6500BE094C /* DCClickIntelligence.h */,
+				014F093C11F83F6500BE094C /* DCClickIntelligence.m */,
+				01C9426A11F4B72800A88FD4 /* DCMouseClicker.h */,
+				01C9426B11F4B72800A88FD4 /* DCMouseClicker.m */,
+				01C9425211F4B72800A88FD4 /* DCDwellMachine.h */,
+				01C9425311F4B72800A88FD4 /* DCDwellMachine.m */,
+				019B39D112895F3800AF3223 /* DCUIState.h */,
+				019B39D212895F3800AF3223 /* DCUIState.m */,
+				0135F6951278A89900B854AF /* DCTouchMonitor.h */,
+				0135F6961278A89900B854AF /* DCTouchMonitor.m */,
+				01AB3EE31333AED000F62F66 /* DCModifierController.h */,
+				01AB3EE41333AED100F62F66 /* DCModifierController.m */,
+			);
+			name = Engine;
+			sourceTree = "<group>";
+		};
+		014F74421207FC000065481F /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				01C9434111F4C69000A88FD4 /* DCAnimationController.h */,
+				01C9434211F4C69000A88FD4 /* DCAnimationController.m */,
+				01D4D6231328045200AE62BC /* DCSymbolController.h */,
+				01D4D6241328045200AE62BC /* DCSymbolController.m */,
+				01D4D64A13280A1400AE62BC /* DCAnimationView.h */,
+				01D4D64B13280A1400AE62BC /* DCAnimationView.m */,
+			);
+			name = Animation;
+			sourceTree = "<group>";
+		};
+		014F74431207FC560065481F /* Prefs */ = {
+			isa = PBXGroup;
+			children = (
+				01C60A88132921F100230ADE /* DCPopupWindowButtonProxy.h */,
+				01C60A89132921F100230ADE /* DCPopupWindowButtonProxy.m */,
+				014F73B8120797880065481F /* DCShortcutViewItem.h */,
+				014F73B9120797880065481F /* DCShortcutViewItem.m */,
+				01C9427411F4B72800A88FD4 /* DCPrefsController.h */,
+				01C9427511F4B72800A88FD4 /* DCPrefsController.m */,
+				01D1434312CA6CAE006AEE0C /* DCPrefsSoftwareController.h */,
+				01D1434412CA6CAE006AEE0C /* DCPrefsSoftwareController.m */,
+				01C15A4E12F967BA00553D37 /* DCPrefsPopupsController.h */,
+				01C15A4F12F967BA00553D37 /* DCPrefsPopupsController.m */,
+				016F91B314BED8E10049E3FB /* DCPrefsPanelController.h */,
+				016F91B414BED8E20049E3FB /* DCPrefsPanelController.m */,
+			);
+			name = Prefs;
+			sourceTree = "<group>";
+		};
+		014F74451207FCA20065481F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				01C9426C11F4B72800A88FD4 /* DCMouseMonitoring.h */,
+				01C9425111F4B72800A88FD4 /* DCDragTypeSetting.h */,
+				01C9424811F4B72700A88FD4 /* DCClickControl.h */,
+				01C9424311F4B72700A88FD4 /* DCActivation.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		0156B98E12BFFA7100B3EC98 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				01C9426611F4B72800A88FD4 /* DCMainMenuController.h */,
+				01C9426711F4B72800A88FD4 /* DCMainMenuController.m */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		015E3BF4120B079C00F55DB4 /* gfx */ = {
+			isa = PBXGroup;
+			children = (
+				012517CE1C8063A20013EF4D /* NM_XIcon.png */,
+				014B1D29191B69B4007928A1 /* Popup.png */,
+				0189619717BA73F80047D8C7 /* DwellClickIconR.icns */,
+				01B8CDD814C8B26400CC41E9 /* Repeat.png */,
+				01B8CDAA14C86C2C00CC41E9 /* PopupOrHold.png */,
+				01B8CDA814C86C2100CC41E9 /* HeldDrag.png */,
+				01992FE3135D7BFB00F1759C /* PopupOrLock.png */,
+				019BA09D131FFF9A00D1F211 /* Popup.png */,
+				019BA05B131FF9E200D1F211 /* NoEntry.png */,
+				01CD40FC130B17B7002E2FC8 /* Command-Big.png */,
+				01CD40FD130B17B7002E2FC8 /* Control-Big.png */,
+				01CD40FE130B17B7002E2FC8 /* Option-Big.png */,
+				01CD40FF130B17B7002E2FC8 /* Shift-Big.png */,
+				012CF31312F3461A0040F5BE /* ShowPopup.png */,
+				018C81B51294368E00CD6C63 /* Triple-Click-With-Copy.png */,
+				018C81B61294368E00CD6C63 /* Triple-Click-With-Paste.png */,
+				018C81B71294368E00CD6C63 /* Triple-Click.png */,
+				0174B146128A9DEA00D442B1 /* Drag-With-Paste.png */,
+				01E4C61C1247997E001852C5 /* LockedDrag.png */,
+				015E3BF5120B079C00F55DB4 /* Auto-Click.png */,
+				015E3BF6120B079C00F55DB4 /* Click-With-Copy.png */,
+				015E3BF7120B079C00F55DB4 /* Click-With-Cut.png */,
+				015E3BF8120B079C00F55DB4 /* Click-With-Paste.png */,
+				015E3BF9120B079C00F55DB4 /* Click.png */,
+				015E3BFA120B079C00F55DB4 /* Command-C.png */,
+				015E3BFB120B079C00F55DB4 /* Command-Click.png */,
+				015E3BFC120B079C00F55DB4 /* Command-Drag.png */,
+				015E3BFE120B079C00F55DB4 /* Command-V.png */,
+				015E3BFF120B079C00F55DB4 /* Command-X.png */,
+				015E3C01120B079C00F55DB4 /* Control-Click.png */,
+				015E3C02120B079C00F55DB4 /* Control-Drag.png */,
+				015E3C08120B079C00F55DB4 /* DCIconStatus.png */,
+				015E3C09120B079C00F55DB4 /* Double-Click-With-Copy.png */,
+				015E3C0A120B079C00F55DB4 /* Double-Click-With-Cut.png */,
+				015E3C0B120B079C00F55DB4 /* Double-Click-With-Paste.png */,
+				015E3C0C120B079C00F55DB4 /* Double-Click.png */,
+				015E3C0D120B079C00F55DB4 /* Drag-With-Copy.png */,
+				015E3C0E120B079C00F55DB4 /* Drag-With-Cut.png */,
+				015E3C0F120B079C00F55DB4 /* Drag.png */,
+				015E3C10120B079C00F55DB4 /* GreenTick.png */,
+				015E3C11120B079C00F55DB4 /* Lock.png */,
+				015E3C13120B079C00F55DB4 /* On-Off.png */,
+				015E3C14120B079C00F55DB4 /* Option-Click.png */,
+				015E3C15120B079C00F55DB4 /* Option-Drag.png */,
+				01B1702C12B7E42100E26927 /* prefs-Popups.png */,
+				016F91BA14BEDB020049E3FB /* prefs-Panel.png */,
+				01C55477126C9BF500B89D77 /* prefs-Feedback.png */,
+				01C55489126CADC700B89D77 /* prefs-Apps.png */,
+				016ACCB22FD03E7900E59082 /* prefs-Advanced.png */,
+				015E3C18120B079C00F55DB4 /* prefs-Clicking.png */,
+				015E3C1A120B079C00F55DB4 /* prefs-Keyboard.png */,
+				015E3C1D120B079C00F55DB4 /* prefs-Software.png */,
+				015E3C1E120B079C00F55DB4 /* Release.png */,
+				015E3C1F120B079C00F55DB4 /* Right-Click.png */,
+				015E3C20120B079C00F55DB4 /* Right-Drag.png */,
+				015E3C21120B079C00F55DB4 /* Shift-Click.png */,
+				015E3C22120B079C00F55DB4 /* Shift-Drag.png */,
+			);
+			path = gfx;
+			sourceTree = "<group>";
+		};
+		016F91BD14BF0C570049E3FB /* Panel */ = {
+			isa = PBXGroup;
+			children = (
+				016F91BE14BF0C8A0049E3FB /* DCClicksPanel.h */,
+				016F91BF14BF0C8A0049E3FB /* DCClicksPanel.m */,
+				016F91C114BF0C8A0049E3FB /* DCClicksPanelController.m */,
+				016F91C014BF0C8A0049E3FB /* DCClicksPanelController.h */,
+				01CB180714C4A5AA00CE1985 /* DCClicksPanelButton.h */,
+				01CB180814C4A5AA00CE1985 /* DCClicksPanelButton.m */,
+				01CB180B14C4A60500CE1985 /* DCClicksPanelButtonCell.h */,
+				01CB180C14C4A60600CE1985 /* DCClicksPanelButtonCell.m */,
+				019CF73114C5880D00D000AC /* DCNewClicksPanel.h */,
+				019CF73214C5880D00D000AC /* DCNewClicksPanel.m */,
+				019CF73514C5886A00D000AC /* DCNewClicksPanelBackgroundView.h */,
+				019CF73614C5886A00D000AC /* DCNewClicksPanelBackgroundView.m */,
+				019CF73914C5888900D000AC /* DCNewClicksPanelBorderView.h */,
+				019CF73A14C5888900D000AC /* DCNewClicksPanelBorderView.m */,
+				019CF73D14C588AC00D000AC /* DCNewClicksPanelButton.h */,
+				019CF73E14C588AC00D000AC /* DCNewClicksPanelButton.m */,
+				019CF74114C588B800D000AC /* DCNewClicksPanelButtonCell.h */,
+				019CF74214C588B800D000AC /* DCNewClicksPanelButtonCell.m */,
+			);
+			name = Panel;
+			sourceTree = "<group>";
+		};
+		0197019711C26B4D00CB6FD7 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				01F8AA14133B4F1E0044531D /* Beep033.mp3 */,
+				01F8AA15133B4F1E0044531D /* Beep034.mp3 */,
+				016ACCB92FD049FE00E59082 /* Beep060.wav */,
+				01F8AA10133B4F0F0044531D /* Glitch015.aiff */,
+				014D4CA4129462430056C234 /* Click043Tripled.aiff */,
+				014D4CA5129462430056C234 /* Click051Tripled.aiff */,
+				014D4CA6129462430056C234 /* Click072Tripled.aiff */,
+				014D4CA7129462430056C234 /* Click078Tripled.aiff */,
+				014EE7CF11CA36BF00DA988F /* Glitch067.mp3 */,
+				014DFC5911C2E24000EC5D28 /* Beep021.wav */,
+				014DFC5A11C2E24000EC5D28 /* Beep022.wav */,
+				01D6312811C6408E00122A41 /* Beep085.wav */,
+				014DFC5C11C2E24000EC5D28 /* Beep086.wav */,
+				014DFC5E11C2E24000EC5D28 /* Click043.wav */,
+				014DFC5F11C2E24000EC5D28 /* Click051.wav */,
+				014DFC6011C2E24000EC5D28 /* Click072.wav */,
+				014DFC6111C2E24000EC5D28 /* Click073.wav */,
+				014DFC6211C2E24000EC5D28 /* Click078.wav */,
+				014DFC6311C2E24000EC5D28 /* Click101.wav */,
+				014DFC6411C2E24000EC5D28 /* Glitch013.wav */,
+				014DFC6511C2E24000EC5D28 /* Glitch014.wav */,
+				014DFC6611C2E24000EC5D28 /* Glitch019.wav */,
+				014DFC6711C2E24000EC5D28 /* Glitch022.wav */,
+				014DFBAF11C2D5D200EC5D28 /* Click043Doubled.aiff */,
+				014DFBB011C2D5D200EC5D28 /* Click072Doubled.aiff */,
+				014DFBB111C2D5D200EC5D28 /* Click078Doubled.aiff */,
+				014DFBB311C2D5D200EC5D28 /* Click051Doubled.aiff */,
+			);
+			name = sounds;
+			sourceTree = "<group>";
+		};
+		01C9424211F4B72700A88FD4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C0DEDFD0E07BDD579A036634 /* NMKit */,
+				0104B1721327B01A004FEF19 /* Application */,
+				014F741C1207FB1D0065481F /* Categories */,
+				014F74451207FCA20065481F /* Protocols */,
+				014F741A1207FA7C0065481F /* Utility */,
+				014F741B1207FB030065481F /* App Support */,
+				014F74411207FBD50065481F /* Engine */,
+				014F74181207FA270065481F /* Selection */,
+				0156B98E12BFFA7100B3EC98 /* Menu */,
+				0104B36E1327B172004FEF19 /* Sound */,
+				014F74421207FC000065481F /* Animation */,
+				016F91BD14BF0C570049E3FB /* Panel */,
+				014F74431207FC560065481F /* Prefs */,
+				013C90AA132115A700C9098F /* About */,
+				014F74401207FBAD0065481F /* View */,
+				014F74171207FA040065481F /* Transformers */,
+			);
+			name = Source;
+			path = src;
+			sourceTree = "<group>";
+		};
+		01C9431111F4B7DE00A88FD4 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				013C90BF1321160800C9098F /* About.xib */,
+				01C9431311F4B7DE00A88FD4 /* Help.xib */,
+				01C9431411F4B7DE00A88FD4 /* Main.xib */,
+				01C9431511F4B7DE00A88FD4 /* Prefs.xib */,
+				01C9431711F4B7DE00A88FD4 /* Welcome.xib */,
+				01C15A5B12F9682400553D37 /* PrefsPopups.xib */,
+				016F91B714BEDA0E0049E3FB /* PrefsPanel.xib */,
+				01D142ED12CA6633006AEE0C /* PrefsSoftware.xib */,
+			);
+			path = xib;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0153574C11B805CD00673C2F /* DwellClick.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* DCTest */ = {
+			isa = PBXGroup;
+			children = (
+				0153579011B80E9E00673C2F /* BuildSettings.xcconfig */,
+				01D40E2A2FCEE4950090E201 /* BuildScripts */,
+				016ACCBE2FD0666B00E59082 /* docs */,
+				012B891A1A9E4F4B00BA7979 /* ShortcutRecorder.xcodeproj */,
+				01C9424211F4B72700A88FD4 /* Source */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = DCTest;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0153578B11B80E9E00673C2F /* DwellClick_Prefix.pch */,
+				01C9430711F4B75D00A88FD4 /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				01C9431111F4B7DE00A88FD4 /* xib */,
+				0197019711C26B4D00CB6FD7 /* sounds */,
+				015E3BF4120B079C00F55DB4 /* gfx */,
+				014F7080120743270065481F /* Config.plist */,
+				0197027011C2959C00CB6FD7 /* Sounds.plist */,
+				0101686D123FF40C00CDA1E1 /* DwellClick.sdef */,
+				0153575011B805CD00673C2F /* DwellClick-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				012B89171A9E493100BA7979 /* ShortcutRecorder.framework */,
+				0130DCDF2FCEE6D40090E201 /* ServiceManagement.framework */,
+				01FFB16B12A8FB6600BC5C23 /* Quartz.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				018E6CBD11D0E4E80078342A /* Sparkle.framework */,
+				01275250127B2C15007356C1 /* Security.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				014F723512075D730065481F /* Carbon.framework */,
+				01AC07B71210343C00D15CA8 /* OpenGL.framework */,
+				01BF76711280133800B3B3FC /* IOKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0DEDFD0E07BDD579A036634 /* NMKit */ = {
+			isa = PBXGroup;
+			children = (
+				C0DE8919AB387333494A0841 /* NMAppMonitor.h */,
+				C0DE9C00B317E3B049745D2D /* NMAppMonitor.m */,
+				C0DE14456AE8558FB1CFDE34 /* NMAppSupportDir.h */,
+				C0DEF17CE2801EDE57B4E8D2 /* NMAppSupportDir.m */,
+				C0DED4E12599A823373B27E4 /* NMAppUtils.h */,
+				C0DEFB7F31674CB2CBFD1048 /* NMAppUtils.m */,
+				C0DEB79A89200DCB9673B4AE /* NMBlockUtils.h */,
+				C0DECED7A960B969D3030589 /* NMBlockUtils.m */,
+				C0DE744768F77118AD26C128 /* NMBrowserHelper.h */,
+				C0DEABDB7801B5243DCB89BC /* NMBrowserHelper.m */,
+				C0DEE5F8A2384AF3BCEB7693 /* NMBubbleCloseButton.h */,
+				C0DE88BCB739B48DF4120FC8 /* NMBubbleCloseButton.m */,
+				C0DEBC247CDA7676D97B785E /* NMBubbleWindow.h */,
+				C0DED6B864BDE1BCE4693CBB /* NMBubbleWindow.m */,
+				C0DE0992AFE460BB73C82B34 /* NMBubbleWindowView.h */,
+				C0DE33AA1B4982EE4F14D543 /* NMBubbleWindowView.m */,
+				C0DEA69846B3AA8CB3D95F25 /* NMCommander.h */,
+				C0DE368482B793863C47C4A0 /* NMCommander.m */,
+				C0DE6F47CC08EC6482FE9231 /* NMConfigUtils.h */,
+				C0DEB84BA8143201509BE8DD /* NMConfigUtils.m */,
+				C0DEE1A84253ECE12E18CAEC /* NMCoreUtils.h */,
+				C0DE0FF5BD9F71C61A4C1296 /* NMCoreUtils.m */,
+				C0DE632C794ECB35B01F22F4 /* NMCursorUtils.h */,
+				C0DECC9A70CB9BE7C8F33F49 /* NMCursorUtils.m */,
+				C0DE462F92AACD1ECDDE751A /* NMCUtils.c */,
+				C0DE80E0D30C970523697C4B /* NMCUtils.h */,
+				C0DE99C49EF2F953DC8EFA77 /* NMEscapableItem.h */,
+				C0DECCCEF7C5942575A82C42 /* NMEventUtils.h */,
+				C0DE6D68BF40073A4E4F0F77 /* NMEventUtils.m */,
+				C0DE7989B984D6D154C83029 /* NMFloatUtils.h */,
+				C0DEF0C9E256C7FF9750B73E /* NMFloatUtils.m */,
+				C0DE78DF0EFE72ACA8932AA9 /* NMGeometryUtils.h */,
+				C0DE4EFDB764E28A23F7CC83 /* NMGeometryUtils.m */,
+				C0DE4F349F66937B923489C6 /* NMImageButton.h */,
+				C0DEC26EE991BEA5FC7657D2 /* NMImageButton.m */,
+				C0DE1E8573D8883611AD06BD /* NMImageButtonCell.h */,
+				C0DE931F7CC148AA1959A149 /* NMImageButtonCell.m */,
+				C0DE0AEE55879917840C5F29 /* NMInitialDefaults.h */,
+				C0DE371D00360A5E6CB04740 /* NMKeyCombo.h */,
+				C0DE858AE33C59AF97FAAAC1 /* NMKeyCombo.m */,
+				C0DE598942BD327DF9150A29 /* NMKeyCommander.h */,
+				C0DE98AB29B8E429322BE0A3 /* NMKeyCommander.m */,
+				C0DE79DD8FBACF1C2CC9831B /* NMKeyConverter.h */,
+				C0DEF41B320DE4DBF0FC45BB /* NMKeyConverter.m */,
+				C0DEA7F9392A95FB87D1BCB9 /* NMKeyPresser.h */,
+				C0DEBB99EFFFBDDEEF1B42DD /* NMKeyPresser.m */,
+				C0DEBAF90AD1026D2CEAA674 /* NMKit.h */,
+				C0DE3E80900B287470B5375D /* NMLinks.h */,
+				C0DE37437DA77F38438BA335 /* NMLinks.m */,
+				C0DEA859B91BDC00267DAF99 /* NMLog.h */,
+				C0DE748EBE4A43D710445F9E /* NMLog.m */,
+				C0DE0FD3B035C3652AB94D5B /* NMLoginItemsController.h */,
+				C0DE7EFB77DC82D166B9350B /* NMLoginItemsController.m */,
+				C0DE637CE6C8BF4AC2D05E99 /* NMMouseUtils.h */,
+				C0DEF0E82AF5A5509BC25FF9 /* NMMouseUtils.m */,
+				C0DE57A128AB251D0EF71C69 /* NMNubWindow.h */,
+				C0DE5563F60D84AFFE9EECE1 /* NMNubWindow.m */,
+				C0DE71F4926B54B4C8A73AC0 /* NMNubWindowView.h */,
+				C0DE7DD25629F66D69D57BCE /* NMNubWindowView.m */,
+				C0DE5EFF7D1FBCE799EAAEB2 /* NMPoint.h */,
+				C0DE2600762A6E7AB3DA35DB /* NMPoint.m */,
+				C0DE4AB15AAC6EF2D04E1255 /* NMPopupController.h */,
+				C0DE377C2430843C0330E63E /* NMPopupController.m */,
+				C0DE66688CA665D03EFDCF8B /* NMPopupWindow.h */,
+				C0DEF0379B5ADDCE938D679F /* NMPopupWindow.m */,
+				C0DEC8B2EFB81935D6F676C8 /* NMPopupWindowBackgroundView.h */,
+				C0DE27F63F185046464412FF /* NMPopupWindowBackgroundView.m */,
+				C0DED499743FB87A1C2BC8C9 /* NMPopupWindowBorderView.h */,
+				C0DE4D7A0746436383FC3B59 /* NMPopupWindowBorderView.m */,
+				C0DEFDD64A66F074A45BDDF3 /* NMPopupWindowButton.h */,
+				C0DEAB90FA0BFB9A4399A0B5 /* NMPopupWindowButton.m */,
+				C0DE7E05DAAD328F059708D9 /* NMPopupWindowButtonCell.h */,
+				C0DE424FCE96B4911E5BF0D8 /* NMPopupWindowButtonCell.m */,
+				C0DEA5482279880F5CB8D6AD /* NMRegexUtils.h */,
+				C0DE51FA539EA73EB5CB45AF /* NMRegexUtils.m */,
+				C0DE8F6DAEF022ED7CAE2379 /* NMStartAtLogin.h */,
+				C0DE7854079321E5FE83B05E /* NMStartAtLogin2024.h */,
+				C0DEAF3EBADC9E723DAB829E /* NMStartAtLogin2024.m */,
+				C0DE70B008AD20C92FE6D5EC /* NMStartAtLoginController.h */,
+				C0DEE39E591BF43733898B73 /* NMStartAtLoginController.m */,
+				C0DE2E2E70745B368F48CBEB /* NMState.h */,
+				C0DEB10C46EB218C76889D2C /* NMState.m */,
+				C0DE77125EA1B08AD80D524B /* NMStateMachine.h */,
+				C0DE00E6B7C94C17BF6DBDFD /* NMStateMachine.m */,
+				C0DE7205B0B257E1FBE4F71F /* NMStatusBubbleWindow.h */,
+				C0DE3A1E994659462A44608D /* NMStatusBubbleWindow.m */,
+				C0DEEE9871CCECD68805FA96 /* NMStatusItemController.h */,
+				C0DEA0CFA0864F7CBBBABA5D /* NMStatusItemController.m */,
+				C0DEBB622521B5A68238E4EF /* NMStatusItemView.h */,
+				C0DEB769F683603200263537 /* NMStatusItemView.m */,
+				C0DECDD2B568911A260EE345 /* NMSugarButton.h */,
+				C0DE6597543C50FCEDECB711 /* NMSugarButton.m */,
+				C0DE60A5CAE8071072E6ECCD /* NMSugarButtonCell.h */,
+				C0DE612252A77DC6163C92AE /* NMSugarButtonCell.m */,
+				C0DE2F4A326A69C03762FD23 /* NMSuperFastHash.c */,
+				C0DE16DD5AD9506D0BB50EA5 /* NMSuperFastHash.h */,
+				C0DE1FE7C21777BAFBB31F4A /* NMTipWindow.h */,
+				C0DEF5B62D52911D0A7167B5 /* NMTipWindow.m */,
+				C0DE7EA1481402EA96533545 /* NMTipWindowView.h */,
+				C0DE5BC4AA5ACC1CFEE16DAE /* NMTipWindowView.m */,
+				C0DEEE7D46DB3650A9BA3863 /* NMUIElement.h */,
+				C0DE3108ABE2678DB66E09F3 /* NMUIElement.m */,
+				C0DE9DAA7C9AC027C1A583F9 /* NMUIElementHelper.h */,
+				C0DEA92D2212C641BDDC7FA3 /* NMUIElementHelper.m */,
+				C0DE643195C58A0D7DC6A008 /* NMUniversalAccessHelper.h */,
+				C0DE91A47886692CE413A83C /* NMUniversalAccessHelper.m */,
+				C0DEC3CF95FA2590800E34A5 /* NMUniversalMonitor.h */,
+				C0DEC7E565E4079468C4808F /* NMUniversalMonitor.m */,
+				C0DE965024897E68BE766D62 /* NSBezierPath+NMNub.h */,
+				C0DEE958F2E445F58802EEB1 /* NSBezierPath+NMNub.m */,
+				C0DEDE401F51B9D63AB8C0DC /* NSImage+NMCopySize.h */,
+				C0DE6838C012311B1E9DB54A /* NSImage+NMCopySize.m */,
+				C0DEA08A30BEF46061AB7C3B /* NSMutableDictionary+NMSafe.h */,
+				C0DEB82F06D43150ACA8EEB6 /* NSMutableDictionary+NMSafe.m */,
+				C0DE4D81BED257A870AE20AF /* NSObject+NMObservePrefs.h */,
+				C0DEA2A7302AE0C3C1330E31 /* NSObject+NMObservePrefs.m */,
+				C0DE4DE63790115E38EF5BC4 /* NSWindow+NMAdditions.h */,
+				C0DE21A4BCE650D6F842E694 /* NSWindow+NMAdditions.m */,
+			);
+			path = NMKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0153574B11B805CD00673C2F /* DwellClick SA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0153575311B805CE00673C2F /* Build configuration list for PBXNativeTarget "DwellClick SA" */;
+			buildPhases = (
+				0153574911B805CD00673C2F /* Sources */,
+				0153574A11B805CD00673C2F /* Frameworks */,
+				0153574811B805CD00673C2F /* Resources */,
+				018E6D6D11D0E5570078342A /* CopyFiles */,
+				01A7C6E317720A81007D3765 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DwellClick SA";
+			productName = DwellClick;
+			productReference = 0153574C11B805CD00673C2F /* DwellClick.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				TargetAttributes = {
+					0153574B11B805CD00673C2F = {
+						DevelopmentTeam = 6W6K75YWQ9;
+					};
+				};
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "dc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				Danish,
+				Dutch,
+				Italian,
+				Spanish,
+				Russian,
+				Norwegian,
+				en,
+				de,
+				es,
+				fr,
+				ja,
+				ru,
+				it,
+				"zh-Hans",
+				nl,
+				ko,
+				"pt-BR",
+				pt,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* DCTest */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 012B891B1A9E4F4B00BA7979 /* Products */;
+					ProjectRef = 012B891A1A9E4F4B00BA7979 /* ShortcutRecorder.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				0153574B11B805CD00673C2F /* DwellClick SA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		012B89211A9E4F4B00BA7979 /* ShortcutRecorder.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ShortcutRecorder.framework;
+			remoteRef = 012B89201A9E4F4B00BA7979 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		017A72E12FCF0D9100723596 /* Inspector.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Inspector.app;
+			remoteRef = 017A72E02FCF0D9100723596 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		017A72E32FCF0D9100723596 /* Unit Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Unit Tests.xctest";
+			remoteRef = 017A72E22FCF0D9100723596 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0153574811B805CD00673C2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01BF758A127F72D500B3B3FC /* Credits.txt in Resources */,
+				0197027211C2959C00CB6FD7 /* Sounds.plist in Resources */,
+				014DFBB911C2D5D200EC5D28 /* Click043Doubled.aiff in Resources */,
+				014DFBBA11C2D5D200EC5D28 /* Click072Doubled.aiff in Resources */,
+				014DFBBB11C2D5D200EC5D28 /* Click078Doubled.aiff in Resources */,
+				014DFBBD11C2D5D200EC5D28 /* Click051Doubled.aiff in Resources */,
+				014DFC7711C2E24000EC5D28 /* Beep021.wav in Resources */,
+				014DFC7811C2E24000EC5D28 /* Beep022.wav in Resources */,
+				014DFC7A11C2E24000EC5D28 /* Beep086.wav in Resources */,
+				014DFC7C11C2E24000EC5D28 /* Click043.wav in Resources */,
+				014DFC7D11C2E24000EC5D28 /* Click051.wav in Resources */,
+				014DFC7E11C2E24000EC5D28 /* Click072.wav in Resources */,
+				014DFC7F11C2E24000EC5D28 /* Click073.wav in Resources */,
+				014DFC8011C2E24000EC5D28 /* Click078.wav in Resources */,
+				014DFC8111C2E24000EC5D28 /* Click101.wav in Resources */,
+				014DFC8211C2E24000EC5D28 /* Glitch013.wav in Resources */,
+				014DFC8311C2E24000EC5D28 /* Glitch014.wav in Resources */,
+				014DFC8411C2E24000EC5D28 /* Glitch019.wav in Resources */,
+				014DFC8511C2E24000EC5D28 /* Glitch022.wav in Resources */,
+				01D6312A11C6408E00122A41 /* Beep085.wav in Resources */,
+				014EE7D111CA36BF00DA988F /* Glitch067.mp3 in Resources */,
+				01C9431F11F4B7DE00A88FD4 /* Help.xib in Resources */,
+				01C9432011F4B7DE00A88FD4 /* Main.xib in Resources */,
+				01C9432111F4B7DE00A88FD4 /* Prefs.xib in Resources */,
+				01C9432311F4B7DE00A88FD4 /* Welcome.xib in Resources */,
+				014F7081120743270065481F /* Config.plist in Resources */,
+				014B1D2A191B69B4007928A1 /* Popup.png in Resources */,
+				015E3C27120B079C00F55DB4 /* Auto-Click.png in Resources */,
+				015E3C28120B079C00F55DB4 /* Click-With-Copy.png in Resources */,
+				015E3C29120B079C00F55DB4 /* Click-With-Cut.png in Resources */,
+				015E3C2A120B079C00F55DB4 /* Click-With-Paste.png in Resources */,
+				015E3C2B120B079C00F55DB4 /* Click.png in Resources */,
+				015E3C2C120B079C00F55DB4 /* Command-C.png in Resources */,
+				015E3C2D120B079C00F55DB4 /* Command-Click.png in Resources */,
+				015E3C2E120B079C00F55DB4 /* Command-Drag.png in Resources */,
+				015E3C30120B079C00F55DB4 /* Command-V.png in Resources */,
+				015E3C31120B079C00F55DB4 /* Command-X.png in Resources */,
+				015E3C33120B079C00F55DB4 /* Control-Click.png in Resources */,
+				015E3C34120B079C00F55DB4 /* Control-Drag.png in Resources */,
+				015E3C3A120B079C00F55DB4 /* DCIconStatus.png in Resources */,
+				015E3C3B120B079C00F55DB4 /* Double-Click-With-Copy.png in Resources */,
+				015E3C3C120B079C00F55DB4 /* Double-Click-With-Cut.png in Resources */,
+				015E3C3D120B079C00F55DB4 /* Double-Click-With-Paste.png in Resources */,
+				015E3C3E120B079C00F55DB4 /* Double-Click.png in Resources */,
+				015E3C3F120B079C00F55DB4 /* Drag-With-Copy.png in Resources */,
+				012517CF1C8063A20013EF4D /* NM_XIcon.png in Resources */,
+				015E3C40120B079C00F55DB4 /* Drag-With-Cut.png in Resources */,
+				016ACCBA2FD049FE00E59082 /* Beep060.wav in Resources */,
+				015E3C41120B079C00F55DB4 /* Drag.png in Resources */,
+				015E3C42120B079C00F55DB4 /* GreenTick.png in Resources */,
+				015E3C43120B079C00F55DB4 /* Lock.png in Resources */,
+				015E3C45120B079C00F55DB4 /* On-Off.png in Resources */,
+				015E3C46120B079C00F55DB4 /* Option-Click.png in Resources */,
+				015E3C47120B079C00F55DB4 /* Option-Drag.png in Resources */,
+				015E3C4A120B079C00F55DB4 /* prefs-Clicking.png in Resources */,
+				015E3C4C120B079C00F55DB4 /* prefs-Keyboard.png in Resources */,
+				015E3C4F120B079C00F55DB4 /* prefs-Software.png in Resources */,
+				015E3C50120B079C00F55DB4 /* Release.png in Resources */,
+				015E3C51120B079C00F55DB4 /* Right-Click.png in Resources */,
+				015E3C52120B079C00F55DB4 /* Right-Drag.png in Resources */,
+				015E3C53120B079C00F55DB4 /* Shift-Click.png in Resources */,
+				015E3C54120B079C00F55DB4 /* Shift-Drag.png in Resources */,
+				0101686E123FF40C00CDA1E1 /* DwellClick.sdef in Resources */,
+				01E4C61D1247997E001852C5 /* LockedDrag.png in Resources */,
+				01C55478126C9BF500B89D77 /* prefs-Feedback.png in Resources */,
+				01C5548A126CADC700B89D77 /* prefs-Apps.png in Resources */,
+				0174B147128A9DEA00D442B1 /* Drag-With-Paste.png in Resources */,
+				018C81B81294368E00CD6C63 /* Triple-Click-With-Copy.png in Resources */,
+				018C81B91294368E00CD6C63 /* Triple-Click-With-Paste.png in Resources */,
+				018C81BA1294368E00CD6C63 /* Triple-Click.png in Resources */,
+				014D4CA8129462430056C234 /* Click043Tripled.aiff in Resources */,
+				014D4CA9129462430056C234 /* Click051Tripled.aiff in Resources */,
+				016ACCB32FD03E7900E59082 /* prefs-Advanced.png in Resources */,
+				014D4CAA129462430056C234 /* Click072Tripled.aiff in Resources */,
+				014D4CAB129462430056C234 /* Click078Tripled.aiff in Resources */,
+				01B1702D12B7E42100E26927 /* prefs-Popups.png in Resources */,
+				01D142EE12CA6633006AEE0C /* PrefsSoftware.xib in Resources */,
+				012CF31412F3461A0040F5BE /* ShowPopup.png in Resources */,
+				01C15A5C12F9682400553D37 /* PrefsPopups.xib in Resources */,
+				01CD4104130B17B7002E2FC8 /* Command-Big.png in Resources */,
+				01CD4105130B17B7002E2FC8 /* Control-Big.png in Resources */,
+				01CD4106130B17B7002E2FC8 /* Option-Big.png in Resources */,
+				01CD4107130B17B7002E2FC8 /* Shift-Big.png in Resources */,
+				019BA05C131FF9E200D1F211 /* NoEntry.png in Resources */,
+				013C90C01321160800C9098F /* About.xib in Resources */,
+				01F8AA11133B4F0F0044531D /* Glitch015.aiff in Resources */,
+				01F8AA16133B4F1E0044531D /* Beep033.mp3 in Resources */,
+				01F8AA19133B4F1E0044531D /* Beep034.mp3 in Resources */,
+				01992FE4135D7BFB00F1759C /* PopupOrLock.png in Resources */,
+				016F91B814BEDA0E0049E3FB /* PrefsPanel.xib in Resources */,
+				016F91BB14BEDB020049E3FB /* prefs-Panel.png in Resources */,
+				01B8CDA914C86C2100CC41E9 /* HeldDrag.png in Resources */,
+				01B8CDAB14C86C2C00CC41E9 /* PopupOrHold.png in Resources */,
+				01B8CDD914C8B26400CC41E9 /* Repeat.png in Resources */,
+				0189619817BA73F80047D8C7 /* DwellClickIconR.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01A7C6E317720A81007D3765 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/zsh;
+			shellScript = "${PROJECT_DIR}/script/build\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0153574911B805CD00673C2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0DE775F09D813A01F262ABE /* NMAppMonitor.m in Sources */,
+				C0DE3AD28EBE620F45A5C91A /* NMAppSupportDir.m in Sources */,
+				C0DEF2D7ECCC19B3237C32D4 /* NMAppUtils.m in Sources */,
+				C0DE4BED7E549CB01FAD8851 /* NMBlockUtils.m in Sources */,
+				C0DEAE6656650AD9F957E3B3 /* NMBrowserHelper.m in Sources */,
+				C0DE19A813F3A82583FE76DE /* NMBubbleCloseButton.m in Sources */,
+				C0DE83372D35FC0D67CBCAF1 /* NMBubbleWindow.m in Sources */,
+				C0DEF700FACCAC0CD964636E /* NMBubbleWindowView.m in Sources */,
+				C0DE82E3DE9B2B4033C0B00B /* NMCommander.m in Sources */,
+				C0DEB0DC473FE2D6B2FC06F9 /* NMConfigUtils.m in Sources */,
+				C0DE102446ADF30FDCCD906A /* NMCoreUtils.m in Sources */,
+				C0DE57C957F8C213090906BD /* NMCursorUtils.m in Sources */,
+				C0DE5167826C60D0D3DCA100 /* NMCUtils.c in Sources */,
+				C0DE8175AF501786C017A924 /* NMEventUtils.m in Sources */,
+				C0DEDEBE3A4040952C09597D /* NMFloatUtils.m in Sources */,
+				C0DE65D3B9E5014EE77F2B06 /* NMGeometryUtils.m in Sources */,
+				C0DEDD49361071BE94FA721E /* NMImageButton.m in Sources */,
+				C0DECD7B7D7EB0EA09A2EF08 /* NMImageButtonCell.m in Sources */,
+				C0DE81E2D55D96659241C2A1 /* NMKeyCombo.m in Sources */,
+				C0DE98B0232A05D3762C421B /* NMKeyCommander.m in Sources */,
+				C0DE2A3623F6DCB64E6C47B3 /* NMKeyConverter.m in Sources */,
+				C0DE6DD9F04B2C453211A867 /* NMKeyPresser.m in Sources */,
+				C0DEBA94E64ADB71732770B8 /* NMLinks.m in Sources */,
+				C0DE0E666684B32AF9348323 /* NMLog.m in Sources */,
+				C0DE6891B49E87C12DFE0968 /* NMLoginItemsController.m in Sources */,
+				C0DE21DD599B8EFB391541FB /* NMMouseUtils.m in Sources */,
+				C0DE798AB203801568BACB54 /* NMNubWindow.m in Sources */,
+				C0DE44783B45B3BC3AE0F77B /* NMNubWindowView.m in Sources */,
+				C0DED205A11CC8743578A61F /* NMPoint.m in Sources */,
+				C0DE98B218159C6C5C8C42A3 /* NMPopupController.m in Sources */,
+				C0DEA5FE9728FA1A8D8E7402 /* NMPopupWindow.m in Sources */,
+				C0DE5C203E1FC8CEB338E556 /* NMPopupWindowBackgroundView.m in Sources */,
+				C0DE5F423C408A4C344CB224 /* NMPopupWindowBorderView.m in Sources */,
+				C0DE5CC6691E9E43EEC3FA37 /* NMPopupWindowButton.m in Sources */,
+				C0DE8E25A36DA1093452467A /* NMPopupWindowButtonCell.m in Sources */,
+				C0DE5F7CF75A66956E5088EB /* NMRegexUtils.m in Sources */,
+				C0DE02DAC2395DBD8C3BD239 /* NMStartAtLogin2024.m in Sources */,
+				C0DEFBDDAB3B461B3C34C0DA /* NMStartAtLoginController.m in Sources */,
+				C0DEA333DE0B8C759886056E /* NMState.m in Sources */,
+				C0DE34EBEDFD81CB02F6C15A /* NMStateMachine.m in Sources */,
+				C0DE8F2636A98513F43BAE0B /* NMStatusBubbleWindow.m in Sources */,
+				C0DE92826978C494AA5DD39B /* NMStatusItemController.m in Sources */,
+				C0DE9770FDAAFB5FCFE45E58 /* NMStatusItemView.m in Sources */,
+				C0DE3572E3FCD8F323100295 /* NMSugarButton.m in Sources */,
+				016ACCB62FD048CC00E59082 /* ActionIconTransformer.m in Sources */,
+				C0DEC4C84A6C29C392191556 /* NMSugarButtonCell.m in Sources */,
+				C0DE2E86CB25094B3A648E1D /* NMSuperFastHash.c in Sources */,
+				C0DE1A076A2900BDA0825887 /* NMTipWindow.m in Sources */,
+				C0DEC0FBC092050A707EC0C1 /* NMTipWindowView.m in Sources */,
+				C0DEA19B93A3CD6F8E0559A5 /* NMUIElement.m in Sources */,
+				C0DEE0582895D03F51F05834 /* NMUIElementHelper.m in Sources */,
+				C0DEF21696B4227F4BBC95DE /* NMUniversalAccessHelper.m in Sources */,
+				C0DE2CF6F849554B74EA529F /* NMUniversalMonitor.m in Sources */,
+				C0DEEE486D4D24FA9766438F /* NSBezierPath+NMNub.m in Sources */,
+				C0DEE8349569EC131D9C40E7 /* NSImage+NMCopySize.m in Sources */,
+				C0DE2454858D3D8B0EA5747D /* NSMutableDictionary+NMSafe.m in Sources */,
+				C0DE77B949EF602F2B1CFE8A /* NSObject+NMObservePrefs.m in Sources */,
+				C0DE938520D59B47A2697402 /* NSWindow+NMAdditions.m in Sources */,
+				01C942D411F4B72800A88FD4 /* DCAppDelegate.m in Sources */,
+				01C942D511F4B72800A88FD4 /* DCClick.m in Sources */,
+				01C942DA11F4B72800A88FD4 /* DCDwellMachine.m in Sources */,
+				01C942DB11F4B72800A88FD4 /* DCEngine.m in Sources */,
+				01C942DC11F4B72800A88FD4 /* DCFlagGroup.m in Sources */,
+				01C942DD11F4B72800A88FD4 /* DCFlagSelection.m in Sources */,
+				01C942DF11F4B72800A88FD4 /* DCKeyedSelection.m in Sources */,
+				01C942E311F4B72800A88FD4 /* DCLinks.m in Sources */,
+				01C942E411F4B72800A88FD4 /* DCMainMenuController.m in Sources */,
+				01C942E611F4B72800A88FD4 /* DCMouseClicker.m in Sources */,
+				01C942E711F4B72800A88FD4 /* DCMouseTap.m in Sources */,
+				01C942EA11F4B72800A88FD4 /* DCPrefsController.m in Sources */,
+				01C942EC11F4B72800A88FD4 /* DCSelectableAction.m in Sources */,
+				01C942ED11F4B72800A88FD4 /* DCSelection.m in Sources */,
+				01C942EE11F4B72800A88FD4 /* DCSelectionGroup.m in Sources */,
+				01C942EF11F4B72800A88FD4 /* DCSoundController.m in Sources */,
+				01C942F211F4B72800A88FD4 /* DCUniqueSelection.m in Sources */,
+				01C942F411F4B72800A88FD4 /* DCWelcomeWindowController.m in Sources */,
+				01C942F611F4B72800A88FD4 /* NSDate+Beginning.m in Sources */,
+				01C9430911F4B75D00A88FD4 /* main.m in Sources */,
+				01C9434411F4C69000A88FD4 /* DCAnimationController.m in Sources */,
+				01C9454D11F500F100A88FD4 /* NSUserDefaults+Color.m in Sources */,
+				01C9984311F5C1B600DB9812 /* DCClickMachine.m in Sources */,
+				014F093D11F83F6500BE094C /* DCClickIntelligence.m in Sources */,
+				014F0F5E11F98B7400BE094C /* BundleIdentifierTransformer.m in Sources */,
+				01FB6BCC1206DCA400C825C0 /* DCAppCell.m in Sources */,
+				01FB6DA41206FB8300C825C0 /* DCImageAndTextCell.m in Sources */,
+				014F736E120790760065481F /* ActionNameTransformer.m in Sources */,
+				014F73BA120797880065481F /* DCShortcutViewItem.m in Sources */,
+				01AD503D120827C00038D53D /* NSUserDefaults+Archive.m in Sources */,
+				01AD55B6120882310038D53D /* DCSimpleTrigger.m in Sources */,
+				01AC07AF1210340500D15CA8 /* DCScrollDetector.m in Sources */,
+				01016880123FF99F00CDA1E1 /* DCApp.m in Sources */,
+				01683298126F239E00904A28 /* DCConstants.m in Sources */,
+				0135F6971278A89900B854AF /* DCTouchMonitor.m in Sources */,
+				018EA2D11287F31800F6F0A2 /* DCClickEvent.m in Sources */,
+				019B39D312895F3800AF3223 /* DCUIState.m in Sources */,
+				019B3A6B1289674E00AF3223 /* DCUtils.m in Sources */,
+				01C3DF09129E7F7F005E99B7 /* DCAppDelegate+Distribution.m in Sources */,
+				01BA6A4E12A52488006D8A64 /* DCPopupsController.m in Sources */,
+				01E1201612AAE8F5008CA3F5 /* DCBoxGrab.m in Sources */,
+				01D1434512CA6CAE006AEE0C /* DCPrefsSoftwareController.m in Sources */,
+				01C15A5012F967BA00553D37 /* DCPrefsPopupsController.m in Sources */,
+				018BCA49130BC87B00283495 /* SecondsTransformer.m in Sources */,
+				01287CFF1313D5D100895A31 /* DCAppDelegate+Startup.m in Sources */,
+				013C90B1132115B600C9098F /* FCAboutController.m in Sources */,
+				013C90B2132115B600C9098F /* FCDraggableImageView.m in Sources */,
+				013C90B3132115B600C9098F /* FCLinkView.m in Sources */,
+				013C90BC132115EB00C9098F /* FCWhiteBox.m in Sources */,
+				013C912D13211D6700C9098F /* DCAboutWindow.m in Sources */,
+				013C92691321455200C9098F /* DCClickCounterView.m in Sources */,
+				01D4D6271328045200AE62BC /* DCSymbolController.m in Sources */,
+				01D4D64E13280A1400AE62BC /* DCAnimationView.m in Sources */,
+				01C60A8C132921F100230ADE /* DCPopupWindowButtonProxy.m in Sources */,
+				01C0C868132A5AAC0003F5DF /* NSImage+Symbol.m in Sources */,
+				01C0C916132A60F90003F5DF /* DCAppNameFormatter.m in Sources */,
+				01A801FF1333943F00729B20 /* DCEngine+Gubbins.m in Sources */,
+				01AB3EE51333AED200F62F66 /* DCModifierController.m in Sources */,
+				0168A83C135E2ADE00F041CB /* BundleIdIconTransformer.m in Sources */,
+				01DC1C921369B382009067E2 /* DCStatusItemDelegate.m in Sources */,
+				016F91B514BED8E20049E3FB /* DCPrefsPanelController.m in Sources */,
+				016F91C214BF0C8A0049E3FB /* DCClicksPanel.m in Sources */,
+				016F91C414BF0C8A0049E3FB /* DCClicksPanelController.m in Sources */,
+				01CB180914C4A5AA00CE1985 /* DCClicksPanelButton.m in Sources */,
+				01CB180D14C4A60600CE1985 /* DCClicksPanelButtonCell.m in Sources */,
+				019CF73314C5880E00D000AC /* DCNewClicksPanel.m in Sources */,
+				019CF73714C5886B00D000AC /* DCNewClicksPanelBackgroundView.m in Sources */,
+				019CF73B14C5888900D000AC /* DCNewClicksPanelBorderView.m in Sources */,
+				019CF73F14C588AC00D000AC /* DCNewClicksPanelButton.m in Sources */,
+				019CF74314C588B800D000AC /* DCNewClicksPanelButtonCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0153575111B805CE00673C2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0153579011B80E9E00673C2F /* BuildSettings.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6W6K75YWQ9;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DwellClick_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DEBUG_BUILD,
+					DEBUG,
+				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_PEDANTIC = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				INFOPLIST_FILE = "DwellClick-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_PREFIX_HEADER = "";
+				INFOPLIST_PREPROCESS = NO;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pilotmoon.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = DwellClick;
+				PROVISIONING_PROFILE = "";
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0153575211B805CE00673C2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0153579011B80E9E00673C2F /* BuildSettings.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 6W6K75YWQ9;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DwellClick_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NS_BLOCK_ASSERTIONS,
+					NDEBUG,
+				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_PEDANTIC = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				INFOPLIST_FILE = "DwellClick-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_PREFIX_HEADER = "";
+				INFOPLIST_PREPROCESS = NO;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pilotmoon.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = DwellClick;
+				PROVISIONING_PROFILE = "";
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
+				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = NO;
+				GCC_WARN_PROTOTYPE_CONVERSION = NO;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = NO;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/**";
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-fdiagnostics-show-option";
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				VERSIONING_SYSTEM = "";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CURRENT_PROJECT_VERSION = 0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = NO;
+				GCC_WARN_PROTOTYPE_CONVERSION = NO;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = NO;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/**";
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				OTHER_CFLAGS = "-fdiagnostics-show-option";
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
+				SDKROOT = macosx;
+				SEPARATE_STRIP = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				VERSIONING_SYSTEM = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0153575311B805CE00673C2F /* Build configuration list for PBXNativeTarget "DwellClick SA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0153575111B805CE00673C2F /* Debug */,
+				0153575211B805CE00673C2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "dc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

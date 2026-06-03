@@ -1,0 +1,11 @@
+#!/bin/zsh
+base=${0:a:h}
+source $base/lib/constants
+source $base/lib/display
+source $base/lib/memo
+source $base/lib/tempdir
+source $base/lib/json
+source $base/lib/shell
+source $base/lib/xcode
+source $base/lib/utils
+export PATH=/opt/homebrew/bin:$PATH

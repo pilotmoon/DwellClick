@@ -1,0 +1,23 @@
+#!/bin/zsh
+set -eu; base=${0:a:h}/..; source $base/common; sayhi $0
+frameworks_path=${1}
+allowed_languages=${2}
+signing_identity=${3}
+show frameworks_path  allowed_languages signing_identity
+[[ -d $frameworks_path ]] || { print "bad paths supplied"; exit 1 }
+
+sr_path=$frameworks_path/ShortcutRecorder.framework
+[[ -d $sr_path ]] || { print "expected items not found"; exit 1 }
+
+print "removing unused stuff from ShortcutRecorder"
+rm -rfv $sr_path/Versions/A/Resources/LICENSE.txt
+rm -rfv $sr_path/Versions/A/Resources/ATTRIBUTION.md
+
+print "removing languages"
+$base/process/remove_langs $sr_path/Versions/A/Resources $allowed_languages
+
+# re-sign everything
+print "re-signing..."
+codesign --timestamp=none -o runtime -s $signing_identity -f $sr_path # sign
+
+saybye $0

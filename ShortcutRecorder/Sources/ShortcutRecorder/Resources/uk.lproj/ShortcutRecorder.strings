@@ -1,0 +1,56 @@
+/* Literal for the Space key */
+"Space" = "Space";
+
+/* VoiceOver type of the object recorded by the control */
+"Shortcut" = "Комбінація клавіш";
+
+/* VoiceOver value for the value-less control */
+"Not set" = "Не встановлено";
+
+/* Tooltip for the cancel button when the control has a value */
+"Use old shortcut" = "Використовувати стару комбінацію клавіш";
+
+/* Tooltip for the cancel button when the control has no value */
+"Cancel recording" = "Скасувати запис";
+
+/* Tooltip for the clear button */
+"Delete current shortcut" = "Видалити поточну комбінацію клавіш";
+
+/* Label and tooltip for the recording mode */
+"Press keys now" = "Натисніть клавіші зараз";
+
+/* Label for the value-less control */
+"Record Shortcut" = "Записати комбінацію клавіш";
+
+/* Tooltip for the normal mode */
+"Click to record shortcut" = "Натисніть для запису комбінації клавіш";
+
+/* Value for the NSLocalizedFailureReasonErrorKey key of validator's error */
+"The \"%@\" shortcut can't be used!" = "Комбінація клавіш \"%@\" не може бути використана!";
+
+/* Value for the NSLocalizedDescriptionKey key of validator's delegate error */
+"The \"%@\" shortcut can't be used because %@." = "Комбінація клавіш \"%@\" не може бути використана тому що %@.";
+
+/* Default value for the NSLocalizedDescriptionKey key of validator's error */
+"The \"%@\" shortcut is already in use." = "Комбінація клавіш \"%@\" вже використовується.";
+
+/* Value for the NSLocalizedDescriptionKey key of validator's system shortcuts error */
+"The \"%@\" shortcut can't be used because it's already used by a system-wide keyboard shortcut. If you really want to use this shortcut, most shortcuts can be changed in the Keyboard panel in System Preferences." = "Комбінацію клавіш \"%@\" не можна використати, оскільки вона вже використовується загальносистемною комбінацією клавіш. Якщо ви дійсно хочете її використовувати, більшість комбінацій клавіш можна змінити у пункті Клавіатура у Системних налаштуваннях.";
+
+/* Value for the NSLocalizedDescriptionKey key of validator's menu error */
+"The \"%@\" shortcut can't be used because it's already used by the \"%@\" menu item." = "Комбінацію клавіш \"%@\" не можна використати, оскільки вона вже використовується пунктом меню \"%@\".";
+
+/* VoiceOver name of the Command modifier key */
+"Command" = "Команда";
+
+/* VoiceOver name of the Option modifier key */
+"Option" = "Опція";
+
+/* VoiceOver name of the Shift modifier key */
+"Shift" = "Shift";
+
+/* VoiceOver name of the Control modifier key */
+"Control" = "Control";
+
+/* VoiceOver name of the modifier keys delimiter */
+"-" = "-";

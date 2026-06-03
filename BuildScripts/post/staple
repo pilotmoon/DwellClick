@@ -1,0 +1,28 @@
+#!/bin/zsh
+set -eu; base=${0:a:h}/..; source $base/common; cd_info
+
+# read in params
+load_info app_path app_zip product build version edition storage_path project_dir
+
+# staple it
+echo "stapling ${app_path}"
+xcrun stapler staple $app_path
+
+# re-zip
+echo "zipping stapled app to:" ${app_zip}
+/usr/bin/ditto -c -k --keepParent $app_path $app_zip
+
+# add png app icon into archive for setapp
+appicon=$project_dir/AppIcon.png
+if [[ $edition == $edition_setapp && -f $appicon ]]; then
+echo "zipping stapled app with AppIcon to:" ${app_zip}
+/usr/bin/zip -j $app_zip $appicon
+fi
+
+# save the stapled zip to storage
+zip_dest=$storage_path/${app_zip:t}
+print "saving to $zip_dest"
+cp -f $app_zip $zip_dest
+
+stapled='1'
+save_info app_zip stapled

@@ -1,0 +1,34 @@
+#!/bin/zsh
+set -eu; base=${0:a:h}/..; source $base/common; sayhi $0
+frameworks_path=${1}
+xpc_services_path=${2}
+allowed_languages=${3}
+signing_identity=${4}
+show frameworks_path xpc_services_path allowed_languages signing_identity
+[[ -d $frameworks_path && -d $xpc_services_path ]] || { print "bad paths supplied"; exit 1 }
+
+sparkle_path=$frameworks_path/Sparkle.framework
+launcher_path=$xpc_services_path/org.sparkle-project.InstallerLauncher.xpc
+updater_path=$launcher_path/Contents/MacOS/Updater.app
+autoupdate_bin_path=$launcher_path/Contents/MacOS/Autoupdate
+[[ -d $sparkle_path && -d $launcher_path && -d $updater_path && -x $autoupdate_bin_path ]] || { print "framework/xpc/updater not found"; exit 1 }
+
+# remove the extra copy of Autoupdate and Updater.app
+print "removing spurious copies of tools"
+rm -fv $sparkle_path/Autoupdate
+rm -fv $sparkle_path/Updater.app
+rm -fv $sparkle_path/Versions/A/Autoupdate
+rm -rfv $sparkle_path/Versions/A/Updater.app
+
+# remove languages from framework and xpc
+$base/process/remove_langs $sparkle_path/Versions/A/Resources $allowed_languages
+$base/process/remove_langs $updater_path/Contents/Resources $allowed_languages
+
+# re-sign everything
+print "re-signing..."
+codesign --timestamp=none -o runtime -s $signing_identity -f $updater_path # sign
+codesign --timestamp=none -o runtime -s $signing_identity -f $autoupdate_bin_path # sign
+codesign --timestamp=none -o runtime -s $signing_identity -f $launcher_path # sign
+codesign --timestamp=none -o runtime -s $signing_identity -f $sparkle_path # sign
+
+saybye $0

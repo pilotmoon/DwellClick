@@ -1,0 +1,48 @@
+#!/bin/zsh
+function param { # get param path from json string
+  local keypath
+  for key in ${*[2,-1]}; do
+    keypath=$keypath.${(qqq)key} # builds keypath such as ."foo"."bar"
+  done
+  echo $1 | jq -r $keypath
+}
+
+function jsonify { # output vars as json
+  local result
+  for name in $*; do
+    result=($result ${(qqq)name}:${(qqq)${(P)name}})
+  done
+  echo "{${(j:,:)result}}" | jq
+}
+
+function jsonmerge { # print json file with merged params
+  if ! [[ -f $1 ]]; then
+    echo "jsonmerge: input file not found: $1"; exit 1
+  fi
+  local current 
+  if ! current=$(jq < $1); then
+    echo "jsonmerge: failed reading json file: $1"; exit 1
+  fi
+  local new
+  new=$(jsonify ${*[2,-1]} | jq) 
+  echo $current $new | jq -s '.[0] * .[1]'
+}
+
+function jsonsave { # save named params to file
+  temp=$(jsonmerge ${=*})
+  print $temp > $1
+}
+
+function jsonload { # get named params from file  
+  local json=$(<$1)
+  for name in ${*[2,-1]}; do
+    val=$(echo $json | jq -r ".${(qqq)name}")
+    if [[ -n $val && $val != null ]]; then
+      eval $name=\$val
+      show $name
+    else 
+      echo "[jsonload] missing parameter in ${1:t}: $name"
+      return 1
+    fi
+  done
+}

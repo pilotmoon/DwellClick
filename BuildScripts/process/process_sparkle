@@ -1,0 +1,37 @@
+#!/bin/zsh
+set -eu; base=${0:a:h}/..; source $base/common; sayhi $0
+sparkle_path=${1}
+allowed_languages=${2}
+signing_identity=${3}
+show sparkle_path allowed_languages signing_identity
+
+# construct paths we will work with
+sparkle_a=$sparkle_path/Versions/A
+sparkle_resources=$sparkle_a/Resources
+sparkle_bin=$sparkle_a/Sparkle
+finish_app=$sparkle_resources/Autoupdate.app
+finish_app_resources=$finish_app/Contents/Resources
+finish_app_bin=$finish_app/Contents/MacOS/Autoupdate
+finish_app_bin2=$finish_app/Contents/MacOS/fileop
+
+# checks
+show sparkle_path sparkle_resources finish_app finish_app_resources finish_app_bin finish_app_bin2
+[[ -d $sparkle_path && -d $sparkle_resources && -x $sparkle_bin && -d $finish_app \
+&& -d $finish_app_resources && -x $finish_app_bin && -x $finish_app_bin2 ]] || { print "bad paths"; exit 1 }
+
+# process finish_installation.app
+$base/process/remove_langs $finish_app_resources $allowed_languages # langs
+rm -rf $finish_app_resources/AppIcon.icns # icon
+codesign --timestamp=none -o runtime -s $signing_identity -f $finish_app # sign
+codesign --timestamp=none -o runtime -s $signing_identity -f $finish_app_bin2 # sign
+
+# process Sparkle.framework itself
+$base/process/remove_langs $sparkle_resources $allowed_languages # langs
+rm -rfv $sparkle_a/*Headers || true
+rm -fv $sparkle_path/*Headers || true
+rm -rfv $sparkle_a/Modules || true
+rm -fv $sparkle_path/Modules || true
+
+codesign --timestamp=none -o runtime -s $signing_identity -f $sparkle_a # sign
+
+saybye $0

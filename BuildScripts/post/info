@@ -1,0 +1,5 @@
+#!/bin/zsh
+set -eu; base=${0:a:h}/..; source $base/common; cd_info
+
+# this shows the info
+print_info

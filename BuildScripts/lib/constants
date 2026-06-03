@@ -1,0 +1,9 @@
+#!/bin/zsh
+export edition_mas="MAS"
+export edition_standalone="Standalone"
+export edition_setapp="Setapp"
+export channel_dev="Development"
+export channel_beta="Beta"
+export channel_production="Production"
+
+

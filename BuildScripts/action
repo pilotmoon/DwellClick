@@ -1,0 +1,69 @@
+#!/bin/zsh
+# called for pre and post build actions in xcode scheme
+set -eu; base=${0:a:h}; source $base/common
+memo_vars vars_action
+pushd $PROJECT_DIR
+
+action=${1:-none}
+metadata_config_path=${BUILDSCRIPTS_METADATA_CONFIG_PATH:-${PROJECT_DIR}/BuildMetadata.generated.xcconfig}
+[[ $metadata_config_path = /* ]] || metadata_config_path=$PROJECT_DIR/$metadata_config_path
+
+# set up log file since there is no log output in xcode
+logdir=${PROJECT_DIR}/log; mkdir -p $logdir
+logfile=$logdir/$action.log
+rm $logfile || true
+touch $logfile
+exec > $logfile 2>&1
+sayhi $0
+
+# write vars to debug
+show action metadata_config_path
+show BUILDSCRIPTS_VERSION_OFFSET BUILDSCRIPTS_VERSION_DEV
+
+# function writes standardized build metadata xcconfig file
+function write_metadata_config() {
+mkdir -p "${metadata_config_path:h}"
+cat <<END > "$metadata_config_path"
+BUILDSCRIPTS_VERSION_NUM = ${1:-0}
+BUILDSCRIPTS_VERSION_STRING = ${2:-not_set}
+BUILDSCRIPTS_ORIGINAL_VERSION_STRING = ${3:-not_set}
+BUILDSCRIPTS_RELEASE_CHANNEL = ${4:-not_set}
+BUILDSCRIPTS_RELEASE_EDITION = ${5:-not_set}
+END
+cat "$metadata_config_path"
+}
+
+function remove_metadata_config() {
+rm -f "$metadata_config_path"
+}
+
+function cleanup_metadata_config_on_exit() {
+case $action in
+postbuild|postarchive) remove_metadata_config ;;
+esac
+}
+trap cleanup_metadata_config_on_exit EXIT
+
+# perform action
+case $action in
+prebuild|prearchive)
+source $base/pre/labels $BUILDSCRIPTS_VERSION_OFFSET $BUILDSCRIPTS_VERSION_DEV
+write_metadata_config $version_num $version_string $original_version_string $channel $edition
+
+# tag repo with build number if Beta or Production
+if [[ $channel == $channel_beta || $channel == $channel_production ]]; then
+  git tag "b$version_num" || true
+fi
+;;
+
+postbuild)
+;;
+postarchive)
+display "Exporting archive" "Post-archive script"
+$base/post/export # run export script
+;;
+*) print "unknown action";;
+esac
+
+popd
+saybye $0

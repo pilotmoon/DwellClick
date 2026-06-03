@@ -1,0 +1,46 @@
+#!/bin/zsh
+set -eu; base=${0:a:h}/..; source $base/common; cd_info
+
+interactive=yes
+while getopts 'q' c; do
+  case $c in
+    q) interactive=no ;;
+  esac
+done
+
+# load vars
+load_info app_zip
+
+# unzip and verify signing
+verify_dir=${PWD}/verify
+mkdir -p $verify_dir; rm -rf $verify_dir/*.app(N)
+echo "unzipping to $verify_dir"
+/usr/bin/ditto -xk $app_zip $verify_dir
+
+# infer .app path
+app_path=($verify_dir/*.app(F)) # (F) expands non-empty directories
+binary_path=($app_path/Contents/MacOS/*(.))  # (.) expands plain files only
+show app_path binary_path
+echo; echo "* verifying with codesign"
+/usr/bin/codesign -dvv $app_path
+
+echo; echo "* verifying with spctl"
+/usr/sbin/spctl -avv $app_path || (print "VERIFY FAILED"; exit 1)
+
+echo; echo "* verifying with lipo"
+/usr/bin/lipo $binary_path -detailed_info
+/usr/bin/lipo $binary_path -verify_arch x86_64 arm64
+verified=1
+save_info verified
+
+if [[ $interactive == yes ]]; then
+  if prompt "Open in Apparency?"; then
+    open -a Apparency $app_path
+  fi
+  if prompt "Open in Taccy?"; then
+    open -a Taccy $app_path
+  fi
+  if prompt "Open in ArchiChect?"; then
+    open -a ArchiChect $app_path
+  fi
+fi
