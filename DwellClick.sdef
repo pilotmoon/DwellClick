@@ -35,12 +35,12 @@
 		</class>
 		
 		<command name="select" code="Dwelsele"
-			description="Specify the action for DwellClick to perform next time the mouse dwells.">
+			description="Specify the action for DwellClick to perform next time the pointer dwells.">
 			<direct-parameter type="action"/>
 		</command>
 		
 		<command name="perform" code="Dwelperf"
-			description="If the mouse is at rest, perform the action immediately. Otherwise, select this as the next action.">
+			description="If the pointer is at rest, perform the action immediately. Otherwise, select this as the next action.">
 			<direct-parameter type="action"/>
 		</command>
 		
