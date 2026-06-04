@@ -72,7 +72,7 @@
 		<key>Drag-With-Paste</key>
 		<string>Drag and Paste</string>
 		<key>FnEquiv</key>
-		<string>Show pop-up</string>
+		<string>Show popup</string>
 		<key>Lock</key>
 		<string>Repeat on/off</string>
 		<key>Mouse-Up</key>
@@ -82,7 +82,7 @@
 		<key>On-Off</key>
 		<string>DwellClick on/off</string>
 		<key>Popup</key>
-		<string>Show pop-up</string>
+		<string>Show popup</string>
 		<key>Release</key>
 		<string>Release drag</string>
 		<key>Triple-Click</key>

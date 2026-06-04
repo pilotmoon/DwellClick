@@ -45,18 +45,18 @@
     BOOL ignoreFn=[[NSUserDefaults standardUserDefaults] boolForKey:@"IgnoreFnKey"];
     if ([self fnShortcut]) {
         if (ignoreFn) {
-            return [NSString stringWithFormat:NSLocalizedString(@"To show the pop-up, press %@", nil), [self fnShortcut]];
+            return [NSString stringWithFormat:NSLocalizedString(@"To show the popup, press %@", nil), [self fnShortcut]];
         }
         else {
-            return [NSString stringWithFormat:NSLocalizedString(@"To show the pop-up, press %@ or fn", nil), [self fnShortcut]];
+            return [NSString stringWithFormat:NSLocalizedString(@"To show the popup, press %@ or fn", nil), [self fnShortcut]];
         }
     }
     else {
         if (ignoreFn) {
-            return NSLocalizedString(@"To show the pop-up, set a keyboard shortcut", nil);
+            return NSLocalizedString(@"To show the popup, set a keyboard shortcut", nil);
         }
         else {
-            return NSLocalizedString(@"To show the pop-up, press fn", nil);
+            return NSLocalizedString(@"To show the popup, press fn", nil);
         }
     }
 }

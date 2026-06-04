@@ -237,7 +237,7 @@
 						<object class="NSTextFieldCell" key="NSCell" id="630322042">
 							<int key="NSCellFlags">68157504</int>
 							<int key="NSCellFlags2">138413056</int>
-							<string key="NSContents">To show the pop-up, press Fn</string>
+							<string key="NSContents">To show the popup, press Fn</string>
 							<object class="NSFont" key="NSSupport">
 								<string key="NSName">LucidaGrande</string>
 								<double key="NSSize">12</double>

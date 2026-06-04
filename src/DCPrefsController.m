@@ -230,12 +230,12 @@ static NSString *const DCShortcutPrefix=@"DCShortcut.";
 		
 		@"prefs-Popups": [NSMutableDictionary dictionaryWithObjectsAndKeys:
 		 [popupsPrefsController view], @"view",
-		 @"Pop-up", @"title",
+		 @"Popup", @"title",
 		 nil],
 		
         @"prefs-Panel": [NSMutableDictionary dictionaryWithObjectsAndKeys:
          [panelPrefsController view], @"view",
-         @"Panel", @"title",
+         @"Floating", @"title",
          nil],
         
         @"prefs-Apps": [NSMutableDictionary dictionaryWithObjectsAndKeys:
