@@ -37,6 +37,8 @@ NSUInteger *DCAnimationHide;
 @interface DCEngine()
 - (void)fnKeyAction;
 - (void)selectDefaultClick;
+- (void)selectedClickChanged;
+- (void)setPendingFnPopup:(BOOL)state;
 @end
 
 @implementation DCEngine
@@ -103,6 +105,24 @@ NSUInteger *DCAnimationHide;
 
 #pragma mark Special Keys Pressed
 
+#define DC_FN_POPUP_RECENT_MOUSE_MOVE_INTERVAL 0.25
+
+- (void)setPendingFnPopup:(BOOL)state
+{
+    if (pendingFnPopup==state) {
+        return;
+    }
+    pendingFnPopup=state;
+    if (state) {
+        [modifierController setNoSelection];
+        [symbolController clearUnderlay];
+        [symbolController displaySymbolName:@"Popup" style:DCSymbolStyleEmboss];
+    }
+    else {
+        [self selectedClickChanged];
+    }
+}
+
 - (BOOL)escKeyPressed
 {
 	BOOL result=NO;
@@ -123,6 +143,10 @@ NSUInteger *DCAnimationHide;
 	else {
 		if ([popupsController isAlive]) {
 			[popupsController cancelPopup];
+			result=YES;
+		}
+		if (pendingFnPopup) {
+			[self setPendingFnPopup:NO];
 			result=YES;
 		}
 		if ((self.autoClickOn || !self.defaultClick.selected)) {
@@ -150,17 +174,32 @@ NSUInteger *DCAnimationHide;
 			self.holdDrag=YES; // lock drag	
 		}
 	}
-	else if ([popupsController isAlive] || DCClickPopup.selected)
+	else if ([popupsController isAlive])
     {
-       // popupsController.buttonSet=DCPopupButtonSetStandard;
-       // todo: removed as does nothing
+        if ([tap mouseMovedWithinTimeInterval:DC_FN_POPUP_RECENT_MOUSE_MOVE_INTERVAL]) {
+            [popupsController cancelPopup:YES];
+            [self setPendingFnPopup:YES];
+        }
+	}
+	else if (DCClickPopup.selected)
+    {
+       // already selected
+    }
+	else if (pendingFnPopup)
+    {
+        // already requested
     }
     else
     {
         if (self.lockCurrentClick) {
             self.lockCurrentClick=NO;
         }
-        [DCClickPopup performTriggeredActionFromKeyboard];
+        if ([tap mouseMovedWithinTimeInterval:DC_FN_POPUP_RECENT_MOUSE_MOVE_INTERVAL]) {
+            [self setPendingFnPopup:YES];
+        }
+        else {
+            [DCClickPopup performTriggeredActionFromKeyboard];
+        }
     }			
 }
 
@@ -179,6 +218,7 @@ NSUInteger *DCAnimationHide;
     {
         if([self modifierKeyActionIsAllowed])
         {
+            [self setPendingFnPopup:NO];
             DCClick *click=(DCClick *)([clickMachine.selectedItem isKindOfClass:[DCClick class]]?clickMachine.selectedItem:nil);
             const DCClickType type=click.type;
             if (clickMachine.dragging)
@@ -195,8 +235,7 @@ NSUInteger *DCAnimationHide;
             }
             else if (popupsController.alive) 
             {
-                // popupsController.buttonSet=[DCPopupsController buttonSetForFlags:flag];
-                // todo removed this as it was buggy
+                // popup button sets are fixed
             }
             else 
             {
@@ -280,11 +319,22 @@ NSUInteger *DCAnimationHide;
 
 - (void)popupWillAppear
 {
+    pendingFnPopup=NO;
     // reset modifier selection
     NMRunAsyncOnMainThread(^{
         [self.modifierController setNoSelection];
         [symbolController displaySymbolName:nil style:0];
     });
+}
+
+- (BOOL)consumePendingFnPopup
+{
+    BOOL result=pendingFnPopup;
+    if (result) {
+        pendingFnPopup=NO;
+        [symbolController clearSymbol];
+    }
+    return result;
 }
 
 # pragma mark State Machine changes
@@ -327,6 +377,9 @@ NSUInteger *DCAnimationHide;
 {
     NMBasicBlock b=^{
         if(!gotShortcut) {
+            if (activity!=DCTapActivityKeyboard) {
+                [self setPendingFnPopup:NO];
+            }
             [modifierController setNoSelection];
             if (self.lockCurrentClick) {
                 self.lockCurrentClick=NO;
@@ -366,6 +419,11 @@ NSUInteger *DCAnimationHide;
 {
 	DCClick *click=(DCClick *)clickMachine.selectedItem;
     NMLogInfo(@"Selected click changed to: %@", click);
+
+    if (pendingFnPopup) {
+        [symbolController displaySymbolName:@"Popup" style:DCSymbolStyleEmboss];
+        return;
+    }
 
 	if ([click isKindOfClass:[DCClick class]])
     {

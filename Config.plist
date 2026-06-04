@@ -2,45 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AlternativePopupsClicks</key>
-	<array>
-		<string>Double-Click</string>
-		<string>Drag</string>
-		<string>Control-Click</string>
-	</array>
-	<key>AvailablePopupsClicks</key>
-	<array>
-		<string>Click</string>
-		<string>Double-Click</string>
-		<string>Triple-Click</string>
-		<string>Drag</string>
-		<string>Shift-Click</string>
-		<string>Shift-Drag</string>
-		<string>Control-Click</string>
-		<string>Control-Drag</string>
-		<string>Option-Click</string>
-		<string>Option-Drag</string>
-		<string>Command-Click</string>
-		<string>Command-Drag</string>
-		<string>Click-With-Copy</string>
-		<string>Click-With-Paste</string>
-		<string>Double-Click-With-Copy</string>
-		<string>Double-Click-With-Paste</string>
-		<string>Triple-Click-With-Copy</string>
-		<string>Triple-Click-With-Paste</string>
-		<string>Drag-With-Copy</string>
-		<string>Drag-With-Paste</string>
-	</array>
-	<key>CommandPopupsClicks</key>
-	<array>
-		<string>Command-Drag</string>
-		<string>Command-Click</string>
-	</array>
-	<key>ControlPopupsClicks</key>
-	<array>
-		<string>Control-Drag</string>
-		<string>Control-Click</string>
-	</array>
 	<key>DefaultPopupsClicks</key>
 	<array>
 		<string>Double-Click</string>
@@ -157,11 +118,6 @@
 		<string>com.dragon.dictate</string>
 		<string>com.oldjewel.lazymouse</string>
 	</array>
-	<key>OptionPopupsClicks</key>
-	<array>
-		<string>Option-Drag</string>
-		<string>Option-Click</string>
-	</array>
 	<key>ResizeCursorsSFH</key>
 	<array>
 		<integer>3064706476</integer>
@@ -250,11 +206,6 @@
 		<string>Drag-With-Paste</string>
 		<string>Mouse-Up</string>
 		<string>Popup</string>
-	</array>
-	<key>ShiftPopupsClicks</key>
-	<array>
-		<string>Shift-Drag</string>
-		<string>Shift-Click</string>
 	</array>
 	<key>ShortcutsList</key>
 	<array>

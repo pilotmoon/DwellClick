@@ -18,67 +18,8 @@
 #import "DCClickEvent.h"
 
 @implementation DCPopupsController
-@synthesize buttonSet;
-
-static NSDictionary *_buttonSetNames;
 
 #pragma mark Private Methods
-
-+ (DCPopupButtonSetIdentifier)buttonSetForFlags:(CGEventFlags)flags
-{
-    if (flags&kCGEventFlagMaskControl) {
-        return DCPopupButtonSetControl;
-    }
-    if (flags&kCGEventFlagMaskAlternate) {
-        return DCPopupButtonSetOption;
-    }
-    if (flags&kCGEventFlagMaskShift) {
-        return DCPopupButtonSetShift;
-    }
-    if (flags&kCGEventFlagMaskCommand) {
-        return DCPopupButtonSetCommand;
-    }
-    return DCPopupButtonSetNone;
-}
-
-
-- (NSArray *)buttonsForIdentifier:(DCPopupButtonSetIdentifier)identifier
-{
-	NSMutableArray *result=[NSMutableArray array];
-	NSArray *names;
-    switch (identifier) {
-		case DCPopupButtonSetStandard:
-			names=clickButtons;
-			break;
-		case DCPopupButtonSetStandardWithLock:
-			names=alternativeClickButtons;
-			break;
-		case DCPopupButtonSetShift:
-			names=clickButtonsShift;
-			break;
-		case DCPopupButtonSetControl:
-			names=clickButtonsControl;
-			break;
-		case DCPopupButtonSetOption:
-			names=clickButtonsOption;
-			break;
-		case DCPopupButtonSetCommand:
-			names=clickButtonsCommand;
-			break;
-        default:
-            names=nil;
-			break;
-	}
-    if (names) {
-		for (NSString *name in names) {
-            NSButton *b=availableButtons[name];
-            if (b) {
-                [result addObject:b];
-            }
-		}		
-	}
-	return result;
-}
 
 - (void)doPopupForEvent:(DCClickEvent *)event
 {	
@@ -88,38 +29,13 @@ static NSDictionary *_buttonSetNames;
     if (event.actualClick!=DCClickPopup) {
         return;
     }
-    
-    // get buttons
-    DCPopupButtonSetIdentifier set=[DCPopupsController buttonSetForFlags:event.uiState.modifiersDown];
-    if ((![DCEngine sharedInstance].lockModifier)&&set==DCPopupButtonSetNone) {
-        set=[DCPopupsController buttonSetForFlags:[DCEngine sharedInstance].modifierController.flags];
-    }
-    if (set!=DCPopupButtonSetNone) {
-        self.buttonSet=set;
-    }
-    	
-	// get the buttons
-    NSArray *theButtons=[self buttonsForIdentifier:buttonSet];
-    if (!theButtons || [theButtons count]==0) {
+    if ([clickButtons count]==0) {
         return;
     }
     
     [[DCEngine sharedInstance] popupWillAppear];
     
-    [self doPopupWithButtons:theButtons location:[[event.uiState.mouseFlippedLocation flip] nsPoint]];
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-	if (object==self && [keyPath isEqualToString:@"buttonSet"]) {
-		if (self.alive) {
-            NMLogInfo(@"change button set");
-			[self.popupWindow changeButtons:[self buttonsForIdentifier:buttonSet] nubLocation:self.currentLocation];
-		}
-	}
-    else {
-        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
-    }
+    [self doPopupWithButtons:clickButtons location:[[event.uiState.mouseFlippedLocation flip] nsPoint]];
 }
 
 #pragma mark Public methods
@@ -128,42 +44,30 @@ static NSDictionary *_buttonSetNames;
 {
 	self=[super init];
 	if (!self) return nil;
-		
-	[self addObserver:self forKeyPath:@"buttonSet" options:0 context:0];
 	
 	// set up buttons
 	NSDictionary *displayNames=[NSDictionary dictionaryWithConfigName:@"DisplayNames"];
-	availableButtons=[NSMutableDictionary dictionary];
+	NSMutableArray *buttons=[NSMutableArray array];
 	
 	// for each button in config
-	for (NSString *name in [NSSet setWithArray:[NSArray arrayWithConfigName:@"AvailablePopupsClicks"]])
+	for (NSString *name in [NSArray arrayWithConfigName:@"DefaultPopupsClicks"])
 	{
 		// create the button with its routine routine
 		NSObject<DCTriggerable> *triggerable=(DCSelection *)clictionary[name];
-		((NSMutableDictionary *)availableButtons)[name] = [self newButtonWithTitle:displayNames[name]
-                                                                              image:[NSImage symbolForName:name]
-                                                                        targetBlock:^{
-                                                                            [triggerable performTriggeredActionFromPopupWithLocation:[[NMPoint pointWithNSPoint:self.currentLocation] flip]];
-                                                                        }];
-    }
-	NMLogInfo(@"Buttons: %@", availableButtons);	
-	
-	clickButtons=[NSArray arrayWithConfigName:@"DefaultPopupsClicks"];
-	alternativeClickButtons=[NSArray arrayWithConfigName:@"AlternativePopupsClicks"];
-	clickButtonsShift=[NSArray arrayWithConfigName:@"ShiftPopupsClicks"];
-    clickButtonsControl=[NSArray arrayWithConfigName:@"ControlPopupsClicks"];
-    clickButtonsOption=[NSArray arrayWithConfigName:@"OptionPopupsClicks"];
-    clickButtonsCommand=[NSArray arrayWithConfigName:@"CommandPopupsClicks"];
+		NSButton *button=[self newButtonWithTitle:displayNames[name]
+                                            image:[NSImage symbolForName:name]
+                                      targetBlock:^{
+                                          [triggerable performTriggeredActionFromPopupWithLocation:[[NMPoint pointWithNSPoint:self.currentLocation] flip]];
+                                      }];
+        if (button) {
+            [buttons addObject:button];
+        }
+	}
+	clickButtons=[buttons copy];
+	NMLogInfo(@"Buttons: %@", clickButtons);
 	
 	return self;
 }
-
-- (void)cancelPopup:(BOOL)quick
-{
-    [super cancelPopup:quick];
-    self.buttonSet=DCPopupButtonSetStandard;
-}
-
 
 - (BOOL)mouseEventDuringOverride:(CGEventRef)event type:(CGEventType)type location:(CGPoint)location
 {

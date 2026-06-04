@@ -87,9 +87,10 @@ extern NSUInteger *DCAnimationHide;
 	BOOL ignoreCount;
 	
 	BOOL hasDwelled;
-	BOOL hasMovedSinceAction;
+    BOOL hasMovedSinceAction;
 	CGEventFlags modifiersDown;
 	CGEventFlags actedOnModifier;
+	BOOL pendingFnPopup;
     
     BOOL gotShortcut;
     
@@ -148,6 +149,7 @@ extern NSUInteger *DCAnimationHide;
 - (BOOL)modifierButtonPressed:(CGEventFlags)flag;
 
 - (void)popupWillAppear;
+- (BOOL)consumePendingFnPopup;
 
 // quick drag
 - (void)didQuickDragWithEvent:(DCClickEvent *)event;

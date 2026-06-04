@@ -80,6 +80,7 @@ typedef enum {
     
     // Where the mouse was last time it was moved or dragged
     CGPoint lastMoveLocation;
+    NSTimeInterval lastMoveTime;
     
     // dwell detection
     NSTimeInterval dwellTime;
@@ -117,9 +118,9 @@ typedef enum {
 
 }
 - (NSTimeInterval)dwelledTime;
+- (BOOL)mouseMovedWithinTimeInterval:(NSTimeInterval)interval;
 - (void)startBounceTimer;
 - (void)mouseDidMove;
 - (void)enableTap:(BOOL)state;
 @end
-
 

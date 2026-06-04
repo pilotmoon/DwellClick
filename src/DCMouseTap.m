@@ -85,6 +85,9 @@ static CGEventRef eventTapCallback (CGEventTapProxy proxy,
 			// record last move location and pid
 			td->lastMoveLocation=location;
 			td->lastMovePid=CGEventGetIntegerValueField(event, kCGEventSourceUnixProcessID);
+			if (moved && !isOurEvent) {
+				td->lastMoveTime=CFAbsoluteTimeGetCurrent();
+			}
             
 			if((0!=td->dragType)&&!isOurEvent) // force dragging
 			{ 
@@ -411,8 +414,9 @@ tap_end:
 {
 	NMLogInfo(@"tap start called");
 	if(![self isActive]) {
-        buttonsClear=YES;
-        lastMoveLocation=CGPointMake(0,0);
+		buttonsClear=YES;
+		lastMoveLocation=CGPointMake(0,0);
+		lastMoveTime=0;
 		dwellCenter=CGPointMake(0,0);
 		hasDwelledSincePenOffTablet=YES;
 		eventNumber=INITIAL_EVENT_NUMBER;
@@ -567,6 +571,11 @@ tap_end:
 - (NSTimeInterval)dwelledTime
 {
 	return dwellTime-([timer isValid]?[[timer fireDate] timeIntervalSinceNow]:0);
+}
+
+- (BOOL)mouseMovedWithinTimeInterval:(NSTimeInterval)interval
+{
+	return lastMoveTime>0 && CFAbsoluteTimeGetCurrent()-lastMoveTime<=interval;
 }
 
 @end

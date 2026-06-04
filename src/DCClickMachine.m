@@ -86,7 +86,11 @@
         // apply special click if not already dragging
         if (!self.dragging)
         {	
-            if(engine.popupsController.mouseActiveInPopup)
+            if ([engine consumePendingFnPopup])
+            {
+                event.actualClick=DCClickPopup;
+            }
+            else if(engine.popupsController.mouseActiveInPopup)
             {
                 event.actualClick=DCClickPopupButtonClick;
             }
