@@ -10,8 +10,8 @@
 #import "DCUtils.h"
 #import "DCTouchMonitor.h"
 #import "DCCommon.h"
+#import "DCCursorInfo.h"
 #import "NMKit/NMPoint.h"
-#import "NMKit/NMCursorUtils.h"
 #import "NMKit/NMConfigUtils.h"
 
 static NSRect _topRect(NSPoint origin, NSSize size, CGFloat d)
@@ -54,6 +54,27 @@ static BOOL _eventLooksSliderLike(DCClickEvent *event)
         return YES;
     }
     return [uiState.mouseElementParents containsObject:@"AXSlider"] || [uiState.mouseElementParents containsObject:(NSString *)kAXValueIndicatorRole];
+}
+
+static void _logAutoDragDecision(DCUIState *uiState, BOOL sliderLike, BOOL resizeCursor, BOOL growArea, BOOL valueIndicator, BOOL scrollBar, BOOL legacyScrollBar, BOOL windowDragBar, BOOL result)
+{
+    if (![DCCursorInfo debugCursorRecognition]) {
+        return;
+    }
+
+    NMLogInfo(@"AUTODRAG decision=%@ cursor=%@ slider=%@ resizeCursor=%@ growArea=%@ valueIndicator=%@ scrollBar=%@ legacyScrollBar=%@ windowDragBar=%@ app=%@ role=%@ parents=%@",
+              result ? @"auto-drag" : @"no-special-click",
+              uiState.cursorType ?: @"unknown",
+              @(sliderLike),
+              @(resizeCursor),
+              @(growArea),
+              @(valueIndicator),
+              @(scrollBar),
+              @(legacyScrollBar),
+              @(windowDragBar),
+              uiState.mouseAppId ?: @"(unknown)",
+              uiState.mouseElementRole ?: @"(unknown)",
+              uiState.mouseElementParents);
 }
 
 // is this a menu item we should not click on
@@ -315,18 +336,6 @@ static BOOL _clickedIntoNewFocus(DCClickEvent *event)
 {
 	if (!(self=[super init])) return nil;
 
-	// hashes of cursors that shouls cause auto drag
-	resizers=[NSMutableSet setWithObjects:
-			  @([[NSCursor resizeLeftCursor] superFastHash]),
-			  @([[NSCursor resizeRightCursor] superFastHash]),
-			  @([[NSCursor resizeLeftRightCursor] superFastHash]),
-			  @([[NSCursor resizeUpCursor] superFastHash]),
-			  @([[NSCursor resizeDownCursor] superFastHash]),
-			  @([[NSCursor resizeUpDownCursor] superFastHash]),
-			  nil];
-	
-	[(NSMutableSet *)resizers addObjectsFromArray:[NSArray arrayWithConfigName:@"ResizeCursorsSFH"]];
-
 	// roles that quick drag can't work on
 	quickDragDisallowedRoles=[NSSet setWithObjects:
 							/** these should be common with popup roles */
@@ -378,13 +387,15 @@ static BOOL _clickedIntoNewFocus(DCClickEvent *event)
         ![DCEngine sharedInstance].lockModifier &&
         !_isYosemiteSafariBar(uiState))
     {
-        if (sliderLike ||
-            [resizers containsObject:uiState.cursorHash] ||
-            [element.role isEqualToString:(NSString *)kAXGrowAreaRole] ||
-            [element.role isEqualToString:(NSString *)kAXValueIndicatorRole] ||
-            [element.role isEqualToString:(NSString *)kAXScrollBarRole] ||
-            (NMOSVersionCheckSnowLeopardOrBelow() && [uiState.mouseElementParents containsObject:(NSString *)kAXWindowRole] && DCScrollBarAtPoint([uiState.mouseFlippedLocation nsPoint])) ||
-            _isWindowDragBar(uiState))
+        const BOOL resizeCursor=[uiState.cursorType isEqualToString:DCCursorTypeResize];
+        const BOOL growArea=[element.role isEqualToString:(NSString *)kAXGrowAreaRole];
+        const BOOL valueIndicator=[element.role isEqualToString:(NSString *)kAXValueIndicatorRole];
+        const BOOL scrollBar=[element.role isEqualToString:(NSString *)kAXScrollBarRole];
+        const BOOL legacyScrollBar=NMOSVersionCheckSnowLeopardOrBelow() && [uiState.mouseElementParents containsObject:(NSString *)kAXWindowRole] && DCScrollBarAtPoint([uiState.mouseFlippedLocation nsPoint]);
+        const BOOL windowDragBar=_isWindowDragBar(uiState);
+        const BOOL shouldAutoDrag=sliderLike || resizeCursor || growArea || valueIndicator || scrollBar || legacyScrollBar || windowDragBar;
+        _logAutoDragDecision(uiState, sliderLike, resizeCursor, growArea, valueIndicator, scrollBar, legacyScrollBar, windowDragBar, shouldAutoDrag);
+        if (shouldAutoDrag)
         {
             return DCClickAutoDragClick;  
         }

@@ -16,6 +16,7 @@
 		012CF31412F3461A0040F5BE /* ShowPopup.png in Resources */ = {isa = PBXBuildFile; fileRef = 012CF31312F3461A0040F5BE /* ShowPopup.png */; };
 		0130DCE02FCEE6D40090E201 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0130DCDF2FCEE6D40090E201 /* ServiceManagement.framework */; };
 		0135F6971278A89900B854AF /* DCTouchMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0135F6961278A89900B854AF /* DCTouchMonitor.m */; };
+		DC0C00032FD1000000000003 /* DCCursorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0C00022FD1000000000002 /* DCCursorInfo.m */; };
 		013C90B1132115B600C9098F /* FCAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C90AC132115B600C9098F /* FCAboutController.m */; };
 		013C90B2132115B600C9098F /* FCDraggableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C90AE132115B600C9098F /* FCDraggableImageView.m */; };
 		013C90B3132115B600C9098F /* FCLinkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C90B0132115B600C9098F /* FCLinkView.m */; };
@@ -187,6 +188,7 @@
 		C0DE02DAC2395DBD8C3BD239 /* NMStartAtLogin2024.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEAF3EBADC9E723DAB829E /* NMStartAtLogin2024.m */; };
 		C0DE0E666684B32AF9348323 /* NMLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE748EBE4A43D710445F9E /* NMLog.m */; };
 		C0DE102446ADF30FDCCD906A /* NMCoreUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE0FF5BD9F71C61A4C1296 /* NMCoreUtils.m */; };
+		DC0C00062FD1000000000006 /* NMCursorFingerprint.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0C00052FD1000000000005 /* NMCursorFingerprint.m */; };
 		C0DE19A813F3A82583FE76DE /* NMBubbleCloseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE88BCB739B48DF4120FC8 /* NMBubbleCloseButton.m */; };
 		C0DE1A076A2900BDA0825887 /* NMTipWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEF5B62D52911D0A7167B5 /* NMTipWindow.m */; };
 		C0DE21DD599B8EFB391541FB /* NMMouseUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEF0E82AF5A5509BC25FF9 /* NMMouseUtils.m */; };
@@ -547,6 +549,8 @@
 		C0DE0AEE55879917840C5F29 /* NMInitialDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMInitialDefaults.h; sourceTree = "<group>"; };
 		C0DE0FD3B035C3652AB94D5B /* NMLoginItemsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMLoginItemsController.h; sourceTree = "<group>"; };
 		C0DE0FF5BD9F71C61A4C1296 /* NMCoreUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMCoreUtils.m; sourceTree = "<group>"; };
+		DC0C00012FD1000000000001 /* DCCursorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCursorInfo.h; sourceTree = "<group>"; };
+		DC0C00022FD1000000000002 /* DCCursorInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCursorInfo.m; sourceTree = "<group>"; };
 		C0DE14456AE8558FB1CFDE34 /* NMAppSupportDir.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMAppSupportDir.h; sourceTree = "<group>"; };
 		C0DE16DD5AD9506D0BB50EA5 /* NMSuperFastHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSuperFastHash.h; sourceTree = "<group>"; };
 		C0DE1E8573D8883611AD06BD /* NMImageButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMImageButtonCell.h; sourceTree = "<group>"; };
@@ -581,6 +585,8 @@
 		C0DE60A5CAE8071072E6ECCD /* NMSugarButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSugarButtonCell.h; sourceTree = "<group>"; };
 		C0DE612252A77DC6163C92AE /* NMSugarButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMSugarButtonCell.m; sourceTree = "<group>"; };
 		C0DE632C794ECB35B01F22F4 /* NMCursorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCursorUtils.h; sourceTree = "<group>"; };
+		DC0C00042FD1000000000004 /* NMCursorFingerprint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCursorFingerprint.h; sourceTree = "<group>"; };
+		DC0C00052FD1000000000005 /* NMCursorFingerprint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMCursorFingerprint.m; sourceTree = "<group>"; };
 		C0DE637CE6C8BF4AC2D05E99 /* NMMouseUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMMouseUtils.h; sourceTree = "<group>"; };
 		C0DE643195C58A0D7DC6A008 /* NMUniversalAccessHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMUniversalAccessHelper.h; sourceTree = "<group>"; };
 		C0DE6597543C50FCEDECB711 /* NMSugarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMSugarButton.m; sourceTree = "<group>"; };
@@ -863,9 +869,11 @@
 				018EA2D01287F31800F6F0A2 /* DCClickEvent.m */,
 				01C9424911F4B72700A88FD4 /* DCClickMachine.h */,
 				01C9984111F5C1B600DB9812 /* DCClickMachine.m */,
-				014F093B11F83F6500BE094C /* DCClickIntelligence.h */,
-				014F093C11F83F6500BE094C /* DCClickIntelligence.m */,
-				01C9426A11F4B72800A88FD4 /* DCMouseClicker.h */,
+					014F093B11F83F6500BE094C /* DCClickIntelligence.h */,
+					014F093C11F83F6500BE094C /* DCClickIntelligence.m */,
+					DC0C00012FD1000000000001 /* DCCursorInfo.h */,
+					DC0C00022FD1000000000002 /* DCCursorInfo.m */,
+					01C9426A11F4B72800A88FD4 /* DCMouseClicker.h */,
 				01C9426B11F4B72800A88FD4 /* DCMouseClicker.m */,
 				01C9425211F4B72800A88FD4 /* DCDwellMachine.h */,
 				01C9425311F4B72800A88FD4 /* DCDwellMachine.m */,
@@ -1183,9 +1191,11 @@
 				C0DEB84BA8143201509BE8DD /* NMConfigUtils.m */,
 				C0DEE1A84253ECE12E18CAEC /* NMCoreUtils.h */,
 				C0DE0FF5BD9F71C61A4C1296 /* NMCoreUtils.m */,
-				C0DE632C794ECB35B01F22F4 /* NMCursorUtils.h */,
-				C0DECC9A70CB9BE7C8F33F49 /* NMCursorUtils.m */,
-				C0DE462F92AACD1ECDDE751A /* NMCUtils.c */,
+					C0DE632C794ECB35B01F22F4 /* NMCursorUtils.h */,
+					C0DECC9A70CB9BE7C8F33F49 /* NMCursorUtils.m */,
+					DC0C00042FD1000000000004 /* NMCursorFingerprint.h */,
+					DC0C00052FD1000000000005 /* NMCursorFingerprint.m */,
+					C0DE462F92AACD1ECDDE751A /* NMCUtils.c */,
 				C0DE80E0D30C970523697C4B /* NMCUtils.h */,
 				C0DE99C49EF2F953DC8EFA77 /* NMEscapableItem.h */,
 				C0DECCCEF7C5942575A82C42 /* NMEventUtils.h */,
@@ -1520,10 +1530,11 @@
 				C0DE83372D35FC0D67CBCAF1 /* NMBubbleWindow.m in Sources */,
 				C0DEF700FACCAC0CD964636E /* NMBubbleWindowView.m in Sources */,
 				C0DE82E3DE9B2B4033C0B00B /* NMCommander.m in Sources */,
-				C0DEB0DC473FE2D6B2FC06F9 /* NMConfigUtils.m in Sources */,
-				C0DE102446ADF30FDCCD906A /* NMCoreUtils.m in Sources */,
-				C0DE57C957F8C213090906BD /* NMCursorUtils.m in Sources */,
-				C0DE5167826C60D0D3DCA100 /* NMCUtils.c in Sources */,
+					C0DEB0DC473FE2D6B2FC06F9 /* NMConfigUtils.m in Sources */,
+					C0DE102446ADF30FDCCD906A /* NMCoreUtils.m in Sources */,
+					C0DE57C957F8C213090906BD /* NMCursorUtils.m in Sources */,
+					DC0C00062FD1000000000006 /* NMCursorFingerprint.m in Sources */,
+					C0DE5167826C60D0D3DCA100 /* NMCUtils.c in Sources */,
 				C0DE8175AF501786C017A924 /* NMEventUtils.m in Sources */,
 				C0DEDEBE3A4040952C09597D /* NMFloatUtils.m in Sources */,
 				C0DE65D3B9E5014EE77F2B06 /* NMGeometryUtils.m in Sources */,
@@ -1602,10 +1613,11 @@
 				01AD55B6120882310038D53D /* DCSimpleTrigger.m in Sources */,
 				01AC07AF1210340500D15CA8 /* DCScrollDetector.m in Sources */,
 				01016880123FF99F00CDA1E1 /* DCApp.m in Sources */,
-				01683298126F239E00904A28 /* DCConstants.m in Sources */,
-				0135F6971278A89900B854AF /* DCTouchMonitor.m in Sources */,
-				018EA2D11287F31800F6F0A2 /* DCClickEvent.m in Sources */,
-				019B39D312895F3800AF3223 /* DCUIState.m in Sources */,
+					01683298126F239E00904A28 /* DCConstants.m in Sources */,
+					0135F6971278A89900B854AF /* DCTouchMonitor.m in Sources */,
+					DC0C00032FD1000000000003 /* DCCursorInfo.m in Sources */,
+					018EA2D11287F31800F6F0A2 /* DCClickEvent.m in Sources */,
+					019B39D312895F3800AF3223 /* DCUIState.m in Sources */,
 				019B3A6B1289674E00AF3223 /* DCUtils.m in Sources */,
 				01C3DF09129E7F7F005E99B7 /* DCAppDelegate+Distribution.m in Sources */,
 				01BA6A4E12A52488006D8A64 /* DCPopupsController.m in Sources */,

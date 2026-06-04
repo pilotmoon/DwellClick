@@ -118,69 +118,8 @@
 		<string>com.dragon.dictate</string>
 		<string>com.oldjewel.lazymouse</string>
 	</array>
-	<key>ResizeCursorsSFH</key>
-	<array>
-		<integer>3064706476</integer>
-		<integer>2893008966</integer>
-		<integer>3734070125</integer>
-		<integer>769039544</integer>
-		<integer>2295757777</integer>
-		<integer>1290468483</integer>
-		<integer>3019241958</integer>
-		<integer>2090590866</integer>
-		<integer>143290896</integer>
-		<integer>1945164266</integer>
-		<integer>2899101375</integer>
-		<integer>1309091554</integer>
-		<integer>1865446052</integer>
-		<integer>737701471</integer>
-		<integer>3636196515</integer>
-		<integer>158488273</integer>
-		<integer>4173977126</integer>
-		<integer>1692721500</integer>
-		<integer>245059770</integer>
-		<integer>3894980825</integer>
-		<integer>2578028227</integer>
-		<integer>466381656</integer>
-		<integer>2347991591</integer>
-		<integer>1173964249</integer>
-		<integer>794733887</integer>
-		<integer>2389535872</integer>
-		<integer>3727803422</integer>
-		<integer>1529095681</integer>
-		<integer>1910872370</integer>
-		<integer>2173554462</integer>
-		<integer>1281552818</integer>
-		<integer>1627574546</integer>
-		<integer>3037780629</integer>
-		<integer>1745800971</integer>
-		<integer>2085827608</integer>
-		<integer>4132051958</integer>
-		<integer>794733887</integer>
-		<integer>2641875268</integer>
-		<integer>75919234</integer>
-		<integer>3183108583</integer>
-		<integer>3386183646</integer>
-		<integer>4235274540</integer>
-		<integer>3037780629</integer>
-		<integer>3605733642</integer>
-		<integer>1460567246</integer>
-		<integer>1783012328</integer>
-		<integer>2859310591</integer>
-		<integer>3738631147</integer>
-		<integer>2783988303</integer>
-		<integer>3456600578</integer>
-		<integer>4120400223</integer>
-		<integer>2535622311</integer>
-		<integer>2180304651</integer>
-		<integer>3201776963</integer>
-		<integer>3453837853</integer>
-		<integer>812112155</integer>
-		<integer>2687527807</integer>
-		<integer>2847333493</integer>
-		<integer>2017337364</integer>
-		<integer>3059718975</integer>
-	</array>
+	<key>CursorClassifications</key>
+	<dict/>
 	<key>ScriptableActions</key>
 	<array>
 		<string>No-Click</string>

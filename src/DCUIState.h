@@ -4,6 +4,7 @@
 #import <Cocoa/Cocoa.h>
 #import "NMKit/NMUIElement.h"
 
+@class DCCursorInfo;
 
 @interface DCUIState : NSObject {
 	NMPoint *mouseFlippedLocation;
@@ -25,7 +26,8 @@
 	BOOL tabletProximity;
 	BOOL axEnabled;
 	CGEventFlags eventFlags;
-	NSNumber *cursorHash;
+	DCCursorInfo *cursorInfo;
+	NSString *cursorType;
 	CGEventFlags modifiersDown;
     BOOL cursorIsVisible;
 	BOOL mouseElementIsOwnSliderFallback;
@@ -49,7 +51,8 @@
 @property (readonly) BOOL tabletProximity;
 @property (readonly) BOOL axEnabled;
 @property (readonly) CGEventFlags eventFlags;
-@property (readonly) NSNumber *cursorHash;
+@property (readonly) DCCursorInfo *cursorInfo;
+@property (readonly) NSString *cursorType;
 @property (readonly) CGEventFlags modifiersDown;
 @property (readonly) BOOL mouseElementIsOwnSliderFallback;
 

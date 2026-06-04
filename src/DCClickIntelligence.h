@@ -6,7 +6,6 @@
 @class DCEngine, DCClick, NMPoint, DCUIState, DCClickEvent;
 
 @interface DCClickIntelligence : NSObject {
-	NSSet *resizers;
 	NSMutableSet *apps;
 	NSSet *quickDragDisallowedRoles;
 	NSString *lastBlockReason;
@@ -21,4 +20,3 @@
 - (BOOL)wouldOneFingerBlock:(BOOL)dragging;
 
 @end
-

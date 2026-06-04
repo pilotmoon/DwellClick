@@ -10,7 +10,7 @@
 #import "NMKit/NMUniversalAccessHelper.h"
 #import "NMKit/NMAppUtils.h"
 #import "NMKit/NMPoint.h"
-#import "NMKit/NMCursorUtils.h"
+#import "DCCursorInfo.h"
 
 static NSSlider *_dcOwnSliderAtFlippedPoint(NMPoint *point, NSWindow **hitWindow)
 {
@@ -38,7 +38,7 @@ static NSSlider *_dcOwnSliderAtFlippedPoint(NMPoint *point, NSWindow **hitWindow
 
 @implementation DCUIState
 @synthesize mouseFlippedLocation, mouseElement, mouseAppIsBusy, mouseWindow, mouseWindowIsMain, mouseAppId, mousePid, focusedPid, activePid, activeAppId, fingers;
-@synthesize tabletProximity, axEnabled, mouseElementRole, mouseWindowTitle, mouseElementParents, mouseElementMenuBar, mouseElementApp, cursorHash, eventFlags;
+@synthesize tabletProximity, axEnabled, mouseElementRole, mouseWindowTitle, mouseElementParents, mouseElementMenuBar, mouseElementApp, cursorInfo, cursorType, eventFlags;
 @synthesize modifiersDown, mouseElementIsOwnSliderFallback;
 
 - (id)initWithFlippedLocation:(NMPoint *)point
@@ -64,8 +64,8 @@ static NSSlider *_dcOwnSliderAtFlippedPoint(NMPoint *point, NSWindow **hitWindow
 	// as api enabled
 	axEnabled=[NMUniversalAccessHelper sharedInstance].axEnabled;
 	
-	// hash of cursor TODO problem as it changes as you click the popup button
-	cursorHash=@([[NSCursor currentSystemCursor] superFastHash]);
+	cursorInfo=[DCCursorInfo currentCursorInfo];
+	cursorType=cursorInfo.classification;
     
 	// get element
 	mouseElement=[NMUIElement elementAtLocation:mouseFlippedLocation timeout:0.1];
@@ -108,6 +108,11 @@ static NSSlider *_dcOwnSliderAtFlippedPoint(NMPoint *point, NSWindow **hitWindow
 		mouseElementParents=[NSSet setWithArray:mouseElement.ownAndParentRoles];
 		mouseAppId=NMBundleIdForPID(mousePid);
 	}
+
+	[cursorInfo logCursorWithContext:@"ui-state"
+							   appId:mouseAppId ?: activeAppId
+								role:mouseElementRole
+							   point:[[mouseFlippedLocation flip] nsPoint]];
 	
 	return self;
 }
