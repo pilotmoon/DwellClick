@@ -46,20 +46,7 @@ NSString *NMModelIdentifier()
 
 NSString *NMOSVersionString(void)
 {
-    NSOperatingSystemVersion osver={0};
-    if ([[NSProcessInfo processInfo] respondsToSelector:@selector(operatingSystemVersion)]) {
-        // Note: Though undocumented, 10.9.5 has this. 10.9.0 does not.
-        osver=[[NSProcessInfo processInfo] operatingSystemVersion];
-    }
-    else {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-        Gestalt(gestaltSystemVersionMajor, (SInt32 *)&osver.majorVersion);
-        Gestalt(gestaltSystemVersionMinor, (SInt32 *)&osver.minorVersion);
-        Gestalt(gestaltSystemVersionBugFix, (SInt32 *)&osver.patchVersion);
-#pragma clang diagnostic pop
-
-    }
+    NSOperatingSystemVersion osver=[[NSProcessInfo processInfo] operatingSystemVersion];
     return [NSString stringWithFormat:@"%@.%@.%@", @(osver.majorVersion), @(osver.minorVersion), @(osver.patchVersion)];
 }
 
@@ -100,31 +87,6 @@ BOOL NMCheckAppInstalled(NSString *bid) {
         }
     }
     return result;
-}
-
-BOOL NMOSVersionCheckSnowLeopardOrBelow()
-{
-    return floor(NSAppKitVersionNumber) <= NSAppKitVersionNumber10_6;
-}
-
-BOOL NMOSVersionCheckLionOrBelow()
-{
-    return floor(NSAppKitVersionNumber) <= NSAppKitVersionNumber10_7;
-}
-
-BOOL NMOSVersionCheckMountainLionOrBelow()
-{
-    return floor(NSAppKitVersionNumber) <= NSAppKitVersionNumber10_8;
-}
-
-BOOL NMOSVersionCheckMavericksOrBelow()
-{
-    return floor(NSAppKitVersionNumber) <= NSAppKitVersionNumber10_9;
-}
-
-BOOL NMOSVersionCheckYosemiteOrBelow()
-{
-    return floor(NSAppKitVersionNumber) <= 1343; //NSAppKitVersionNumber10_10
 }
 
 @implementation NSNumber (NMPidAdditions)

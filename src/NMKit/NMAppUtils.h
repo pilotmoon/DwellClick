@@ -7,10 +7,6 @@
 
 #define NM_BAD_PID ((pid_t)(-1))
 
-#ifndef NSAppKitVersionNumber10_8
-    #define NSAppKitVersionNumber10_8 1187
-#endif
-
 NSDate *NMExpireDate(NSUInteger days);
 
 NSString *NMOwnBundleID(void);
@@ -22,12 +18,6 @@ BOOL NMOwnAppIsFocused(void);
 
 NSString *NMModelIdentifier();
 NSString *NMOSVersionString(void);
-
-BOOL NMOSVersionCheckSnowLeopardOrBelow();
-BOOL NMOSVersionCheckLionOrBelow();
-BOOL NMOSVersionCheckMountainLionOrBelow();
-BOOL NMOSVersionCheckMavericksOrBelow();
-BOOL NMOSVersionCheckYosemiteOrBelow();
 
 NSNumber *NMAppVersionNumber(void);
 NSString *NMAppVersionString(void);
@@ -41,4 +31,3 @@ BOOL NMCheckAppInstalled(NSString *bid);
 + (NSNumber *)numberWithPid:(pid_t)pid;
 - (pid_t)pidValue;
 @end
-

@@ -19,18 +19,6 @@ NSString *NMStatusItemHideIcon=@"NMStatusItemHideIcon";
 @property BOOL canOpenMenu;
 @end
 
-#if MAC_OS_X_VERSION_MAX_ALLOWED <= MAC_OS_X_VERSION_10_9
-
-@interface NSStatusBarButton : NSButton
-@property BOOL appearsDisabled;
-@end
-
-@interface NSStatusItem (Fake)
-@property NSStatusBarButton *button;
-@end
-
-#endif
-
 @implementation NMStatusItemController
 
 #pragma mark Singleton class method
@@ -49,16 +37,6 @@ NSString *NMStatusItemHideIcon=@"NMStatusItemHideIcon";
 + (NSColor *)defaultColor
 {
     return [NSColor blackColor];
-}
-
-+ (NSColor *)highlightColor
-{
-    return [NSColor whiteColor];
-}
-
-+ (NSColor *)disabledColor
-{
-    return [NSColor grayColor];
 }
 
 #pragma mark Init
@@ -109,12 +87,7 @@ NSString *NMStatusItemHideIcon=@"NMStatusItemHideIcon";
 
 - (void)updateImage
 {
-	if ([NSStatusItem instancesRespondToSelector:@selector(button)]) {
-		self.statusItem.button.appearsDisabled=!self.enabled;
-	}
-	else {
-		[[self statusItemView] setNeedsDisplay:YES];
-	}
+    self.statusItem.button.appearsDisabled=!self.enabled;
 }
 
 #pragma mark Add and remove the icon from the menu bar
@@ -133,17 +106,11 @@ NSString *NMStatusItemHideIcon=@"NMStatusItemHideIcon";
         self.statusItem=[[NSStatusBar systemStatusBar] statusItemWithLength:viewFrame.size.width];
         self.statusItem.image=[self statusImageWithColor:[NMStatusItemController defaultColor]];
 
-		if([self.statusItem respondsToSelector:@selector(button)]) {
-			[self.statusItem setHighlightMode:YES];
-			[self.statusItem.image setTemplate:YES];
-			[self.statusItem.button setTarget:self];
-			[self.statusItem.button setAction:@selector(statusButtonClicked:)];
-			[self.statusItem.button sendActionOn:NSLeftMouseDownMask|NSRightMouseDownMask];
-		}
-		else {
-			// create view
-			[self.statusItem setView:[[NMStatusItemView alloc] initWithFrame:viewFrame controller:self]];
-		}
+        [self.statusItem setHighlightMode:YES];
+        [self.statusItem.image setTemplate:YES];
+        [self.statusItem.button setTarget:self];
+        [self.statusItem.button setAction:@selector(statusButtonClicked:)];
+        [self.statusItem.button sendActionOn:NSLeftMouseDownMask|NSRightMouseDownMask];
 		
 		// add the tracking area
 		[[self statusItemView] addTrackingArea:[[NSTrackingArea alloc] initWithRect:[[self statusItemView] frame]
@@ -327,33 +294,6 @@ NSString *NMStatusItemHideIcon=@"NMStatusItemHideIcon";
 	[self showAttachedMenu:NO];
 }
 
-#pragma mark Drawing the custom status item
-
-- (void)drawInRect:(NSRect)rect
-{
-    // draw background
-    [self.statusItem drawStatusBarBackgroundInRect:rect withHighlight:self.menuIsOpen];
-    
-    // get image of correct color
-    NSImage *const image=[self statusImageWithColor:^{
-        if (!self.ready||!self.enabled) {
-            return [[self class] disabledColor];
-        }
-        else if (self.menuIsOpen) {
-            return [[self class] highlightColor];
-        }
-        else {
-            return [[self class] defaultColor];
-        }
-    }()];
-    
-    // draw actual image
-    [image drawInRect:NMRectRound(NMRectForCenteredBoxInBox([image size], rect.size))
-             fromRect:NSZeroRect
-            operation:NSCompositeSourceOver
-             fraction:1.0];
-}
-
 #pragma mark Click actions
 
 - (void)doLeftClickAction
@@ -381,12 +321,7 @@ NSString *NMStatusItemHideIcon=@"NMStatusItemHideIcon";
 
 - (NSView *)statusItemView
 {
-    if ([self.statusItem respondsToSelector:@selector(button)]) {
-        return self.statusItem.button; // yosemite
-    }
-    else {
-        return [self.statusItem view]; // mavericks and below
-    }
+    return self.statusItem.button;
 }
 
 - (NSWindow *)statusItemWindow

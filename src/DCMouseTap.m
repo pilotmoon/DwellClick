@@ -426,14 +426,7 @@ tap_end:
 
 		[self willChangeValueForKey:@"active"];
 		
-		CGEventMask mask=MOVE_MASK | DRAG_MASK | DOWN_MASK | UP_MASK | SCROLL_MASK | TABLET_MASK | KEYBOARD_MASK | FLAGS_MASK;
-		if (DCTouchMonitorTouchesInfoAvailable()) {
-			NMLogInfo(@"Touch Info Is Available");
-			mask |= NSEventMaskGesture;
-		}
-		else {
-			NMLogInfo(@"Touch Info Is Not Available");
-		}
+		CGEventMask mask=MOVE_MASK | DRAG_MASK | DOWN_MASK | UP_MASK | SCROLL_MASK | TABLET_MASK | KEYBOARD_MASK | FLAGS_MASK | NSEventMaskGesture;
 
         
         // create mach port

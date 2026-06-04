@@ -52,7 +52,6 @@ Master include file for NMKit
 #import "NMStateMachine.h"
 #import "NMStatusBubbleWindow.h"
 #import "NMStatusItemController.h"
-#import "NMStatusItemView.h"
 #import "NMSugarButton.h"
 #import "NMSugarButtonCell.h"
 #import "NMSuperFastHash.h"

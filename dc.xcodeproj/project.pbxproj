@@ -118,7 +118,6 @@
 		019CF74314C588B800D000AC /* DCNewClicksPanelButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 019CF74214C588B800D000AC /* DCNewClicksPanelButtonCell.m */; };
 		01A801FF1333943F00729B20 /* DCEngine+Gubbins.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A801FE1333943B00729B20 /* DCEngine+Gubbins.m */; };
 		01AB3EE51333AED200F62F66 /* DCModifierController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AB3EE41333AED100F62F66 /* DCModifierController.m */; };
-		01AC07AF1210340500D15CA8 /* DCScrollDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AC07AE1210340500D15CA8 /* DCScrollDetector.m */; };
 		01AD503D120827C00038D53D /* NSUserDefaults+Archive.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AD503C120827C00038D53D /* NSUserDefaults+Archive.m */; };
 		01AD55B6120882310038D53D /* DCSimpleTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AD55B5120882310038D53D /* DCSimpleTrigger.m */; };
 		01B1702D12B7E42100E26927 /* prefs-Popups.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B1702C12B7E42100E26927 /* prefs-Popups.png */; };
@@ -221,7 +220,6 @@
 		C0DE8F2636A98513F43BAE0B /* NMStatusBubbleWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE3A1E994659462A44608D /* NMStatusBubbleWindow.m */; };
 		C0DE92826978C494AA5DD39B /* NMStatusItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEA0CFA0864F7CBBBABA5D /* NMStatusItemController.m */; };
 		C0DE938520D59B47A2697402 /* NSWindow+NMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE21A4BCE650D6F842E694 /* NSWindow+NMAdditions.m */; };
-		C0DE9770FDAAFB5FCFE45E58 /* NMStatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEB769F683603200263537 /* NMStatusItemView.m */; };
 		C0DE98B0232A05D3762C421B /* NMKeyCommander.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE98AB29B8E429322BE0A3 /* NMKeyCommander.m */; };
 		C0DE98B218159C6C5C8C42A3 /* NMPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE377C2430843C0330E63E /* NMPopupController.m */; };
 		C0DEA19B93A3CD6F8E0559A5 /* NMUIElement.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE3108ABE2678DB66E09F3 /* NMUIElement.m */; };
@@ -429,8 +427,6 @@
 		01A801FE1333943B00729B20 /* DCEngine+Gubbins.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DCEngine+Gubbins.m"; sourceTree = "<group>"; };
 		01AB3EE31333AED000F62F66 /* DCModifierController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCModifierController.h; sourceTree = "<group>"; };
 		01AB3EE41333AED100F62F66 /* DCModifierController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCModifierController.m; sourceTree = "<group>"; };
-		01AC07AD1210340500D15CA8 /* DCScrollDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCScrollDetector.h; sourceTree = "<group>"; };
-		01AC07AE1210340500D15CA8 /* DCScrollDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCScrollDetector.m; sourceTree = "<group>"; };
 		01AC07B71210343C00D15CA8 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		01AD503B120827C00038D53D /* NSUserDefaults+Archive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Archive.h"; sourceTree = "<group>"; };
 		01AD503C120827C00038D53D /* NSUserDefaults+Archive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Archive.m"; sourceTree = "<group>"; };
@@ -632,12 +628,10 @@
 		C0DEABDB7801B5243DCB89BC /* NMBrowserHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMBrowserHelper.m; sourceTree = "<group>"; };
 		C0DEAF3EBADC9E723DAB829E /* NMStartAtLogin2024.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMStartAtLogin2024.m; sourceTree = "<group>"; };
 		C0DEB10C46EB218C76889D2C /* NMState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMState.m; sourceTree = "<group>"; };
-		C0DEB769F683603200263537 /* NMStatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMStatusItemView.m; sourceTree = "<group>"; };
 		C0DEB79A89200DCB9673B4AE /* NMBlockUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMBlockUtils.h; sourceTree = "<group>"; };
 		C0DEB82F06D43150ACA8EEB6 /* NSMutableDictionary+NMSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+NMSafe.m"; sourceTree = "<group>"; };
 		C0DEB84BA8143201509BE8DD /* NMConfigUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMConfigUtils.m; sourceTree = "<group>"; };
 		C0DEBAF90AD1026D2CEAA674 /* NMKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMKit.h; sourceTree = "<group>"; };
-		C0DEBB622521B5A68238E4EF /* NMStatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMStatusItemView.h; sourceTree = "<group>"; };
 		C0DEBB99EFFFBDDEEF1B42DD /* NMKeyPresser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMKeyPresser.m; sourceTree = "<group>"; };
 		C0DEBC247CDA7676D97B785E /* NMBubbleWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMBubbleWindow.h; sourceTree = "<group>"; };
 		C0DEC26EE991BEA5FC7657D2 /* NMImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMImageButton.m; sourceTree = "<group>"; };
@@ -798,8 +792,6 @@
 			children = (
 				01C9428711F4B72800A88FD4 /* DCUtils.h */,
 				019B3A6A1289674E00AF3223 /* DCUtils.m */,
-				01AC07AD1210340500D15CA8 /* DCScrollDetector.h */,
-				01AC07AE1210340500D15CA8 /* DCScrollDetector.m */,
 				01E1201412AAE8F5008CA3F5 /* DCBoxGrab.h */,
 				01E1201512AAE8F5008CA3F5 /* DCBoxGrab.m */,
 			);
@@ -1259,8 +1251,6 @@
 				C0DE3A1E994659462A44608D /* NMStatusBubbleWindow.m */,
 				C0DEEE9871CCECD68805FA96 /* NMStatusItemController.h */,
 				C0DEA0CFA0864F7CBBBABA5D /* NMStatusItemController.m */,
-				C0DEBB622521B5A68238E4EF /* NMStatusItemView.h */,
-				C0DEB769F683603200263537 /* NMStatusItemView.m */,
 				C0DECDD2B568911A260EE345 /* NMSugarButton.h */,
 				C0DE6597543C50FCEDECB711 /* NMSugarButton.m */,
 				C0DE60A5CAE8071072E6ECCD /* NMSugarButtonCell.h */,
@@ -1564,7 +1554,6 @@
 				C0DE34EBEDFD81CB02F6C15A /* NMStateMachine.m in Sources */,
 				C0DE8F2636A98513F43BAE0B /* NMStatusBubbleWindow.m in Sources */,
 				C0DE92826978C494AA5DD39B /* NMStatusItemController.m in Sources */,
-				C0DE9770FDAAFB5FCFE45E58 /* NMStatusItemView.m in Sources */,
 				C0DE3572E3FCD8F323100295 /* NMSugarButton.m in Sources */,
 				016ACCB62FD048CC00E59082 /* ActionIconTransformer.m in Sources */,
 				C0DEC4C84A6C29C392191556 /* NMSugarButtonCell.m in Sources */,
@@ -1611,7 +1600,6 @@
 				014F73BA120797880065481F /* DCShortcutViewItem.m in Sources */,
 				01AD503D120827C00038D53D /* NSUserDefaults+Archive.m in Sources */,
 				01AD55B6120882310038D53D /* DCSimpleTrigger.m in Sources */,
-				01AC07AF1210340500D15CA8 /* DCScrollDetector.m in Sources */,
 				01016880123FF99F00CDA1E1 /* DCApp.m in Sources */,
 					01683298126F239E00904A28 /* DCConstants.m in Sources */,
 					0135F6971278A89900B854AF /* DCTouchMonitor.m in Sources */,

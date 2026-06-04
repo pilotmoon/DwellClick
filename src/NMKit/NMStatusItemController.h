@@ -6,7 +6,6 @@
 #import "NMEscapableItem.h"
 #import "NSObject+NMObservePrefs.h"
 #import "NMStatusBubbleWindow.h"
-#import "NMStatusItemView.h"
 
 extern NSString *NMStatusItemClickedNotification;
 extern NSString *NMStatusItemRightClickedNotification;
@@ -28,7 +27,7 @@ extern NSString *NMStatusItemRightClickedNotification;
 - (void)statusItemDidEndModalDialog;
 @end
 
-@interface NMStatusItemController : NSWindowController <NSWindowDelegate, NSMenuDelegate, NMEscapableItemDelegate, NMStatusItemViewDelegate>
+@interface NMStatusItemController : NSWindowController <NSWindowDelegate, NSMenuDelegate, NMEscapableItemDelegate>
 
 @property id <NMStatusItemControllerDelegate, NSObject> delegate;
 @property BOOL temporarilyInMenu;

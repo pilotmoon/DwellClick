@@ -70,10 +70,7 @@ NSString *const NMCursorBlankHashes=@"NMCursorBlankHashes";
         // beams
         beamHashes=[NSMutableSet setFromArrayWithConfigName:NMCursorBeamHashes];
         [beamHashes addObject:@([[NSCursor IBeamCursor] superFastHash])];        
-        if ([NSCursor respondsToSelector:@selector(IBeamCursorForVerticalLayout)]) {
-            NSCursor *cursor=[NSCursor performSelector:@selector(IBeamCursorForVerticalLayout)];
-            [(NSMutableSet *)beamHashes addObject:@([cursor superFastHash])];
-        }
+        [beamHashes addObject:@([[NSCursor IBeamCursorForVerticalLayout] superFastHash])];
         
         // blanks
         blankHashes=[NSMutableSet setFromArrayWithConfigName:NMCursorBlankHashes];

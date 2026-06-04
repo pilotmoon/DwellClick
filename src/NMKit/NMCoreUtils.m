@@ -533,25 +533,14 @@ BOOL NMPref(NSString *key)
 - (BOOL)isTrashedFile
 {
     BOOL result=NO;
-    if (NMOSVersionCheckMavericksOrBelow()) {
-        Boolean inTrash=false;
-        const UInt8 *const utfPath=(UInt8*)[[self path] UTF8String];
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-        const OSStatus err=DetermineIfPathIsEnclosedByFolder(kOnAppropriateDisk, kTrashFolderType, utfPath, false, &inTrash);
-#pragma clang diagnostic pop
-        result=(err==noErr)&inTrash;
-    }
-    else {
-        NSURLRelationship relationship=NSURLRelationshipOther;
-        if([[NSFileManager defaultManager] getRelationship:&relationship
-                                               ofDirectory:NSTrashDirectory
-                                                  inDomain:0
-                                               toItemAtURL:self
-                                                     error:nil])
-        {
-          result=(relationship==NSURLRelationshipContains);
-        }
+    NSURLRelationship relationship=NSURLRelationshipOther;
+    if([[NSFileManager defaultManager] getRelationship:&relationship
+                                           ofDirectory:NSTrashDirectory
+                                              inDomain:0
+                                           toItemAtURL:self
+                                                 error:nil])
+    {
+      result=(relationship==NSURLRelationshipContains);
     }
     return result;
 }

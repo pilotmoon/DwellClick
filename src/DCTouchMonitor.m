@@ -9,11 +9,6 @@ NSUInteger DCTouchMonitorFingers=0;
 NSUInteger DCTouchMonitorMaxFingers=0;
 static NSMutableSet *_touches=nil;
 
-BOOL DCTouchMonitorTouchesInfoAvailable(void)
-{
-	return [NSEvent instancesRespondToSelector:@selector(touchesMatchingPhase:inView:)];
-}
-
 void DCTouchMonitorReset(void)
 {
     DCTouchMonitorFingers=0;
@@ -50,4 +45,3 @@ void DCTouchMonitorHandleTappedEvent(CGEventRef cgEvent)
 		DCTouchMonitorUpdateWithEvent(event);
 	}
 }
-

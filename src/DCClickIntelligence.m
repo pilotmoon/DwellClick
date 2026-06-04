@@ -4,7 +4,6 @@
 #import "DCClickIntelligence.h"
 #import "DCClickEvent.h"
 #import	"NMKit/NMUniversalAccessHelper.h"
-#import "DCScrollDetector.h"
 #import "DCEngine.h"
 #import "DCConstants.h"
 #import "DCUtils.h"
@@ -56,13 +55,13 @@ static BOOL _eventLooksSliderLike(DCClickEvent *event)
     return [uiState.mouseElementParents containsObject:@"AXSlider"] || [uiState.mouseElementParents containsObject:(NSString *)kAXValueIndicatorRole];
 }
 
-static void _logAutoDragDecision(DCUIState *uiState, BOOL sliderLike, BOOL resizeCursor, BOOL growArea, BOOL valueIndicator, BOOL scrollBar, BOOL legacyScrollBar, BOOL windowDragBar, BOOL result)
+static void _logAutoDragDecision(DCUIState *uiState, BOOL sliderLike, BOOL resizeCursor, BOOL growArea, BOOL valueIndicator, BOOL scrollBar, BOOL windowDragBar, BOOL result)
 {
     if (![DCCursorInfo debugCursorRecognition]) {
         return;
     }
 
-    NMLogInfo(@"AUTODRAG decision=%@ cursor=%@ slider=%@ resizeCursor=%@ growArea=%@ valueIndicator=%@ scrollBar=%@ legacyScrollBar=%@ windowDragBar=%@ app=%@ role=%@ parents=%@",
+    NMLogInfo(@"AUTODRAG decision=%@ cursor=%@ slider=%@ resizeCursor=%@ growArea=%@ valueIndicator=%@ scrollBar=%@ windowDragBar=%@ app=%@ role=%@ parents=%@",
               result ? @"auto-drag" : @"no-special-click",
               uiState.cursorType ?: @"unknown",
               @(sliderLike),
@@ -70,7 +69,6 @@ static void _logAutoDragDecision(DCUIState *uiState, BOOL sliderLike, BOOL resiz
               @(growArea),
               @(valueIndicator),
               @(scrollBar),
-              @(legacyScrollBar),
               @(windowDragBar),
               uiState.mouseAppId ?: @"(unknown)",
               uiState.mouseElementRole ?: @"(unknown)",
@@ -93,15 +91,12 @@ static BOOL _isProtectedMenuItem(NMUIElement *element)
     return NO;
 }
 
-static BOOL _isYosemiteSafariBar(DCUIState *state)
+static BOOL _isSafariToolbarText(DCUIState *state)
 {
-    const NSString *safariId=@"com.apple.Safari";
     BOOL result=NO;
     
-    // yosemite safari
     if ([state.mouseAppId isEqualToString:NMBrowserHelperIdentifierSafari]&&
-        [state.activeAppId isEqualToString:NMBrowserHelperIdentifierSafari]&&
-        !NMOSVersionCheckMavericksOrBelow())
+        [state.activeAppId isEqualToString:NMBrowserHelperIdentifierSafari])
     {
         NMUIElement *textElement=nil;
         if ([state.mouseElementParents containsObject:NSAccessibilityToolbarRole]&&![state.mouseElementParents containsObject:NSAccessibilityScrollAreaRole]) {
@@ -385,16 +380,15 @@ static BOOL _clickedIntoNewFocus(DCClickEvent *event)
         [[NSUserDefaults standardUserDefaults] boolForKey:DCPrefsAutoDragOn] &&
         [DCEngine sharedInstance].defaultClick.selected &&
         ![DCEngine sharedInstance].lockModifier &&
-        !_isYosemiteSafariBar(uiState))
+        !_isSafariToolbarText(uiState))
     {
         const BOOL resizeCursor=[uiState.cursorType isEqualToString:DCCursorTypeResize];
         const BOOL growArea=[element.role isEqualToString:(NSString *)kAXGrowAreaRole];
         const BOOL valueIndicator=[element.role isEqualToString:(NSString *)kAXValueIndicatorRole];
         const BOOL scrollBar=[element.role isEqualToString:(NSString *)kAXScrollBarRole];
-        const BOOL legacyScrollBar=NMOSVersionCheckSnowLeopardOrBelow() && [uiState.mouseElementParents containsObject:(NSString *)kAXWindowRole] && DCScrollBarAtPoint([uiState.mouseFlippedLocation nsPoint]);
         const BOOL windowDragBar=_isWindowDragBar(uiState);
-        const BOOL shouldAutoDrag=sliderLike || resizeCursor || growArea || valueIndicator || scrollBar || legacyScrollBar || windowDragBar;
-        _logAutoDragDecision(uiState, sliderLike, resizeCursor, growArea, valueIndicator, scrollBar, legacyScrollBar, windowDragBar, shouldAutoDrag);
+        const BOOL shouldAutoDrag=sliderLike || resizeCursor || growArea || valueIndicator || scrollBar || windowDragBar;
+        _logAutoDragDecision(uiState, sliderLike, resizeCursor, growArea, valueIndicator, scrollBar, windowDragBar, shouldAutoDrag);
         if (shouldAutoDrag)
         {
             return DCClickAutoDragClick;  

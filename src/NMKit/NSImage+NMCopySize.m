@@ -8,11 +8,8 @@
 
 + (CGFloat)nm_backingScaleFactor
 {
-    CGFloat scale=1.0;
     NSScreen *screen=[NSScreen mainScreen];
-    if ([screen respondsToSelector:@selector(backingScaleFactor)]) {
-        scale=[screen backingScaleFactor];
-    }
+    CGFloat scale=[screen backingScaleFactor];
     return scale<1.0 ? 1.0 : scale;
 }
 

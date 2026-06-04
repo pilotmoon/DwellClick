@@ -61,7 +61,7 @@
 {
     NSString *addr=@"\"Pilotmoon Support\" <support@pilotmoon.com>";
     NSString *subj=[NSString stringWithFormat:@"%@ Feedback", [self displayName]];
-    NSString *body=[NSString stringWithFormat:@"Here's how I feel about %@:\n\n--\n(I'm using %@ %@ (%@) with Mac OS X %@ on %@)\n",
+    NSString *body=[NSString stringWithFormat:@"Here's how I feel about %@:\n\n--\n(I'm using %@ %@ (%@) with macOS %@ on %@)\n",
                     [self displayName],
                     [self displayName],
                     NMAppVersionString(),
