@@ -233,12 +233,12 @@ NSUInteger *DCAnimationHide;
                     modifierController.flags=flag;
                 }
             }
-            else if (popupsController.alive) 
+            else
             {
-                // popup button sets are fixed
-            }
-            else 
-            {
+                if (popupsController.alive)
+                {
+                    [popupsController cancelPopup:YES];
+                }
                 if((modifierController.flags&flag || self.lockCurrentClick) && (click.type==DCClickTypeSingle || self.lockCurrentClick))
                 {
                     self.modifierController.flags=flag;
@@ -262,7 +262,7 @@ NSUInteger *DCAnimationHide;
     modifiersDown|=flag;
     if (clickMachine.dragging||
         popupsController.mouseInPopup||
-        (popupsController.alive&&![self isDwellDetecting]))
+        (popupsController.alive&&(!(flag&kCGEventFlagMaskSecondaryFn)||![self isDwellDetecting])))
     {
         actedOnModifier|=flag;
         [self dispenseAction:flag];
