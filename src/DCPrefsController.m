@@ -235,7 +235,7 @@ static NSString *const DCShortcutPrefix=@"DCShortcut.";
 		
         @"prefs-Panel": [NSMutableDictionary dictionaryWithObjectsAndKeys:
          [panelPrefsController view], @"view",
-         @"Floating", @"title",
+         @"Panel", @"title",
          nil],
         
         @"prefs-Apps": [NSMutableDictionary dictionaryWithObjectsAndKeys:
