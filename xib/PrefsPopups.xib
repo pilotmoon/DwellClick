@@ -248,10 +248,10 @@
 							<object class="NSColor" key="NSTextColor">
 								<int key="NSColorSpace">6</int>
 								<string key="NSCatalogName">System</string>
-								<string key="NSColorName">disabledControlTextColor</string>
+								<string key="NSColorName">secondaryLabelColor</string>
 								<object class="NSColor" key="NSColor">
 									<int key="NSColorSpace">3</int>
-									<bytes key="NSWhite">MC4zMzMzMzMzMzMzAA</bytes>
+									<bytes key="NSWhite">MC41AA</bytes>
 								</object>
 							</object>
 						</object>

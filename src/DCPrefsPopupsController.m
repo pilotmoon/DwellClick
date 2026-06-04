@@ -28,6 +28,11 @@
 		SRShortcut *shortcut=[SRShortcut shortcutWithDictionary:rep];
 		if (shortcut)
 		{
+            NSString *modifiers=[SRSymbolicModifierFlagsTransformer.sharedTransformer transformedValue:@(shortcut.modifierFlags)];
+            NSString *keyEquivalent=[SRKeyEquivalentTransformer.sharedTransformer transformedValue:shortcut];
+            if (modifiers&&keyEquivalent) {
+                return [modifiers stringByAppendingString:keyEquivalent.uppercaseString];
+            }
             return [shortcut readableStringRepresentation:YES];
         }
     }
