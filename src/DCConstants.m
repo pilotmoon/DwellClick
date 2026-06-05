@@ -11,6 +11,7 @@ const CGFloat DCDefaultMoveDistancePixels=10.0;
 
 /* Beta */
 const NSUInteger DCBetaDays=100;
+NSString * DCPrefsBetaUpdates = @"BetaUpdates";
 
 /* DwellCLick On/Off */
 NSString * DCPrefsAutoClickOn = @"AutoClickOn";

@@ -5,6 +5,8 @@
 
 @interface DCAppDelegate (Distribution) 
 
++ (BOOL)isBetaReleaseChannel;
+
 - (void)distributionInit;
 - (void)distributionFirstRun;
 - (void)distributionVersionUpgrade;

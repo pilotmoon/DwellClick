@@ -4,6 +4,7 @@
 #import "DCAppDelegate.h"
 #import "DCAppDelegate+Distribution.h"
 
+#import "DCConstants.h"
 #import "NMKit/NMKit.h"
 
 #import "DCLinks.h"
@@ -13,6 +14,12 @@ static NSString *const DCReleaseChannelInfoKey = @"PilotmoonReleaseChannel";
 static NSString *const DCReleaseChannelBeta = @"Beta";
 
 @implementation DCAppDelegate (Distribution)
+
++ (BOOL)isBetaReleaseChannel
+{
+    NSString *releaseChannel = [[NSBundle mainBundle] objectForInfoDictionaryKey:DCReleaseChannelInfoKey];
+    return [releaseChannel isEqualToString:DCReleaseChannelBeta];
+}
 
 #pragma mark Main Methods
 
@@ -106,8 +113,7 @@ static NSString *const DCReleaseChannelBeta = @"Beta";
 
 - (NSSet<NSString *> *)allowedChannelsForUpdater:(SPUUpdater *)updater
 {
-    NSString *releaseChannel = [[NSBundle mainBundle] objectForInfoDictionaryKey:DCReleaseChannelInfoKey];
-    if ([releaseChannel isEqualToString:DCReleaseChannelBeta]) {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:DCPrefsBetaUpdates]) {
         NMLogFine(@"Allowing Sparkle beta update channel");
         return [NSSet setWithObject:DCReleaseChannelBeta];
     }

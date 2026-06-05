@@ -53,6 +53,7 @@
 		
 		NSData *animationColorData=[NSArchiver archivedDataWithRootObject:[NSColor colorWithDeviceRed:0.7411 green:0 blue:0.7411 alpha:1.0]];
         NSMutableDictionary *defaults = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+										 @([DCAppDelegate isBetaReleaseChannel]), DCPrefsBetaUpdates,
 										 @NO, DCPrefsAutoClickOn,
 										 @0.6f, DCPrefsDwellTimeSeconds,
 										 [NSNumber numberWithFloat:DCDefaultMoveDistancePixels], DCPrefsMoveDistancePixels,

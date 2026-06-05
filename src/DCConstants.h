@@ -11,6 +11,7 @@ extern const CGFloat DCDefaultMoveDistancePixels;
 
 /* Beta */
 extern const NSUInteger DCBetaDays;
+extern NSString * DCPrefsBetaUpdates;
 
 /* DwellClick On/Off */
 extern NSString * DCPrefsAutoClickOn;
