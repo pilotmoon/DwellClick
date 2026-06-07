@@ -8,7 +8,6 @@
 #import "DCMouseClicker.h"
 #import "DCDwellMachine.h"
 #import "DCClickMachine.h"
-#import "NMKit/NMKeyPresser.h"
 #import "DCAnimationController.h"
 #import "DCClickIntelligence.h"
 #import "DCPopupsController.h"
@@ -18,9 +17,6 @@
 
 // selection options
 #define SELECTION_OPTION_AUTO_DRAG (1<<1)
-#define SELECTION_OPTION_CUT_AFTER (1<<2)
-#define SELECTION_OPTION_COPY_AFTER (1<<3)
-#define SELECTION_OPTION_PASTE_AFTER (1<<4)
 #define SELECTION_OPTION_DEFER_DROP (1<<5)
 #define SELECTION_OPTION_MODIFIED_CONTROL (1<<6)
 #define SELECTION_OPTION_MODIFIED_OPTION (1<<7)

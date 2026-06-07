@@ -31,7 +31,6 @@ NSString * DCPrefsAppVersion = @"AppVersion";
 NSString * DCPrefsAvoidEdgesWhenDragging=@"AvoidEdgesWhenDragging";
 NSString * DCPrefsAlwaysLockDrag=@"AlwaysLockDrag";
 NSString * DCPrefsModifiersOn=@"ModifiersOn";
-NSString * DCPrefsExtraShortcuts=@"ExtraShortcuts";
 NSString * DCPrefsFloatOnTop=@"PrefsFloatOnTop";
 NSString * DCPrefsEnableTablet=@"EnableTablet";
 NSString * DCPrefsActivationInterval=@"ActivationInterval";

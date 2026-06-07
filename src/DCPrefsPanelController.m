@@ -23,6 +23,7 @@
 	if (self) {		
         buttonOrder=@[@"Click",
                      @"Double-Click",
+                     @"Triple-Click",
                      @"Drag",
                      @"ToggleControl",
                      @"ToggleOption",

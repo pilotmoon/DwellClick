@@ -637,22 +637,8 @@ NSUInteger *DCAnimationHide;
 // not called for drag begin or no-click
 - (void)eventIsComplete:(DCClickEvent *)event
 {
-	// act on flags
 	NMLogInfo(@"[Engine] Event complete, actual click: %@", event.actualClick.name);
-	switch (event.actualClick.options) {
-		case SELECTION_OPTION_CUT_AFTER:
-			[NMKeyPresser pressCommandX];
-			break;
-		case SELECTION_OPTION_COPY_AFTER:
-			[NMKeyPresser pressCommandC];
-			break;
-		case SELECTION_OPTION_PASTE_AFTER:
-			[NMKeyPresser pressCommandV];
-			break;
-		default:
-			break;
-	}
-    
+
     if (event.actualClick!=DCClickPopupButtonClick && 
         event.actualClick!=DCClickPanelButtonClick &&
         !self.lockModifier &&

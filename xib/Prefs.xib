@@ -35,7 +35,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="398" width="500" height="163"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1470" height="923"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1050"/>
             <view key="contentView" id="840">
                 <rect key="frame" x="0.0" y="0.0" width="500" height="163"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -103,7 +103,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="438" width="500" height="210"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1470" height="923"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1050"/>
             <view key="contentView" id="545">
                 <rect key="frame" x="0.0" y="0.0" width="500" height="210"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -134,7 +134,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="417" width="500" height="230"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1470" height="923"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1050"/>
             <view key="contentView" id="1513">
                 <rect key="frame" x="0.0" y="0.0" width="500" height="230"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -302,7 +302,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="375" width="500" height="271"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1470" height="923"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1050"/>
             <view key="contentView" id="928">
                 <rect key="frame" x="0.0" y="0.0" width="500" height="271"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -437,7 +437,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="397" width="500" height="324"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1470" height="923"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1050"/>
             <view key="contentView" id="809">
                 <rect key="frame" x="0.0" y="0.0" width="500" height="324"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -446,14 +446,14 @@
                 </userGuides>
                 <subviews>
                     <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1243">
-                        <rect key="frame" x="65" y="79" width="384" height="197"/>
+                        <rect key="frame" x="65" y="79" width="384" height="229"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <clipView key="contentView" copiesOnScroll="NO" id="dfJ-Qy-8ua">
-                            <rect key="frame" x="0.0" y="0.0" width="384" height="197"/>
+                            <rect key="frame" x="0.0" y="0.0" width="384" height="229"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <collectionView id="1219">
-                                    <rect key="frame" x="0.0" y="0.0" width="384" height="197"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="384" height="229"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="primaryBackgroundColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <connections>
@@ -471,15 +471,6 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1412">
-                        <rect key="frame" x="62" y="290" width="156" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Keyboard equivalents" id="1413">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                     <button tag="6" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2576">
                         <rect key="frame" x="458" y="283" width="25" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -519,7 +510,7 @@
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="139" y="142"/>
+            <point key="canvasLocation" x="222" y="-15"/>
         </window>
         <collectionViewItem id="1220" customClass="DCShortcutViewItem">
             <connections>
@@ -569,7 +560,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="466" width="500" height="261"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1470" height="923"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1050"/>
             <view key="contentView" id="2483">
                 <rect key="frame" x="0.0" y="0.0" width="500" height="261"/>
                 <autoresizingMask key="autoresizingMask"/>

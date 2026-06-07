@@ -41,12 +41,6 @@
 	<dict>
 		<key>Click</key>
 		<string>Single-click</string>
-		<key>Click-With-Copy</key>
-		<string>Single-click and Copy</string>
-		<key>Click-With-Cut</key>
-		<string>Single-click and Cut</string>
-		<key>Click-With-Paste</key>
-		<string>Single-click and Paste</string>
 		<key>Command-Click</key>
 		<string>Command-click</string>
 		<key>Control-Click</key>
@@ -55,24 +49,12 @@
 		<string>No-click</string>
 		<key>Double-Click</key>
 		<string>Double-click</string>
-		<key>Double-Click-With-Copy</key>
-		<string>Double-click and Copy</string>
-		<key>Double-Click-With-Cut</key>
-		<string>Double-click and Cut</string>
-		<key>Double-Click-With-Paste</key>
-		<string>Double-click and Paste</string>
 		<key>Drag</key>
 		<string>Drag</string>
 		<key>Drag-Toggle</key>
 		<string>Drag</string>
 		<key>HeldDrag-Toggle</key>
 		<string>Drag and hold</string>
-		<key>Drag-With-Copy</key>
-		<string>Drag and Copy</string>
-		<key>Drag-With-Cut</key>
-		<string>Drag and Cut</string>
-		<key>Drag-With-Paste</key>
-		<string>Drag and Paste</string>
 		<key>FnEquiv</key>
 		<string>Show popup</string>
 		<key>Lock</key>
@@ -93,32 +75,7 @@
 		<string>Shift-click</string>
 		<key>Triple-Click</key>
 		<string>Triple-click</string>
-		<key>Triple-Click-With-Copy</key>
-		<string>Triple-click and Copy</string>
-		<key>Triple-Click-With-Cut</key>
-		<string>Triple-click and Cut</string>
-		<key>Triple-Click-With-Paste</key>
-		<string>Triple-click and Paste</string>
 	</dict>
-	<key>ExtraShortcutsList</key>
-	<array>
-		<string>Option-Click</string>
-		<string>Shift-Click</string>
-		<string>Command-Click</string>
-		<string>Control-Drag</string>
-		<string>Option-Drag</string>
-		<string>Shift-Drag</string>
-		<string>Command-Drag</string>
-		<string>Click-With-Copy</string>
-		<string>Click-With-Paste</string>
-		<string>Double-Click-With-Copy</string>
-		<string>Double-Click-With-Paste</string>
-		<string>Drag-With-Copy</string>
-		<string>Drag-With-Paste</string>
-		<string>Triple-Click</string>
-		<string>Triple-Click-With-Copy</string>
-		<string>Triple-Click-With-Paste</string>
-	</array>
 	<key>MouseMovingApps</key>
 	<array>
 		<string>com.dragon.dictate</string>
@@ -141,14 +98,6 @@
 		<string>Option-Drag</string>
 		<string>Shift-Drag</string>
 		<string>Command-Drag</string>
-		<string>Click-With-Copy</string>
-		<string>Click-With-Paste</string>
-		<string>Double-Click-With-Copy</string>
-		<string>Double-Click-With-Paste</string>
-		<string>Triple-Click-With-Copy</string>
-		<string>Triple-Click-With-Paste</string>
-		<string>Drag-With-Copy</string>
-		<string>Drag-With-Paste</string>
 		<string>Mouse-Up</string>
 		<string>Popup</string>
 	</array>
@@ -157,6 +106,7 @@
 		<string>On-Off</string>
 		<string>Click</string>
 		<string>Double-Click</string>
+		<string>Triple-Click</string>
 		<string>Control-Click</string>
 		<string>Drag-Toggle</string>
 		<string>HeldDrag-Toggle</string>

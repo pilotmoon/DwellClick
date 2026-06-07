@@ -26,28 +26,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9">
-                                <rect key="frame" x="37" y="95" width="36" height="18"/>
+                                <rect key="frame" x="37" y="87" width="36" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Click" id="10"/>
                             </imageView>
                             <button imageHugsTitle="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7">
-                                <rect key="frame" x="16" y="95" width="22" height="18"/>
+                                <rect key="frame" x="16" y="87" width="22" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="leading" alignment="left" state="on" inset="2" id="8">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <button tag="6" imageHugsTitle="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="35">
-                                <rect key="frame" x="92" y="22" width="22" height="18"/>
+                            <button tag="7" imageHugsTitle="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="35">
+                                <rect key="frame" x="92" y="14" width="22" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="leading" alignment="left" state="on" inset="2" id="38">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <button tag="5" imageHugsTitle="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="26">
-                                <rect key="frame" x="92" y="46" width="22" height="18"/>
+                            <button tag="6" imageHugsTitle="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="26">
+                                <rect key="frame" x="92" y="38" width="22" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="leading" alignment="left" state="on" inset="2" id="31">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -55,23 +55,23 @@
                                 </buttonCell>
                             </button>
                             <button tag="2" imageHugsTitle="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="15">
-                                <rect key="frame" x="16" y="46" width="22" height="18"/>
+                                <rect key="frame" x="16" y="38" width="22" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="leading" alignment="left" state="on" inset="2" id="18">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <button tag="4" imageHugsTitle="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25">
-                                <rect key="frame" x="92" y="70" width="22" height="18"/>
+                            <button tag="5" imageHugsTitle="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25">
+                                <rect key="frame" x="92" y="62" width="22" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="leading" alignment="left" state="on" inset="2" id="32">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <button tag="3" imageHugsTitle="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="23">
-                                <rect key="frame" x="92" y="95" width="22" height="18"/>
+                            <button tag="4" imageHugsTitle="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="23">
+                                <rect key="frame" x="92" y="87" width="22" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="leading" alignment="left" state="on" inset="2" id="34">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -79,32 +79,32 @@
                                 </buttonCell>
                             </button>
                             <imageView fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="19">
-                                <rect key="frame" x="37" y="71" width="36" height="18"/>
+                                <rect key="frame" x="37" y="63" width="36" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Click" id="20"/>
                             </imageView>
-                            <imageView fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="24">
-                                <rect key="frame" x="110" y="95" width="36" height="18"/>
+                            <imageView fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="24">
+                                <rect key="frame" x="110" y="87" width="36" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Control-Click" id="33"/>
                             </imageView>
-                            <imageView fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="27">
-                                <rect key="frame" x="110" y="71" width="36" height="18"/>
+                            <imageView fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="27">
+                                <rect key="frame" x="110" y="63" width="36" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Click" id="30"/>
                             </imageView>
-                            <imageView fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="28">
-                                <rect key="frame" x="110" y="46" width="36" height="18"/>
+                            <imageView fixedFrame="YES" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="28">
+                                <rect key="frame" x="110" y="38" width="36" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Click" id="29"/>
                             </imageView>
-                            <imageView fixedFrame="YES" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="36">
-                                <rect key="frame" x="110" y="22" width="36" height="18"/>
+                            <imageView fixedFrame="YES" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="36">
+                                <rect key="frame" x="110" y="14" width="36" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Click" id="37"/>
                             </imageView>
                             <button tag="1" imageHugsTitle="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="11">
-                                <rect key="frame" x="16" y="70" width="22" height="18"/>
+                                <rect key="frame" x="16" y="62" width="22" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="leading" alignment="left" state="on" inset="2" id="14">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -112,20 +112,33 @@
                                 </buttonCell>
                             </button>
                             <imageView fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="21">
-                                <rect key="frame" x="37" y="46" width="36" height="18"/>
+                                <rect key="frame" x="37" y="38" width="36" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Click" id="22"/>
                             </imageView>
-                            <button tag="7" imageHugsTitle="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="96">
-                                <rect key="frame" x="165" y="95" width="22" height="18"/>
+                            <button tag="3" imageHugsTitle="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DCP-Drag-Button">
+                                <rect key="frame" x="16" y="14" width="22" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="leading" alignment="left" state="on" inset="2" id="DCP-Drag-ButtonCell">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <imageView fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="DCP-Drag-Image">
+                                <rect key="frame" x="37" y="14" width="36" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Click" id="DCP-Drag-ImageCell"/>
+                            </imageView>
+                            <button tag="8" imageHugsTitle="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="96">
+                                <rect key="frame" x="165" y="87" width="22" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="leading" alignment="left" state="on" inset="2" id="99">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <imageView fixedFrame="YES" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="97">
-                                <rect key="frame" x="183" y="95" width="36" height="18"/>
+                            <imageView fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="97">
+                                <rect key="frame" x="183" y="87" width="36" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Click" id="98"/>
                             </imageView>
@@ -212,7 +225,7 @@
                     </connections>
                 </button>
             </subviews>
-            <point key="canvasLocation" x="139" y="155"/>
+            <point key="canvasLocation" x="139" y="154.5"/>
         </customView>
         <userDefaultsController representsSharedInstance="YES" id="68"/>
     </objects>

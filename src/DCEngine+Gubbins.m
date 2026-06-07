@@ -183,40 +183,6 @@
 	[(DCSelection *)clictionary[@"Shift-Drag"] setOptions:SELECTION_OPTION_MODIFIED_SHIFT];
 	[(DCSelection *)clictionary[@"Shift-Release"] setOptions:SELECTION_OPTION_MODIFIED_SHIFT];
 	
-	// Clipboard clicks
-	CLICK(Drag-With-Copy-Release, standardLeftClicker, dragEndWithEvent, DCClickTypeDragEnd);
-	ROOT(Drag-With-Copy, standardLeftClicker, dragBeginWithEvent, DCClickTypeDragBegin, (DCClick *)[clictionary objectForKey:@"Drag-With-Copy-Release"]);
-	[(DCSelection *)clictionary[@"Drag-With-Copy-Release"] setOptions:SELECTION_OPTION_COPY_AFTER];
-    
-	CLICK(Drag-With-Paste-Release, standardLeftClicker, dragEndWithEvent, DCClickTypeDragEnd);
-	ROOT(Drag-With-Paste, standardLeftClicker, dragBeginWithEvent, DCClickTypeDragBegin, (DCClick *)[clictionary objectForKey:@"Drag-With-Paste-Release"]);
-	[(DCSelection *)clictionary[@"Drag-With-Paste-Release"] setOptions:SELECTION_OPTION_PASTE_AFTER];
-	
-	CLICK(Drag-With-Cut-Release, standardLeftClicker, dragEndWithEvent, DCClickTypeDragEnd);
-	ROOT(Drag-With-Cut, standardLeftClicker, dragBeginWithEvent, DCClickTypeDragBegin, (DCClick *)[clictionary objectForKey:@"Drag-With-Cut-Release"]);
-	[(DCSelection *)clictionary[@"Drag-With-Cut-Release"] setOptions:SELECTION_OPTION_CUT_AFTER];
-    
-	ROOT(Click-With-Cut, standardLeftClicker, clickWithEvent, DCClickTypeSingle, (DCClick *)[clictionary objectForKey:@"Drag-With-Cut-Release"]);
-	[(DCSelection *)clictionary[@"Click-With-Cut"] setOptions:SELECTION_OPTION_CUT_AFTER];
-	ROOT(Click-With-Copy, standardLeftClicker, clickWithEvent, DCClickTypeSingle, (DCClick *)[clictionary objectForKey:@"Drag-With-Copy-Release"]);
-	[(DCSelection *)clictionary[@"Click-With-Copy"] setOptions:SELECTION_OPTION_COPY_AFTER];
-	ROOT(Click-With-Paste, standardLeftClicker, clickWithEvent, DCClickTypeSingle, (DCClick *)[clictionary objectForKey:@"Drag-With-Paste-Release"]);
-	[(DCSelection *)clictionary[@"Click-With-Paste"] setOptions:SELECTION_OPTION_PASTE_AFTER];
-    
-	CLICK(Double-Click-With-Cut, standardLeftClicker, doubleClickWithEvent, DCClickTypeDouble);
-	[(DCSelection *)clictionary[@"Double-Click-With-Cut"] setOptions:SELECTION_OPTION_CUT_AFTER];
-	CLICK(Double-Click-With-Copy, standardLeftClicker, doubleClickWithEvent, DCClickTypeDouble);
-	[(DCSelection *)clictionary[@"Double-Click-With-Copy"] setOptions:SELECTION_OPTION_COPY_AFTER];
-	CLICK(Double-Click-With-Paste, standardLeftClicker, doubleClickWithEvent, DCClickTypeDouble);
-	[(DCSelection *)clictionary[@"Double-Click-With-Paste"] setOptions:SELECTION_OPTION_PASTE_AFTER];
-	
-	CLICK(Triple-Click-With-Cut, standardLeftClicker, tripleClickWithEvent, DCClickTypeTriple);
-	[(DCSelection *)clictionary[@"Triple-Click-With-Cut"] setOptions:SELECTION_OPTION_CUT_AFTER];
-	CLICK(Triple-Click-With-Copy, standardLeftClicker, tripleClickWithEvent, DCClickTypeTriple);
-	[(DCSelection *)clictionary[@"Triple-Click-With-Copy"] setOptions:SELECTION_OPTION_COPY_AFTER];
-	CLICK(Triple-Click-With-Paste, standardLeftClicker, tripleClickWithEvent, DCClickTypeTriple);
-	[(DCSelection *)clictionary[@"Triple-Click-With-Paste"] setOptions:SELECTION_OPTION_PASTE_AFTER];
-	
 	DCClickNoClick=(DCClick *)[self.clickMachine noSelectionObject];
 	DCClickDenied=(DCClick *)clictionary[@"Denied"];
 	DCClickSingleClick=(DCClick *)clictionary[@"Click"];

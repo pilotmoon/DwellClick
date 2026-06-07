@@ -31,7 +31,6 @@ Master include file for NMKit
 #import "NMKeyCombo.h"
 #import "NMKeyCommander.h"
 #import "NMKeyConverter.h"
-#import "NMKeyPresser.h"
 #import "NMLinks.h"
 #import "NMLog.h"
 #import "NMLoginItemsController.h"

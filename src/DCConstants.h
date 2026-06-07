@@ -31,7 +31,6 @@ extern NSString * DCPrefsAppVersion;
 extern NSString * DCPrefsAvoidEdgesWhenDragging;
 extern NSString * DCPrefsAlwaysLockDrag;
 extern NSString * DCPrefsModifiersOn;
-extern NSString * DCPrefsExtraShortcuts;
 extern NSString * DCPrefsFloatOnTop;
 extern NSString * DCPrefsEnableTablet;
 extern NSString * DCPrefsActivationInterval;

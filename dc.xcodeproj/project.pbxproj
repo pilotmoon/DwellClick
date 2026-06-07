@@ -54,24 +54,13 @@
 		014F736E120790760065481F /* ActionNameTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 014F736D120790760065481F /* ActionNameTransformer.m */; };
 		014F73BA120797880065481F /* DCShortcutViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 014F73B9120797880065481F /* DCShortcutViewItem.m */; };
 		015E3C27120B079C00F55DB4 /* Auto-Click.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3BF5120B079C00F55DB4 /* Auto-Click.png */; };
-		015E3C28120B079C00F55DB4 /* Click-With-Copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3BF6120B079C00F55DB4 /* Click-With-Copy.png */; };
-		015E3C29120B079C00F55DB4 /* Click-With-Cut.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3BF7120B079C00F55DB4 /* Click-With-Cut.png */; };
-		015E3C2A120B079C00F55DB4 /* Click-With-Paste.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3BF8120B079C00F55DB4 /* Click-With-Paste.png */; };
 		015E3C2B120B079C00F55DB4 /* Click.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3BF9120B079C00F55DB4 /* Click.png */; };
-		015E3C2C120B079C00F55DB4 /* Command-C.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3BFA120B079C00F55DB4 /* Command-C.png */; };
 		015E3C2D120B079C00F55DB4 /* Command-Click.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3BFB120B079C00F55DB4 /* Command-Click.png */; };
 		015E3C2E120B079C00F55DB4 /* Command-Drag.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3BFC120B079C00F55DB4 /* Command-Drag.png */; };
-		015E3C30120B079C00F55DB4 /* Command-V.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3BFE120B079C00F55DB4 /* Command-V.png */; };
-		015E3C31120B079C00F55DB4 /* Command-X.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3BFF120B079C00F55DB4 /* Command-X.png */; };
 		015E3C33120B079C00F55DB4 /* Control-Click.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C01120B079C00F55DB4 /* Control-Click.png */; };
 		015E3C34120B079C00F55DB4 /* Control-Drag.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C02120B079C00F55DB4 /* Control-Drag.png */; };
 		015E3C3A120B079C00F55DB4 /* DCIconStatus.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C08120B079C00F55DB4 /* DCIconStatus.png */; };
-		015E3C3B120B079C00F55DB4 /* Double-Click-With-Copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C09120B079C00F55DB4 /* Double-Click-With-Copy.png */; };
-		015E3C3C120B079C00F55DB4 /* Double-Click-With-Cut.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C0A120B079C00F55DB4 /* Double-Click-With-Cut.png */; };
-		015E3C3D120B079C00F55DB4 /* Double-Click-With-Paste.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C0B120B079C00F55DB4 /* Double-Click-With-Paste.png */; };
 		015E3C3E120B079C00F55DB4 /* Double-Click.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C0C120B079C00F55DB4 /* Double-Click.png */; };
-		015E3C3F120B079C00F55DB4 /* Drag-With-Copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C0D120B079C00F55DB4 /* Drag-With-Copy.png */; };
-		015E3C40120B079C00F55DB4 /* Drag-With-Cut.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C0E120B079C00F55DB4 /* Drag-With-Cut.png */; };
 		015E3C41120B079C00F55DB4 /* Drag.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C0F120B079C00F55DB4 /* Drag.png */; };
 		015E3C42120B079C00F55DB4 /* GreenTick.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C10120B079C00F55DB4 /* GreenTick.png */; };
 		015E3C43120B079C00F55DB4 /* Lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 015E3C11120B079C00F55DB4 /* Lock.png */; };
@@ -97,11 +86,8 @@
 		016F91BB14BEDB020049E3FB /* prefs-Panel.png in Resources */ = {isa = PBXBuildFile; fileRef = 016F91BA14BEDB020049E3FB /* prefs-Panel.png */; };
 		016F91C214BF0C8A0049E3FB /* DCClicksPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 016F91BF14BF0C8A0049E3FB /* DCClicksPanel.m */; };
 		016F91C414BF0C8A0049E3FB /* DCClicksPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016F91C114BF0C8A0049E3FB /* DCClicksPanelController.m */; };
-		0174B147128A9DEA00D442B1 /* Drag-With-Paste.png in Resources */ = {isa = PBXBuildFile; fileRef = 0174B146128A9DEA00D442B1 /* Drag-With-Paste.png */; };
 		0189619817BA73F80047D8C7 /* DwellClickIconR.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0189619717BA73F80047D8C7 /* DwellClickIconR.icns */; };
 		018BCA49130BC87B00283495 /* SecondsTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 018BCA47130BC87B00283495 /* SecondsTransformer.m */; };
-		018C81B81294368E00CD6C63 /* Triple-Click-With-Copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 018C81B51294368E00CD6C63 /* Triple-Click-With-Copy.png */; };
-		018C81B91294368E00CD6C63 /* Triple-Click-With-Paste.png in Resources */ = {isa = PBXBuildFile; fileRef = 018C81B61294368E00CD6C63 /* Triple-Click-With-Paste.png */; };
 		018C81BA1294368E00CD6C63 /* Triple-Click.png in Resources */ = {isa = PBXBuildFile; fileRef = 018C81B71294368E00CD6C63 /* Triple-Click.png */; };
 		018E6CBF11D0E4E80078342A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018E6CBD11D0E4E80078342A /* Sparkle.framework */; };
 		018E6D6A11D0E5390078342A /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 018E6CBD11D0E4E80078342A /* Sparkle.framework */; };
@@ -208,7 +194,6 @@
 		C0DE5F7CF75A66956E5088EB /* NMRegexUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE51FA539EA73EB5CB45AF /* NMRegexUtils.m */; };
 		C0DE65D3B9E5014EE77F2B06 /* NMGeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE4EFDB764E28A23F7CC83 /* NMGeometryUtils.m */; };
 		C0DE6891B49E87C12DFE0968 /* NMLoginItemsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE7EFB77DC82D166B9350B /* NMLoginItemsController.m */; };
-		C0DE6DD9F04B2C453211A867 /* NMKeyPresser.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEBB99EFFFBDDEEF1B42DD /* NMKeyPresser.m */; };
 		C0DE775F09D813A01F262ABE /* NMAppMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE9C00B317E3B049745D2D /* NMAppMonitor.m */; };
 		C0DE77B949EF602F2B1CFE8A /* NSObject+NMObservePrefs.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DEA2A7302AE0C3C1330E31 /* NSObject+NMObservePrefs.m */; };
 		C0DE798AB203801568BACB54 /* NMNubWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DE5563F60D84AFFE9EECE1 /* NMNubWindow.m */; };
@@ -346,24 +331,13 @@
 		0153578B11B80E9E00673C2F /* DwellClick_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DwellClick_Prefix.pch; sourceTree = "<group>"; };
 		0153579011B80E9E00673C2F /* BuildSettings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BuildSettings.xcconfig; sourceTree = "<group>"; };
 		015E3BF5120B079C00F55DB4 /* Auto-Click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Auto-Click.png"; sourceTree = "<group>"; };
-		015E3BF6120B079C00F55DB4 /* Click-With-Copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Click-With-Copy.png"; sourceTree = "<group>"; };
-		015E3BF7120B079C00F55DB4 /* Click-With-Cut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Click-With-Cut.png"; sourceTree = "<group>"; };
-		015E3BF8120B079C00F55DB4 /* Click-With-Paste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Click-With-Paste.png"; sourceTree = "<group>"; };
 		015E3BF9120B079C00F55DB4 /* Click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Click.png; sourceTree = "<group>"; };
-		015E3BFA120B079C00F55DB4 /* Command-C.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Command-C.png"; sourceTree = "<group>"; };
 		015E3BFB120B079C00F55DB4 /* Command-Click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Command-Click.png"; sourceTree = "<group>"; };
 		015E3BFC120B079C00F55DB4 /* Command-Drag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Command-Drag.png"; sourceTree = "<group>"; };
-		015E3BFE120B079C00F55DB4 /* Command-V.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Command-V.png"; sourceTree = "<group>"; };
-		015E3BFF120B079C00F55DB4 /* Command-X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Command-X.png"; sourceTree = "<group>"; };
 		015E3C01120B079C00F55DB4 /* Control-Click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Control-Click.png"; sourceTree = "<group>"; };
 		015E3C02120B079C00F55DB4 /* Control-Drag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Control-Drag.png"; sourceTree = "<group>"; };
 		015E3C08120B079C00F55DB4 /* DCIconStatus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DCIconStatus.png; sourceTree = "<group>"; };
-		015E3C09120B079C00F55DB4 /* Double-Click-With-Copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Double-Click-With-Copy.png"; sourceTree = "<group>"; };
-		015E3C0A120B079C00F55DB4 /* Double-Click-With-Cut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Double-Click-With-Cut.png"; sourceTree = "<group>"; };
-		015E3C0B120B079C00F55DB4 /* Double-Click-With-Paste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Double-Click-With-Paste.png"; sourceTree = "<group>"; };
 		015E3C0C120B079C00F55DB4 /* Double-Click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Double-Click.png"; sourceTree = "<group>"; };
-		015E3C0D120B079C00F55DB4 /* Drag-With-Copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Drag-With-Copy.png"; sourceTree = "<group>"; };
-		015E3C0E120B079C00F55DB4 /* Drag-With-Cut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Drag-With-Cut.png"; sourceTree = "<group>"; };
 		015E3C0F120B079C00F55DB4 /* Drag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Drag.png; sourceTree = "<group>"; };
 		015E3C10120B079C00F55DB4 /* GreenTick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenTick.png; sourceTree = "<group>"; };
 		015E3C11120B079C00F55DB4 /* Lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lock.png; sourceTree = "<group>"; };
@@ -396,12 +370,9 @@
 		016F91BF14BF0C8A0049E3FB /* DCClicksPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCClicksPanel.m; sourceTree = "<group>"; };
 		016F91C014BF0C8A0049E3FB /* DCClicksPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCClicksPanelController.h; sourceTree = "<group>"; };
 		016F91C114BF0C8A0049E3FB /* DCClicksPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCClicksPanelController.m; sourceTree = "<group>"; };
-		0174B146128A9DEA00D442B1 /* Drag-With-Paste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Drag-With-Paste.png"; sourceTree = "<group>"; };
 		0189619717BA73F80047D8C7 /* DwellClickIconR.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = DwellClickIconR.icns; sourceTree = "<group>"; };
 		018BCA46130BC87B00283495 /* SecondsTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondsTransformer.h; sourceTree = "<group>"; };
 		018BCA47130BC87B00283495 /* SecondsTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondsTransformer.m; sourceTree = "<group>"; };
-		018C81B51294368E00CD6C63 /* Triple-Click-With-Copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Triple-Click-With-Copy.png"; sourceTree = "<group>"; };
-		018C81B61294368E00CD6C63 /* Triple-Click-With-Paste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Triple-Click-With-Paste.png"; sourceTree = "<group>"; };
 		018C81B71294368E00CD6C63 /* Triple-Click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Triple-Click.png"; sourceTree = "<group>"; };
 		018E6CBD11D0E4E80078342A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		018EA2CF1287F31800F6F0A2 /* DCClickEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCClickEvent.h; sourceTree = "<group>"; };
@@ -621,7 +592,6 @@
 		C0DEA2A7302AE0C3C1330E31 /* NSObject+NMObservePrefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NMObservePrefs.m"; sourceTree = "<group>"; };
 		C0DEA5482279880F5CB8D6AD /* NMRegexUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMRegexUtils.h; sourceTree = "<group>"; };
 		C0DEA69846B3AA8CB3D95F25 /* NMCommander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCommander.h; sourceTree = "<group>"; };
-		C0DEA7F9392A95FB87D1BCB9 /* NMKeyPresser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMKeyPresser.h; sourceTree = "<group>"; };
 		C0DEA859B91BDC00267DAF99 /* NMLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMLog.h; sourceTree = "<group>"; };
 		C0DEA92D2212C641BDDC7FA3 /* NMUIElementHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMUIElementHelper.m; sourceTree = "<group>"; };
 		C0DEAB90FA0BFB9A4399A0B5 /* NMPopupWindowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMPopupWindowButton.m; sourceTree = "<group>"; };
@@ -632,7 +602,6 @@
 		C0DEB82F06D43150ACA8EEB6 /* NSMutableDictionary+NMSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+NMSafe.m"; sourceTree = "<group>"; };
 		C0DEB84BA8143201509BE8DD /* NMConfigUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMConfigUtils.m; sourceTree = "<group>"; };
 		C0DEBAF90AD1026D2CEAA674 /* NMKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMKit.h; sourceTree = "<group>"; };
-		C0DEBB99EFFFBDDEEF1B42DD /* NMKeyPresser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMKeyPresser.m; sourceTree = "<group>"; };
 		C0DEBC247CDA7676D97B785E /* NMBubbleWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMBubbleWindow.h; sourceTree = "<group>"; };
 		C0DEC26EE991BEA5FC7657D2 /* NMImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMImageButton.m; sourceTree = "<group>"; };
 		C0DEC3CF95FA2590800E34A5 /* NMUniversalMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMUniversalMonitor.h; sourceTree = "<group>"; };
@@ -948,30 +917,16 @@
 				01CD40FE130B17B7002E2FC8 /* Option-Big.png */,
 				01CD40FF130B17B7002E2FC8 /* Shift-Big.png */,
 				012CF31312F3461A0040F5BE /* ShowPopup.png */,
-				018C81B51294368E00CD6C63 /* Triple-Click-With-Copy.png */,
-				018C81B61294368E00CD6C63 /* Triple-Click-With-Paste.png */,
 				018C81B71294368E00CD6C63 /* Triple-Click.png */,
-				0174B146128A9DEA00D442B1 /* Drag-With-Paste.png */,
 				01E4C61C1247997E001852C5 /* LockedDrag.png */,
 				015E3BF5120B079C00F55DB4 /* Auto-Click.png */,
-				015E3BF6120B079C00F55DB4 /* Click-With-Copy.png */,
-				015E3BF7120B079C00F55DB4 /* Click-With-Cut.png */,
-				015E3BF8120B079C00F55DB4 /* Click-With-Paste.png */,
 				015E3BF9120B079C00F55DB4 /* Click.png */,
-				015E3BFA120B079C00F55DB4 /* Command-C.png */,
 				015E3BFB120B079C00F55DB4 /* Command-Click.png */,
 				015E3BFC120B079C00F55DB4 /* Command-Drag.png */,
-				015E3BFE120B079C00F55DB4 /* Command-V.png */,
-				015E3BFF120B079C00F55DB4 /* Command-X.png */,
 				015E3C01120B079C00F55DB4 /* Control-Click.png */,
 				015E3C02120B079C00F55DB4 /* Control-Drag.png */,
 				015E3C08120B079C00F55DB4 /* DCIconStatus.png */,
-				015E3C09120B079C00F55DB4 /* Double-Click-With-Copy.png */,
-				015E3C0A120B079C00F55DB4 /* Double-Click-With-Cut.png */,
-				015E3C0B120B079C00F55DB4 /* Double-Click-With-Paste.png */,
 				015E3C0C120B079C00F55DB4 /* Double-Click.png */,
-				015E3C0D120B079C00F55DB4 /* Drag-With-Copy.png */,
-				015E3C0E120B079C00F55DB4 /* Drag-With-Cut.png */,
 				015E3C0F120B079C00F55DB4 /* Drag.png */,
 				015E3C10120B079C00F55DB4 /* GreenTick.png */,
 				015E3C11120B079C00F55DB4 /* Lock.png */,
@@ -1207,8 +1162,6 @@
 				C0DE98AB29B8E429322BE0A3 /* NMKeyCommander.m */,
 				C0DE79DD8FBACF1C2CC9831B /* NMKeyConverter.h */,
 				C0DEF41B320DE4DBF0FC45BB /* NMKeyConverter.m */,
-				C0DEA7F9392A95FB87D1BCB9 /* NMKeyPresser.h */,
-				C0DEBB99EFFFBDDEEF1B42DD /* NMKeyPresser.m */,
 				C0DEBAF90AD1026D2CEAA674 /* NMKit.h */,
 				C0DE3E80900B287470B5375D /* NMLinks.h */,
 				C0DE37437DA77F38438BA335 /* NMLinks.m */,
@@ -1418,25 +1371,14 @@
 				014F7081120743270065481F /* Config.plist in Resources */,
 				014B1D2A191B69B4007928A1 /* Popup.png in Resources */,
 				015E3C27120B079C00F55DB4 /* Auto-Click.png in Resources */,
-				015E3C28120B079C00F55DB4 /* Click-With-Copy.png in Resources */,
-				015E3C29120B079C00F55DB4 /* Click-With-Cut.png in Resources */,
-				015E3C2A120B079C00F55DB4 /* Click-With-Paste.png in Resources */,
 				015E3C2B120B079C00F55DB4 /* Click.png in Resources */,
-				015E3C2C120B079C00F55DB4 /* Command-C.png in Resources */,
 				015E3C2D120B079C00F55DB4 /* Command-Click.png in Resources */,
 				015E3C2E120B079C00F55DB4 /* Command-Drag.png in Resources */,
-				015E3C30120B079C00F55DB4 /* Command-V.png in Resources */,
-				015E3C31120B079C00F55DB4 /* Command-X.png in Resources */,
 				015E3C33120B079C00F55DB4 /* Control-Click.png in Resources */,
 				015E3C34120B079C00F55DB4 /* Control-Drag.png in Resources */,
 				015E3C3A120B079C00F55DB4 /* DCIconStatus.png in Resources */,
-				015E3C3B120B079C00F55DB4 /* Double-Click-With-Copy.png in Resources */,
-				015E3C3C120B079C00F55DB4 /* Double-Click-With-Cut.png in Resources */,
-				015E3C3D120B079C00F55DB4 /* Double-Click-With-Paste.png in Resources */,
 				015E3C3E120B079C00F55DB4 /* Double-Click.png in Resources */,
-				015E3C3F120B079C00F55DB4 /* Drag-With-Copy.png in Resources */,
 				012517CF1C8063A20013EF4D /* NM_XIcon.png in Resources */,
-				015E3C40120B079C00F55DB4 /* Drag-With-Cut.png in Resources */,
 				016ACCBA2FD049FE00E59082 /* Beep060.wav in Resources */,
 				015E3C41120B079C00F55DB4 /* Drag.png in Resources */,
 				015E3C42120B079C00F55DB4 /* GreenTick.png in Resources */,
@@ -1456,9 +1398,6 @@
 				01E4C61D1247997E001852C5 /* LockedDrag.png in Resources */,
 				01C55478126C9BF500B89D77 /* prefs-Feedback.png in Resources */,
 				01C5548A126CADC700B89D77 /* prefs-Apps.png in Resources */,
-				0174B147128A9DEA00D442B1 /* Drag-With-Paste.png in Resources */,
-				018C81B81294368E00CD6C63 /* Triple-Click-With-Copy.png in Resources */,
-				018C81B91294368E00CD6C63 /* Triple-Click-With-Paste.png in Resources */,
 				018C81BA1294368E00CD6C63 /* Triple-Click.png in Resources */,
 				014D4CA8129462430056C234 /* Click043Tripled.aiff in Resources */,
 				014D4CA9129462430056C234 /* Click051Tripled.aiff in Resources */,
@@ -1533,7 +1472,6 @@
 				C0DE81E2D55D96659241C2A1 /* NMKeyCombo.m in Sources */,
 				C0DE98B0232A05D3762C421B /* NMKeyCommander.m in Sources */,
 				C0DE2A3623F6DCB64E6C47B3 /* NMKeyConverter.m in Sources */,
-				C0DE6DD9F04B2C453211A867 /* NMKeyPresser.m in Sources */,
 				C0DEBA94E64ADB71732770B8 /* NMLinks.m in Sources */,
 				C0DE0E666684B32AF9348323 /* NMLog.m in Sources */,
 				C0DE6891B49E87C12DFE0968 /* NMLoginItemsController.m in Sources */,
