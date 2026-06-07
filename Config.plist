@@ -40,25 +40,27 @@
 	<key>DisplayNames</key>
 	<dict>
 		<key>Click</key>
-		<string>Single click</string>
+		<string>Single-click</string>
 		<key>Click-With-Copy</key>
-		<string>Click and Copy</string>
+		<string>Single-click and Copy</string>
 		<key>Click-With-Cut</key>
-		<string>Click and Cut</string>
+		<string>Single-click and Cut</string>
 		<key>Click-With-Paste</key>
-		<string>Click and Paste</string>
+		<string>Single-click and Paste</string>
+		<key>Command-Click</key>
+		<string>Command-click</string>
 		<key>Control-Click</key>
 		<string>Control-click</string>
 		<key>Denied</key>
-		<string>No click</string>
+		<string>No-click</string>
 		<key>Double-Click</key>
-		<string>Double click</string>
+		<string>Double-click</string>
 		<key>Double-Click-With-Copy</key>
-		<string>Double click and Copy</string>
+		<string>Double-click and Copy</string>
 		<key>Double-Click-With-Cut</key>
-		<string>Double click and Cut</string>
+		<string>Double-click and Cut</string>
 		<key>Double-Click-With-Paste</key>
-		<string>Double click and Paste</string>
+		<string>Double-click and Paste</string>
 		<key>Drag</key>
 		<string>Drag</string>
 		<key>Drag-Toggle</key>
@@ -78,21 +80,25 @@
 		<key>Mouse-Up</key>
 		<string>Mouse up</string>
 		<key>No-Click</key>
-		<string>No-Click</string>
+		<string>No-click</string>
 		<key>On-Off</key>
 		<string>DwellClick on/off</string>
+		<key>Option-Click</key>
+		<string>Option-click</string>
 		<key>Popup</key>
 		<string>Show popup</string>
 		<key>Release</key>
 		<string>Release drag</string>
+		<key>Shift-Click</key>
+		<string>Shift-click</string>
 		<key>Triple-Click</key>
-		<string>Triple click</string>
+		<string>Triple-click</string>
 		<key>Triple-Click-With-Copy</key>
-		<string>Triple click and Copy</string>
+		<string>Triple-click and Copy</string>
 		<key>Triple-Click-With-Cut</key>
-		<string>Triple click and Cut</string>
+		<string>Triple-click and Cut</string>
 		<key>Triple-Click-With-Paste</key>
-		<string>Triple click and Paste</string>
+		<string>Triple-click and Paste</string>
 	</dict>
 	<key>ExtraShortcutsList</key>
 	<array>
