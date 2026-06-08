@@ -6,7 +6,6 @@
 #import "NMKit/NMEventUtils.h"
 #import "DCTouchMonitor.h"
 #import "DCEngine.h"
-#import "DCBoxGrab.h"
 #import "NMKit/NMUniversalAccessHelper.h"
 #import "NMKit/NMAppUtils.h"
 #import "NMKit/NMPoint.h"
